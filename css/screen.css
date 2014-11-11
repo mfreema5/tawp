@@ -24,8 +24,16 @@ html {
 
 /***************************************************************************************/
 /* Typography, color, etc.          Basic element hierarchy:                           */
-/* Layout is farther down.                    <body>                                   */
-/*                                              <header>                               */
+/* Layout is farther down.          <header>                                           */
+/*                                  <body>	                                           */
+/*                                    <main>                                           */
+/*                                      <article>                                      */
+/*                                        <section>                                    */
+/*                                          <h1>,<h2>,<h3>,<h4>,<h5>,<h6>              */
+/*                                          <!-- while "headings" are not              */
+/*                                           containing blocks, they can               */
+/*                                           indicate hierarchy       --!>             */
+/*                                  <footer>                                           */
 /***************************************************************************************/
 
 body {
@@ -37,8 +45,16 @@ main {
 
 /***************************************************************************************/
 /* Layout                           Basic element hierarchy:                           */
-/*                                            <body>                                   */
-/*                                              <header>                               */
+/*                                  <header>                                           */
+/*                                  <body>	                                           */
+/*                                    <main>                                           */
+/*                                      <article>                                      */
+/*                                        <section>                                    */
+/*                                          <h1>,<h2>,<h3>,<h4>,<h5>,<h6>              */
+/*                                          <!-- while "headings" are not              */
+/*                                           containing blocks, they can               */
+/*                                           indicate hierarchy       --!>             */
+/*                                  <footer>                                           */
 /***************************************************************************************/
                                                                   /** Default layouts **/
 
