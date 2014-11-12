@@ -42,6 +42,37 @@ body {
 main {
 }
 
+h1 {
+  font-size:  1.375em;
+  line-height: 1.500em;       /* font + 0.125em */
+  margin-bottom: 0.250em;
+}
+
+h2 {
+  font-size:  1.250em;
+  line-height: 1.375em;       /* font + 0.125em */
+  margin-bottom: 0.125em;
+}
+
+h3 {
+  font-size: 1.125em;
+  line-height: 1.250em;       /* font + 0.125em */
+  margin-bottom: 0.125em;
+}
+
+p {
+  margin: 0.375em 0 0.500em 0;
+}
+
+ul {
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
+li {
+  list-style: inherit;
+  margin: 0.125em 0 0.125em 0.5em;
+}
 
 /***************************************************************************************/
 /* Layout                           Basic element hierarchy:                           */
@@ -64,14 +95,33 @@ header {                                                  /* Header - top of pag
 main {
 }
 
+
 /***************************************************************************************/
                                                                     /* screen < 47 em */
-@media all and ( max-width: 47em ) {
+@media all and ( min-width: 1em ) {
 
   body {
+    background-color: rgba(209,192,169,1);
   }
 
-  header {
+                           /* Can I use the border to create color-containers? */
+                           /* Make the header background match the border color? */
+                           /* Force header to 100% wide? */
+  article {
+    background-color: rgba(245,234,219,1);
+    /* border: 1px solid rgb( 92, 74, 48); */
+    margin: 0.375em;
+    padding: 0.250em;
+  }
+
+  section {
+    background-color: rgba(255,251,245,1);
+    /* border: 1px solid rgb( 92, 74, 48); */
+    margin: 0.125em 0.125em 0.250em 0.125em;  /* fighting the collapse */
+    padding: 0.375em;
+  }
+
+  p {
   }
 
 }
@@ -80,26 +130,16 @@ main {
                                                              /* 48 em < screen < 64 em */
 @media all and ( min-width: 48em ) {
 
-  body {
-  }
-
-  header {
-  }
-
 }
 
 /***************************************************************************************/
+
+                                      /* Limit blocks containing text to 35 em wide? */
+                                      /* 35 em + margin&padding + margin&padding = ? */
+                                      /* Then start in-lining blocks? */
+
                                                                      /* 64 em < screen */
 @media all and ( min-width: 64em ) {
-
-  body {
-  }
-
-  header {
-  }
-
-  main {
-  }
 
 }
 
