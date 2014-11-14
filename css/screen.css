@@ -4,7 +4,7 @@
                                                               /*** Basic Text Styles ***/
 
 h1,h2,h3,h4,h5,h6,b,strong {                        /* Bold on headings, b, and strong */
-  font-weight: bold; font-size: 115%; }
+  font-weight: bold; }
 
 i,em,cite {                                               /* Italic on i, em, and cite */
   font-style: italic; }
@@ -60,8 +60,10 @@ h3 {
   margin-bottom: 0.125em;
 }
 
-p {
-  margin: 0.375em 0 0.500em 0;
+h4 {
+  font-size: 1em;
+  line-height: 1.250em;       /* font + 0.125em */
+  margin-bottom: 0.125em;
 }
 
 ul {
@@ -101,27 +103,46 @@ main {
 @media all and ( min-width: 1em ) {
 
   body {
-    background-color: rgba(209,192,169,1);
+    background-color: rgb(209,192,169);
+    border-style: solid;
+    border-color: rgb(209,192,169);
+    border-width: 0.250em 0.250em 0.250em 0.250em;
   }
 
-                           /* Can I use the border to create color-containers? */
-                           /* Make the header background match the border color? */
-                           /* Force header to 100% wide? */
+  h1 {
+    margin-left: 0.125em;
+  }
+
   article {
-    background-color: rgba(245,234,219,1);
-    /* border: 1px solid rgb( 92, 74, 48); */
-    margin: 0.375em;
-    padding: 0.250em;
+    background-color: rgba(255,251,245,1);
+    border-style: solid;
+    border-color: rgb(245,234,219);
+    border-width: 0 0.250em 0.375em 0.250em;
+    margin: 0.250em;
+  }
+
+  article h2 {
+    background-color: rgb(245,234,219);
+    width: 100%;
   }
 
   section {
     background-color: rgba(255,251,245,1);
     /* border: 1px solid rgb( 92, 74, 48); */
     margin: 0.125em 0.125em 0.250em 0.125em;  /* fighting the collapse */
-    padding: 0.375em;
+    padding: 0.375em 0.375em 0.125em 0.375em;
   }
 
+  .subcontainer {
+    background-color: inherit;
+    margin: 0.125em 0.125em 0.250em 0.125em;  /* fighting the collapse */
+    padding: 0.375em 0.375em 0.125em 0.375em;
+  }
+
+
+
   p {
+    margin: 0.375em 0.125em 0.500em 0.375em;
   }
 
 }
