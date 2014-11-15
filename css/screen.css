@@ -140,7 +140,10 @@ main {
     padding: 0.375em 0.375em 0.125em 0.375em;
   }
 
-
+  .ref p {
+    margin: 0.375em 0.125em 0.500em 1.375em;    /* increase left by 1 em */
+    text-indent: -1em;                          /* for hacky hanging indents */
+  }
 
   p {
     margin: 0.375em 0.125em 0.500em 0.375em;
