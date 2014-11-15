@@ -26,13 +26,12 @@ html {
 /* Typography, color, etc.          Basic element hierarchy:                           */
 /* Layout is farther down.          <header>                                           */
 /*                                  <body>	                                           */
-/*                                    <main>                                           */
-/*                                      <article>                                      */
-/*                                        <section>                                    */
-/*                                          <h1>,<h2>,<h3>,<h4>,<h5>,<h6>              */
-/*                                          <!-- while "headings" are not              */
-/*                                           containing blocks, they can               */
-/*                                           indicate hierarchy       --!>             */
+/*                                    <main> <h1>                                      */
+/*                                      <article> <h2>                                 */
+/*                                        <section> <h3>                               */
+/*                                          <div.subcontainer>                         */
+/*                                          <div.quote>                                */
+/*                                        <div.ref>
 /*                                    <footer>                                         */
 /***************************************************************************************/
 
@@ -91,13 +90,12 @@ a.invisible:hover {
 /* Layout                           Basic element hierarchy:                           */
 /*                                  <header>                                           */
 /*                                  <body>	                                           */
-/*                                    <main>                                           */
-/*                                      <article>                                      */
-/*                                        <section>                                    */
-/*                                          <h1>,<h2>,<h3>,<h4>,<h5>,<h6>              */
-/*                                          <!-- while "headings" are not              */
-/*                                           containing blocks, they can               */
-/*                                           indicate hierarchy       --!>             */
+/*                                    <main> <h1>                                      */
+/*                                      <article> <h2>                                 */
+/*                                        <section> <h3>                               */
+/*                                          <div.subcontainer>                         */
+/*                                          <div.quote>                                */
+/*                                        <div.ref>
 /*                                    <footer>                                         */
 /***************************************************************************************/
                                                                   /** Default layouts **/
@@ -107,6 +105,11 @@ header {                                                  /* Header - top of pag
 
 main {
 }
+
+article {
+  max-width: 37em;                            /* Stupidly long lines are hard too read */
+  min-width: 12em;                            /* Force horizontal scrollbar on when    */
+}                                             /*         (em-px):(vw-px) ratio is high */
 
 
 /***************************************************************************************/
@@ -124,24 +127,23 @@ main {
     margin-left: 0.125em;
   }
 
-  article {
-    background-color: rgba(255,251,245,1);
-    border-style: solid;
-    border-color: rgb(245,234,219);
+  article {                                     /* Organizationally, article levels    */
+    background-color: rgb(255,251,245);         /* should be rgb(245,234,219), but for */
+    border-style: solid;                        /* readability, text will be backed by */
+    border-color: rgb(245,234,219);             /* rgb(255,251,245).                   */
     border-width: 0 0.250em 0.375em 0.250em;
     margin: 0.250em;
   }
 
-  article h2 {
-    background-color: rgb(245,234,219);
+  article h2 {                                          /* Using color to indicate the */
+    background-color: rgb(245,234,219);                 /* organizational level        */
     width: 100%;
   }
 
   section {
     background-color: rgba(255,251,245,1);
-    /* border: 1px solid rgb( 92, 74, 48); */
     margin: 0.125em 0.125em 0.250em 0.125em;                  /* fighting the collapse */
-    padding: 0.375em 0.375em 0.125em 0.375em;
+    padding: 0.375em 0.375em 0.125em 0.125em;
   }
 
   .subcontainer {
@@ -163,9 +165,12 @@ main {
   }
 
   p {
-    margin: 0.375em 0.125em 0.500em 0.375em;
+    margin: 0.375em 0.125em 0.500em 0.250em;   /* trial-and-error "looks right" values */
+    padding: 0.250em 0 0.250em 0;                           /* padding? It no collapse */
   }
-
+                                /* On really tiny viewports, it looks better to have   */
+                                /* huge spaces between paragraphs.  In part because    */
+                                /* you get so little whitespace on the sides, I think. */
 }
 
 /***************************************************************************************/
@@ -176,9 +181,9 @@ main {
 
 /***************************************************************************************/
 
-                                      /* Limit blocks containing text to 35 em wide? */
-                                      /* 35 em + margin&padding + margin&padding = ? */
+                                      /* Limit blocks containing text to 37 em wide? */
                                       /* Then start in-lining blocks? */
+                                      /* Or add “references.html” as gloss? */
 
                                                                      /* 64 em < screen */
 @media all and ( min-width: 64em ) {
