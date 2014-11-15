@@ -77,6 +77,16 @@ li {
   margin: 0.125em 0 0.125em 0.5em;
 }
 
+.invisible {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.invisible:hover {
+  text-decoration: underline;
+}
+
+
 /***************************************************************************************/
 /* Layout                           Basic element hierarchy:                           */
 /*                                  <header>                                           */
@@ -139,6 +149,15 @@ main {
     margin: 0.125em 0.125em 0.250em 0.125em;  /* fighting the collapse */
     padding: 0.375em 0.375em 0.125em 0.375em;
   }
+
+  .quote {
+    font-family: monospace;
+    background-color: inherit;
+    margin: 0.375em 1.625em 0.375em 1.625em;
+    padding: 0.375em 0.500em 0.375em 0.500em;
+  }
+
+
 
   .ref p {
     margin: 0.375em 0.125em 0.500em 1.375em;    /* increase left by 1 em */
