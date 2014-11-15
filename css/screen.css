@@ -69,6 +69,7 @@ h4 {
 ul {
   list-style-position: inside;
   list-style-type: disc;
+  margin: 0.125em 0 0.125em 0.625em;
 }
 
 li {
