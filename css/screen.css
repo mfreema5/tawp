@@ -36,6 +36,7 @@ html {
 /***************************************************************************************/
 
 body {
+    font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "DejaVu Sans Condensed", sans-serif;
 }
 
 main {
@@ -60,9 +61,22 @@ section, .lightbox, {              /* text a light background, to improve readab
 }
 
 blockquote {
-  font-family: monospace;                      /* hideous font choice; replace later */
+	font-family: Cambria, Georgia, "Liberation Serif", serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
   background-color: inherit;
   }
+
+h1, h2, {
+  font-family: Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
+  font-weight: bold;
+}
+
+h3, h4 {
+  font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "DejaVu Sans Condensed", sans-serif;
+	font-weight: bold;
+}
 
 h1 {
   font-size:     1.375em;
@@ -71,22 +85,30 @@ h1 {
   margin-left:   0.125em;
 }
 
+h2, h3, h4 {
+  margin-bottom: 0.125em;
+}
+
 h2 {
   font-size:     1.250em;
   line-height:   1.375em;
-  margin-bottom: 0.125em;
 }
 
 h3 {
   font-size:     1.125em;
   line-height:   1.250em;
-  margin-bottom: 0.125em;
 }
 
 h4 {
   font-size:     1.000em;
   line-height:   1.250em;
-  margin-bottom: 0.125em;
+}
+
+p {
+  font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "DejaVu Sans Condensed", sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
 }
 
 .lorem {
@@ -112,6 +134,11 @@ a {
 a:hover { text-decoration: underline; }
 
 .nocolor { color: inherit; }
+
+nav a {
+  font-family: Frutiger, Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
+  font-weight: 500;
+}
 
 
 /***************************************************************************************/
