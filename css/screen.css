@@ -38,31 +38,25 @@ html {
 body {
 }
 
-                                                      /* Need to make main responsive? */
-                                                      /* Have it appear @ 37.5em ?! */
 main {
   background-color: rgb(209,192,169);
+  border-radius: 0.250em;
 }
 
-article {
+article, nav {
   background-color: rgb(245,234,219);
-}
-
-article p {
-  background-color: rgb(255,251,245);
+  border-radius: 0.250em;
 }
                        /* You can't specify border-widths as percentages, because....? */
-                                         /* So, another way to give article text a     */
-div.lightbox {                           /* light background, to improve readability.  */
+                                   /* So, class "lightbox" is a way to give article    */
+section, .lightbox, {              /* text a light background, to improve readability. */
   background-color: rgb(255,251,245);
-}
-
-section {
-  background-color: rgb(255,251,245);
+  border-radius: 0.125em;
 }
 
 .subcontainer {
   background-color: inherit;
+  border-radius: 0.125em;
 }
 
 blockquote {
@@ -196,6 +190,9 @@ article {
     margin:  0.250em 0.125em 0.500em 0.250em;
     padding: 0.250em 0 0.250em 0;             /* padding instead margin -> no collapse */
   }
+
+  body:nav { display: none}
+
 }
 
 /********************************************************[ 12.5 em < screen < 37.5 em ]*/
@@ -251,9 +248,11 @@ article {
     padding: 0.250em 0 0.250em 0;             /* padding instead margin -> no collapse */
   }
 
+  body:nav { display: none}
+
 }
 
-/********************************************************[ 37.5 em < screen < ???? em ]*/
+/*******************************************************[ 37.5 em < screen < 45.25 em ]*/
 
                                       /* Limit width of <article>, to limit the length */
                                       /* of lines of text.                             */
@@ -318,6 +317,150 @@ article {
     padding: 0.250em 0 0.250em 0;             /* padding instead margin -> no collapse */
   }
 
+  body:nav { display: none}
+
 }
+
+/*********************************************************[ 45.25 em < screen < 60 em ]*/
+
+ @media all and ( min-width: 45.25em ) {
+
+  body {
+    background-color: rgb(177,153,121);
+    border-width: 0 0.750em;
+    border-style: solid;
+    border-color: rgb(177,153,121);
+    padding: 2% 1px;
+  }
+
+  main {
+    background-color: rgb(209,192,169);
+    width:   37.5em;
+    margin:  0 0 0 3.125em;
+    padding: 0 0 0.250em 0;
+  }
+
+  nav { display: none; }
+
+  h1 {
+    margin-left: 0.125em;
+  }
+
+  article {
+    max-width: 37em;
+    margin:  0.750em;
+    padding: 0 0.750em 1.125em 0.750em;
+  }
+
+  div.lightbox {
+    margin:  0.375em 0.375em 0.750em 0.375em;
+    padding: 0.375em 1.125em 0.750em 0.375em;
+  }
+
+  section {
+    margin:  0.375em 0.375em 0.750em 0.375em;
+    padding: 1.125em 1.125em 0.375em 0.375em;
+  }
+
+  .subcontainer {
+    margin:  0.375em;
+    padding: 1.125em 1.125em 0.375em 1.125em;
+  }
+
+  blockquote {
+    margin:  1.125em 4.875em 1.125em 4.875em
+    padding: 1.125em 1.500em 1.125em 1.500em;
+  }
+
+  h2, h3 {
+    padding-bottom: 0.125em;
+  }
+
+  p {
+    margin:  0.250em 0.125em 0.500em 0.250em;
+    padding: 0.250em 0 0.250em 0;             /* padding instead margin -> no collapse */
+  }
+
+}
+
+
+/********************************************************************[ 60 em < screen ]*/
+
+ @media all and ( min-width: 60em ) {
+
+  body {
+    background-color: rgb(177,153,121);
+    border-width: 0 0.750em;
+    border-style: solid;
+    border-color: rgb(177,153,121);
+    padding: 2% 1px;
+  }
+
+  main {
+    background-color: rgb(209,192,169);
+    width:   37.5em;
+    margin:  0 0 0 3.125em;
+    padding: 0 0 0.250em 0;
+  }
+
+  nav {
+    display: block;
+    border-radius: 0.9375em;
+    position: fixed; top: 3em; left: 44.5em;
+    width:   12.50em;
+    padding: 0.125em;
+  }
+
+  nav p {
+    background-color: rgb(209,192,169);
+    border-radius: 0.9375em;
+    text-align: center;
+    margin:  0.625em 0.500em;
+    padding: 0.375em 0.125em;
+  }
+
+
+  h1 {
+    margin-left: 0.125em;
+  }
+
+  article {
+    max-width: 37em;
+    margin:  0.750em;
+    padding: 0 0.750em 1.125em 0.750em;
+  }
+
+  div.lightbox {
+    margin:  0.375em 0.375em 0.750em 0.375em;
+    padding: 0.375em 1.125em 0.750em 0.375em;
+  }
+
+  section {
+    margin:  0.375em 0.375em 0.750em 0.375em;
+    padding: 1.125em 1.125em 0.375em 0.375em;
+  }
+
+  .subcontainer {
+    margin:  0.375em;
+    padding: 1.125em 1.125em 0.375em 1.125em;
+  }
+
+  blockquote {
+    margin:  1.125em 4.875em 1.125em 4.875em
+    padding: 1.125em 1.500em 1.125em 1.500em;
+  }
+
+  h2, h3 {
+    padding-bottom: 0.125em;
+  }
+
+  p {
+    margin:  0.250em 0.125em 0.500em 0.250em;
+    padding: 0.250em 0 0.250em 0;             /* padding instead margin -> no collapse */
+  }
+
+}
+
+
 
 /***************************************************************************************/
