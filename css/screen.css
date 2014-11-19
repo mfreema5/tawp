@@ -340,8 +340,6 @@ article {
     padding: 0 0 0.250em 0;
   }
 
-  nav { display: none; }
-
   h1 {
     margin-left: 0.125em;
   }
@@ -381,6 +379,40 @@ article {
     padding: 0.250em 0 0.250em 0;             /* padding instead margin -> no collapse */
   }
 
+  nav {
+    display: block;
+    text-align: center;                           /* Centers inline-block <div>s, too! */
+    border-color:  rgb(209,192,169);
+    border-width: 0.250em 0.750em 0 0.750em;
+    border-style: solid;
+    border-radius: 0 0 0.250em 0.250em;
+    position: fixed; bottom: 0em; left: 3.9375em;
+    width:   37.500em;
+    margin:  0;
+    padding: 0.125em 0.375em;
+  }                                      /* border-radius: top   top    bottom  bottom */
+                                         /*                left  right  right   left   */
+  nav div {
+    display: inline-block;
+    font-size:  81.25%;
+    background-color: rgb(209,192,169);
+    border-radius: 0.9375em;
+    text-align: center;
+    width: 31.5%;
+    margin:  0.250em 0.125em;
+    padding: 0.375em 0.125em;
+  }
+
+  nav a {
+    color: rgb( 83,121,105);                                          /* greenly - 2-4 */
+  }
+
+  nav a:hover {
+    text-decoration: none;
+    color: rgb(122,122,146);                               /* switches to purply - 1-3 */
+    text-shadow: rgb(156,156,171)  0  0 28px;                    /* and glows a little */
+  }
+
 }
 
 
@@ -406,19 +438,21 @@ article {
   nav {
     display: block;
     border-radius: 0.9375em;
+    border-width: 0.325em;
     position: fixed; top: 3em; left: 44.5em;
     width:   12.50em;
-    padding: 0.125em;
+    height:  8.125em;
+    padding: 0.1875em;
   }
 
-  nav p {
+  nav div {
+    font-size:  100%;
     background-color: rgb(209,192,169);
     border-radius: 0.9375em;
     text-align: center;
-    margin:  0.625em 0.500em;
+    width:   11.250em;
     padding: 0.375em 0.125em;
   }
-
 
   h1 {
     margin-left: 0.125em;
