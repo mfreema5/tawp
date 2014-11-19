@@ -60,7 +60,7 @@ section, .lightbox, {              /* text a light background, to improve readab
   border-radius: 0.125em;
 }
 
-blockquote {
+blockquote p {
 	font-family: Cambria, Georgia, "Liberation Serif", serif;
 	font-style: normal;
 	font-variant: normal;
