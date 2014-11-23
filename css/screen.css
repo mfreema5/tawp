@@ -1,37 +1,18 @@
                                                 /*****  screen.css: Screen Styles  *****/
-
-/***************************************************************************************/
-                                                              /*** Basic Text Styles ***/
-
-h1,h2,h3,h4,h5,h6,b,strong {                        /* Bold on headings, b, and strong */
-  font-weight: bold; }
-
-i,em,cite {                                               /* Italic on i, em, and cite */
-  font-style: italic; }
-
-abbr,acronym {                    /* Dotted border and help cursor to abbr and acronym */
-  border-bottom: 1px dotted; cursor: help; }
-
-/***************************************************************************************/
-                                                            /*** Structural elements ***/
-
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
 
 /***************************************************************************************/
 /* Typography, color, etc.          Basic element hierarchy:                           */
 /* Layout is farther down.          <header>                                           */
-/*                                  <body>	                                           */
+/*                                  <body>                                             */
 /*                                    <main> <h1>                                      */
 /*                                      <article> <h2>                                 */
+/*                                        <div.lightbox>                               */
 /*                                        <section> <h3>                               */
 /*                                          <div.subcontainer>                         */
 /*                                          <blockquote>                               */
-/*                                        <div.ref>                                    */
+/*                                    <nav>                                            */
 /*                                    <footer>                                         */
 /***************************************************************************************/
 
@@ -48,11 +29,10 @@ article, nav {
   background-color: rgb(245,234,219);
   border-radius: 0.250em;
 }
-                       /* You can't specify border-widths as percentages, because....? */
-                                   /* So, class "lightbox" is a way to give article    */
-section, .lightbox, {              /* text a light background, to improve readability. */
-  background-color: rgb(255,251,245);
-  border-radius: 0.125em;
+
+section, .lightbox, {                             /* Class "lightbox" is a way to give */
+  background-color: rgb(255,251,245);             /* article text a light background,  */
+  border-radius: 0.125em;                         /* to improve readability.           */
 }
 
 .subcontainer {
@@ -68,45 +48,43 @@ blockquote p {
   background-color: inherit;
   }
 
-main nav {
-  border-radius: 0.125em;
-  }
-
-h1, h2, {
-  font-family: Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
-  font-weight: bold;
-}
-
-h3, h4 {
-  font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "DejaVu Sans Condensed", sans-serif;
-	font-weight: bold;
-}
-
 h1 {
+  font-family: Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed",
+               "Liberation Sans", "Nimbus Sans L", sans-serif;
+  font-weight:   bold;
   font-size:     1.375em;
   line-height:   1.500em;                                            /* font + 0.125em */
   margin-bottom: 0.250em;
   margin-left:   0.125em;
 }
 
-h2, h3, h4 {
-  margin-bottom: 0.125em;
-}
-
 h2 {
+  font-family: Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed",
+               "Liberation Sans", "Nimbus Sans L", sans-serif;
+  font-weight:   bold;
   font-size:     1.250em;
   line-height:   1.375em;
 }
 
 h3 {
+  font-family: Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed",
+               "Liberation Sans", "Nimbus Sans L", sans-serif;
+	font-weight:   bold;
   font-size:     1.125em;
   line-height:   1.250em;
 }
 
 h4 {
+  font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans",
+               "DejaVu Sans Condensed", sans-serif;
+	font-weight:   bold;
   font-size:     1.000em;
   line-height:   1.250em;
 }
+
+h5,h6,b,strong { font-weight: bold; }
+
+i,em { font-style: italic; }
 
 p {
   font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "DejaVu Sans Condensed", sans-serif;
@@ -115,7 +93,7 @@ p {
 	font-weight: 400;
 }
 
-.lorem {
+.lorem {                                                    /* Fade place-holder text. */
   color: rgb(209,192,169);
 }
 
@@ -144,41 +122,15 @@ nav a {
   font-weight: 500;
 }
 
-
-/***************************************************************************************/
-/* Layout                           Basic element hierarchy:                           */
-/*                                  <header>                                           */
-/*                                  <body>	                                           */
-/*                                    <main> <h1>                                      */
-/*                                      <article> <h2>                                 */
-/*                                        <section> <h3>                               */
-/*                                          <div.subcontainer>                         */
-/*                                          <blockquote>                               */
-/*                                        <div.ref>                                    */
-/*                                    <footer>                                         */
-/***************************************************************************************/
-                                                                  /** Default layouts **/
-
-header {                                                  /* Header - top of page info */
-}
-
-main {
-}
-
-article {
-}
-
-.ref p {
-  margin: 0.375em 0.125em 0.500em 1.375em;              /* increase left by 1 em     */
-  text-indent: -1em;                                    /* for hacky hanging indents */
-}
+main nav {
+  border-radius: 0.125em;
+  }
 
 
-/******************************************************************[ screen < 12.5 em ]*/
+/*[Begin layout]***************************************************[ screen < 12.5 em ]*/
 
                                                       /* Using ‘em’ instead of ‘%’ to  */
-                                                      /* enforce minimums for spacings */
-@media all and ( min-width: 0 ) {
+@media all and ( min-width: 0 ) {                     /* enforce minimums for spacings */
 
   body {
     background-color: rgb(209,192,169);
@@ -186,11 +138,6 @@ article {
     border-style: solid;
     border-color: rgb(209,192,169);
   }
-
-  h1 {
-    margin-left: 0.125em;
-  }
-
 
   article {                                      /* Force horizontal scrollbar when    */
     min-width: 12em;                             /*      (em-px):(vw-px) ratio is high */
@@ -218,15 +165,14 @@ article {
     padding: 0.375em 0.500em 0.375em 0.500em;
   }
 
-                               /* On really tiny viewports, it looks better to have    */
-                               /* relatively huge spaces between paragraphs / headers. */
-  h2, h3 {
-    padding-bottom: 0.125em;
-  }
-
   p {
     margin:  0.250em 0.125em 0.500em 0.250em;
     padding: 0.250em 0 0.250em 0;             /* padding instead margin -> no collapse */
+  }
+
+  .ref p {
+    margin: 0.375em 0.125em 0.500em 1.375em;              /* increase left by 1 em     */
+    text-indent: -1em;                                    /* for hacky hanging indents */
   }
 
   nav { display: none}
@@ -242,8 +188,8 @@ article {
     width:   100%;
     margin:  0.250em;
     padding: 0 0.250em 0.250em 0.250em;
-  }                            /* syntax -> border-radius: top   top    bottom  bottom */
-                                                       /*  left  right  right   left   */
+  }
+
   main nav div {
     display: inline-block;
     font-size:  0.625em;
@@ -259,7 +205,6 @@ article {
     color: rgb(122,122,146);                                           /* purply - 1-3 */
   }
 
-
 }
 
 /********************************************************[ 12.5 em < screen < 37.5 em ]*/
@@ -273,7 +218,7 @@ article {
   }                                                                /*  4 % <- 0.500 em */
                                                                    /*  5 % <- 0.625 em */
   article {                                                        /*  6 % <- 0.750 em */
-    margin:  2%;                                                   /*  7 % <- 0.875 em */
+    margin:  0.250em 2% 0.250em 2%;                                /*  7 % <- 0.875 em */
     padding: 0 2% 3% 2%;                                           /*  8 % <- 1.000 em */
   }
 
@@ -330,7 +275,7 @@ article {
 
   article {
     max-width: 37em;
-    margin:  0.750em;
+    margin:  0.250em 0.750em;
     padding: 0 0.750em 0.250em 0.750em;
   }
 
@@ -360,16 +305,9 @@ article {
 
  @media all and ( min-width: 45.25em ) {
 
-  body {
-  }
-
   main {
     width:   37.5em;
     margin:  0 0 0 3.125em;
-  }
-
-  main nav {
-    display: none;
   }
 
   nav {                                 /* see css/notes-on-breakpoints.txt for sizing */
@@ -378,13 +316,13 @@ article {
     border-color:  rgb(209,192,169);
     border-width: 0.250em 0.750em 0 0.750em;
     border-style: solid;
-    border-radius: 0 0 0.250em 0.250em;
-    position: fixed; bottom: 0em; left: 3.875em;
-    width:   37.500em;
+    border-radius: 0 0 0.250em 0.250em;                /* syntax -> border-radius:     */
+    position: fixed; bottom: 0em; left: 3.875em;       /* top   top    bottom  bottom  */
+    width:   37.500em;                                 /* left, right, right , left  ; */
     margin:  0;
     padding: 0.125em 0.375em;
-  }                            /* syntax -> border-radius: top   top    bottom  bottom */
-                                                       /*  left  right  right   left   */
+  }
+
   nav div {
     display: inline-block;
     font-size:  81.25%;
@@ -404,6 +342,25 @@ article {
     text-decoration: none;
     color: rgb(122,122,146);                               /* switches to purply - 1-3 */
     text-shadow: rgb(156,156,171)  0  0 28px;                    /* and glows a little */
+  }
+
+  main nav {                           /* Becomes an empty divider between <articles>. */
+    background-color: rgb(177,153,121);
+    display: inline-block;                                         /* Clear attributes */
+    position: relative;                                            /* set for <nav>    */
+    top: 0;
+    left: 0;
+    border-width:  0;
+    border-style:  solid;
+    border-radius: 0.1875em;                              /* Matches vertical padding. */
+    width:   96%;
+    height: auto;
+    margin:  0 2% 0.125em 2%;
+    padding: 0.1875em 0.250em 0.1875em 0.250em;
+  }
+
+  main nav a {
+    display: none;
   }
 
 }
@@ -431,6 +388,19 @@ article {
     text-align: center;
     width:   11.250em;
     padding: 0.375em 0.125em;
+  }
+
+  main nav {
+    border-radius: 0.1875em;                              /* Matches vertical padding. */
+    border-width:  0;
+    position: relative;                                            /* set for <nav>    */
+    width:   96%;
+    height: auto;
+    padding: 0.1875em 0.250em 0.1875em 0.250em;
+  }
+
+  main nav a {
+    display: none;
   }
 
 }
