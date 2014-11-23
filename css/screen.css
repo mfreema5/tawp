@@ -196,8 +196,8 @@ main nav {
     background-color: rgb(209,192,169);
     border-radius: 0.875em;
     text-align: center;
-    width: 45%;
-    margin:  0.250em 0.375em;
+    width: 33%;
+    margin:  0.250em 6%;
     padding: 0.375em 1.125em;
   }
 
@@ -268,9 +268,9 @@ main nav {
   main {
     background-color: rgb(209,192,169);
     max-width: 37.5em;
-    margin:  0 auto;  /* 0 0 0 2%; */
+    margin:  0 auto;
     border:  0;
-    padding: 0 0 0.250em 0;
+    padding: 0 0 1em 0;                               /* Pad bottom to clear <nav>. */
   }
 
   article {
