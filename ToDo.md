@@ -2,7 +2,7 @@
 
 ##Secondary &lt;nav&gt; for contents
 
-Add another &lt;nav&gt; element that has the over-all contents (like in index.html:article#contents), to appear at high screen-widths, underneath the main &lt;nav&gt; box.  Should be able to recycle a lot of the styling from the main &lt;nav&gt;.
+It might be a good idea to add another &lt;nav&gt; element that has the over-all contents (like in `index.html:article#contents`), to appear at high screen-widths, underneath the main &lt;nav&gt; box.  Should be able to recycle a lot of the styling from the main &lt;nav&gt;.
 
 ##Better font stack
 
@@ -10,7 +10,7 @@ The fonts are just horrible.  I prefer *sans-serif* fonts for most things.  I'd 
 
 ##“Top” button in inter-article &lt;nav&gt;
 
-In practical-impact.thesis.html there are &lt;nav&gt; elements that appear at smaller screen-widths.  Currently there's “index” and “refs”; I'm thinking it might be worthwhile to add a “top” between them, to go back to the top of the page.  The tricky bit is making sure they never wrap onto to lines at silly-narrow screen widths.
+In `practical-impact.thesis.html` there are &lt;nav&gt; elements that appear at smaller screen-widths.  Currently there's “index” and “refs”; I'm thinking it might be worthwhile to add a “top” between them, to go back to the top of the page.  The tricky bit is making sure they never wrap onto to lines at silly-narrow screen widths.
 
 ##Footer
 
