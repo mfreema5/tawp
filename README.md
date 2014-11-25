@@ -6,5 +6,5 @@ This will be both:
 * Submitted as Project 4 for COM 530 - “Standards-based Web Design”
   * For more details on how these web pages integrate into COM 530, see: [Alternative project 4](https://github.com/mfreema5/COM530-notes/blob/master/alternate-proj4-intent.md).
 
-
+A recent version of ‘tawp’ can be seen live at: [www.freeman.blue](http://www.freeman.blue).
 
