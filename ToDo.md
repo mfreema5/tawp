@@ -10,7 +10,7 @@ The fonts are just horrible.  I prefer *sans-serif* fonts for most things.  I'd 
 
 ##“Top” button in inter-article &lt;nav&gt;
 
-In `practical-impact.thesis.html` there are &lt;nav&gt; elements that appear at smaller screen-widths.  Currently there's “index” and “refs”; I'm thinking it might be worthwhile to add a “top” between them, to go back to the top of the page.  The tricky bit is making sure they never wrap onto to lines at silly-narrow screen widths.
+In `practical-impact.thesis.html` there are &lt;nav&gt; elements that appear at smaller screen-widths.  Currently there's “index” and “refs”; I'm thinking it might be worthwhile to add a “top” between them, to go back to the top of the page.  The tricky bit is making sure they never wrap onto two lines at silly-narrow screen widths.
 
 ##Footer
 
