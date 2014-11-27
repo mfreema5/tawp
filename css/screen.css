@@ -177,15 +177,15 @@ main nav {
 
   /*nav { display: none}*/
 
-  #global {                                 /* see css/notes-on-breakpoints.txt for sizing */
+  nav {                                 /* see css/notes-on-breakpoints.txt for sizing */
     display: block;
     text-align: center;                           /* Centers inline-block <div>s, too! */
     border-color:  rgb(209,192,169);
     border-width: 0.250em 0.750em 0 0.750em;
     border-style: solid;
     border-radius: 0 0 0.250em 0.250em;                /* syntax -> border-radius:     */
-    position: fixed; 
-    bottom: 0em; 
+    position: fixed;
+    bottom: 0em;
     left: 0em;       /* top   top    bottom  bottom  */
     right: 0em;
     width: 98%;                                 /* left, right, right , left  ; */
@@ -194,7 +194,7 @@ main nav {
     padding: 0.125em 0.375em;
   }
 
-  #global div {
+  nav div {
     display: inline-block;
     font-size:  81.25%;
     background-color: rgb(209,192,169);
@@ -205,11 +205,11 @@ main nav {
     padding: 0.375em 0.125em;
   }
 
-  #global a {
+  nav a {
     color: rgb( 83,121,105);                                          /* greenly - 2-4 */
   }
 
-  #global a:hover {
+  nav a:hover {
     text-decoration: none;
     color: rgb(122,122,146);                               /* switches to purply - 1-3 */
     text-shadow: rgb(156,156,171)  0  0 28px;                    /* and glows a little */
@@ -337,7 +337,7 @@ main nav {
     padding: 1.125em 1.500em 1.125em 1.500em;
   }
 
-  nav#global {
+  nav {
     width: 96%;
   }
 }
@@ -351,7 +351,7 @@ main nav {
     margin:  0 0 0 3.125em;
   }
 
-  nav#global {
+  nav {
     left: 3.875em;
     width: 37.500em;
     margin: 0;
@@ -387,7 +387,7 @@ main nav {
     padding: 2% 1px;
   }
 
-  nav#global {
+  nav {
     border-radius: 0.9375em;
     border-width: 0.325em;
     position: fixed; top: 3em; left: 44.5em;
@@ -396,7 +396,7 @@ main nav {
     padding: 0.1875em;
   }
 
-  nav#global div {
+  nav div {
     font-size:  100%;
     text-align: center;
     width:   11.250em;
