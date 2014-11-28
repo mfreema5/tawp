@@ -217,6 +217,7 @@ main nav {
 
   main nav {
     display: block;
+    position: relative;
     min-width: 12em;                                              /* matches <article> */
     text-align: center;                           /* Centers inline-block <div>s, too! */
     border-color:  rgb(209,192,169);
