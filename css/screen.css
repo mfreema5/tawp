@@ -36,7 +36,7 @@ section, .lightbox, {                             /* Class "lightbox" is a way t
 }
 
 .subcontainer {
-  background-color: inherit;
+  /*background-color: inherit;*/     /*just to make it shorter to read --Bing*/
   border-radius: 0.125em;
 }
 
@@ -82,7 +82,7 @@ h4 {
   line-height:   1.250em;
 }
 
-h5,h6,b,strong { font-weight: bold; }
+/*h5,h6,b,strong { font-weight: bold; } */  /*just to make it shorter to read* --Bing*/
 
 i,em { font-style: italic; }
 
@@ -94,7 +94,7 @@ p {
 }
 
 .lorem {                                                    /* Fade place-holder text. */
-  color: rgb(209,192,169);
+  color: rgb(158,113,113);   /*confused about the color, made it more readable* --Bing*/
 }
 
 ul {
@@ -181,7 +181,7 @@ main nav {
     display: block;
     text-align: center;                           /* Centers inline-block <div>s, too! */
     border-color:  rgb(209,192,169);
-    border-width: 0.250em 0.750em 0 0.750em;
+    border-width: 0.250em 0.750em 0.250em 0.750em;  /*Change slightly to make the effect better --Bing */
     border-style: solid;
     border-radius: 0 0 0.250em 0.250em;                /* syntax -> border-radius:     */
     position: fixed;
@@ -194,13 +194,14 @@ main nav {
     padding: 0.125em 0.375em;
   }
 
+/*The "nav div" below I changed the display format to make it more readable --Bing*/
   nav div {
-    display: inline-block;
-    font-size:  81.25%;
+    display: block;
+    font-size:  100%;
     background-color: rgb(209,192,169);
     border-radius: 0.9375em;
     text-align: center;
-    width: 31.5%;
+    width: 96%;
     margin:  0.250em 0.125em;
     padding: 0.375em 0.125em;
   }
@@ -250,7 +251,7 @@ main nav {
 
                                                /* Switch from ‘em’ to ‘%’ to allow     */
                                                /* dynamic/responsive sizing of spaces. */
-@media all and ( min-width: 12.5em ) {         /*    see: css/notes-on-breakpoints.txt */
+@media all and ( min-width: 18.5em ) { /*I changed the scale to make the nav more clearly displayed in both screen scales --Bing*/       /*    see: css/notes-on-breakpoints.txt */
                                                                    /*  1 % <- 0.125 em */
   body {                                                           /*  2 % <- 0.250 em */
     border-width: 2vw;                                             /*  3 % <- 0.375 em */
@@ -279,6 +280,13 @@ main nav {
   blockquote {
     margin:  3% 13% 3% 13%
     padding: 3% 4% 3% 4%;
+  }
+
+/*The "nav div" below is what I added to make the bottom nav differently displayed from the above --Bing*/
+  nav div {
+    display: inline-block;
+    font-size:  81.75%;
+    width: 28.25%;
   }
 
   main nav {
