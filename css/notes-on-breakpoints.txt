@@ -67,6 +67,16 @@ AND, there's a 0.250em space between <divs>, due to whitespace in the source htm
 11.50 - 0.250 = 11.250em -> width of “button”
 
 
++-----------------+ Post-renovations by Xi +-----------------+
+
+2% of 96% = 1.92%
+
+2 * 1.92% = 3.84%
+
+4% + 3.84% = 7.84%
+
+100% - 7.84% = 92.16%
+
 
 
 

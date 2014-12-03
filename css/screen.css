@@ -1,23 +1,34 @@
-                                                /*****  screen.css: Screen Styles  *****/
-html { box-sizing: border-box; background-color: rgb(177,153,121); }
-*, *:before, *:after { box-sizing: inherit; }
+/*****  screen.css: Screen Styles  *****/
 
-/***************************************************************************************/
-/* Typography, color, etc.          Basic element hierarchy:                           */
-/* Layout is farther down.          <header>                                           */
-/*                                  <body>                                             */
-/*                                    <main> <h1>                                      */
-/*                                      <article> <h2>                                 */
-/*                                        <div.lightbox>                               */
-/*                                        <section> <h3>                               */
-/*                                          <div.subcontainer>                         */
-/*                                          <blockquote>                               */
-/*                                    <nav>                                            */
-/*                                    <footer>                                         */
-/***************************************************************************************/
+html {
+  box-sizing: border-box;
+  background-color: rgb(177,153,121);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Typography, color, etc. */
+/* Layout is farther down. */
+
+/********************************/
+/*  Basic element hierarchy:    */
+/*  <header>                    */
+/*  <body>                      */
+/*    <main> <h1>               */
+/*      <article> <h2>          */
+/*        <div.lightbox>        */
+/*        <section> <h3>        */
+/*          <div.subcontainer>  */
+/*          <blockquote>        */
+/*    <nav>                     */
+/*    <footer>                  */
+/********************************/
 
 body {
-    font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "DejaVu Sans Condensed", sans-serif;
+    font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans",
+                 "DejaVu Sans Condensed", sans-serif;
 }
 
 main {
@@ -30,9 +41,12 @@ article, nav {
   border-radius: 0.250em;
 }
 
-section, .lightbox, {                             /* Class "lightbox" is a way to give */
-  background-color: rgb(255,251,245);             /* article text a light background,  */
-  border-radius: 0.125em;                         /* to improve readability.           */
+section, .lightbox, {
+  background-color: rgb(255,251,245);
+  border-radius: 0.125em;
+  /* Class "lightbox" is a way to give */
+  /* article text a light background,  */
+  /* to improve readability.           */
 }
 
 .subcontainer {
@@ -53,7 +67,7 @@ h1 {
                "Liberation Sans", "Nimbus Sans L", sans-serif;
   font-weight:   bold;
   font-size:     1.375em;
-  line-height:   1.500em;                                            /* font + 0.125em */
+  line-height:   1.500em;  /* font + 0.125em */
   margin-bottom: 0.250em;
   margin-left:   0.125em;
 }
@@ -87,14 +101,16 @@ h5,h6,b,strong { font-weight: bold; }
 i,em { font-style: italic; }
 
 p {
-  font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "DejaVu Sans Condensed", sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans",
+               "DejaVu Sans Condensed", sans-serif;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 400;
 }
 
-.lorem {                                                    /* Fade place-holder text. */
+.lorem {
   color: rgb(209,192,169);
+  /* Fades place-holder text. */
 }
 
 ul {
@@ -118,7 +134,8 @@ a:hover { text-decoration: underline; }
 .nocolor { color: inherit; }
 
 nav a {
-  font-family: Frutiger, Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
+  font-family: Frutiger, Trebuchet, Helvetica, "DejaVu Sans Condensed",
+               "Liberation Sans", "Nimbus Sans L", sans-serif;
   font-weight: 500;
 }
 
@@ -127,20 +144,91 @@ main nav {
   }
 
 
-/*[Begin layout]***************************************************[ screen < 12.5 em ]*/
+/* Layout *************************************/
+/* “CSS doesn't define where to place things; */
+/* it defines HOW to place them.              */
+/* Like the Tao, it does nothing,             */
+/* but through it, all things get done.” - me */
 
-                                                      /* Using ‘em’ instead of ‘%’ to  */
-@media all and ( min-width: 0 ) {                     /* enforce minimums for spacings */
+/*[ Default; no media query ]*********************/
+/* Targets a [12.5 em < screen < 37.5 em] screen */
+
+p {
+  margin:  0.250em 0.125em 0.500em 0.250em;
+  padding: 0.250em 0 0.250em 0;
+  /* padding instead margin -> no collapse */
+}
+
+.ref p {
+  margin: 0.375em 0.125em 0.500em 1.375em;
+  /* increase left by 1 em     */
+  text-indent: -1em;
+  /* for hacky hanging indents */
+}
+
+nav {
+  /* see css/notes-on-breakpoints.txt for sizing */
+  display: block;
+  text-align: center;  /* Centers an inline-block <div>, too! */
+  border-color:  rgb(209,192,169);
+  border-width: 0.250em 0 0 0;
+  border-style: solid;
+  border-radius: 0 0 0.250em 0.250em;
+
+    /* syntax for border-radius:     */
+    /* top left, top right, bottom right, bottom left; */
+    /* (a.k.a., start top-left, go around clockwise)   */
+  position: fixed;
+  bottom: 0em;
+  left:   0em;
+  right:  0em;
+  width:  92.16%;
+  /* 100% - ((2 * 2%) + (2 * (2% * 96%))) = 100% - (4% + 3.84%) */
+  max-width: 37.5em;
+  margin:  0 auto;
+  padding: 0.125em 0.375em;
+}
+
+nav div {
+  display: inline-block;
+  font-size:  81.25%;
+  background-color: rgb(209,192,169);
+  border-radius: 0.9375em;
+  text-align: center;
+  width: 31.5%;
+  margin:  0.250em 0.125em;
+  padding: 0.375em 0.125em;
+}
+
+nav a {
+  color: rgb( 83,121,105);  /* greenly - 2-4 */
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: rgb(122,122,146);         /* switches to purply - 1-3 */
+  text-shadow: rgb(156,156,171)  0  0 28px;  /* glows a little */
+}
+
+/*********************************************[ screen < 12.5 em ]*/
+/* This is a weirdly small size of viewport, thus not the default */
+/* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
+
+@media all and ( min-width: 0 ) {
 
   body {
     background-color: rgb(209,192,169);
+    padding: 0.250em;
+/*
     border-width: 0.250em;
     border-style: solid;
     border-color: rgb(209,192,169);
+*/
   }
 
-  article {                                      /* Force horizontal scrollbar when    */
-    min-width: 12em;                             /*      (em-px):(vw-px) ratio is high */
+  article {
+    /* Force horizontal scroll when (em-px):(vw-px) ratio is high */
+    min-width: 12em;
     margin:  0.250em;
     padding: 0 0.250em 0.375em 0.250em;
   }
@@ -165,64 +253,16 @@ main nav {
     padding: 0.375em 0.500em 0.375em 0.500em;
   }
 
-  p {
-    margin:  0.250em 0.125em 0.500em 0.250em;
-    padding: 0.250em 0 0.250em 0;             /* padding instead margin -> no collapse */
-  }
-
-  .ref p {
-    margin: 0.375em 0.125em 0.500em 1.375em;              /* increase left by 1 em     */
-    text-indent: -1em;                                    /* for hacky hanging indents */
-  }
-
-  /*nav { display: none}*/
-
-  nav {                                 /* see css/notes-on-breakpoints.txt for sizing */
-    display: block;
-    text-align: center;                           /* Centers inline-block <div>s, too! */
-    border-color:  rgb(209,192,169);
-    border-width: 0.250em 0.750em 0 0.750em;
-    border-style: solid;
-    border-radius: 0 0 0.250em 0.250em;                /* syntax -> border-radius:     */
-    position: fixed;
-    bottom: 0em;
-    left: 0em;       /* top   top    bottom  bottom  */
-    right: 0em;
-    width: 98%;                                 /* left, right, right , left  ; */
-    max-width: 37.5em;
-    margin:  0 auto;
-    padding: 0.125em 0.375em;
-  }
-
-  nav div {
-    display: inline-block;
-    font-size:  81.25%;
-    background-color: rgb(209,192,169);
-    border-radius: 0.9375em;
-    text-align: center;
-    width: 31.5%;
-    margin:  0.250em 0.125em;
-    padding: 0.375em 0.125em;
-  }
-
-  nav a {
-    color: rgb( 83,121,105);                                          /* greenly - 2-4 */
-  }
-
-  nav a:hover {
-    text-decoration: none;
-    color: rgb(122,122,146);                               /* switches to purply - 1-3 */
-    text-shadow: rgb(156,156,171)  0  0 28px;                    /* and glows a little */
-  }
+  nav { display: none;}  /* Display too small/weird for fixed <nav> */
 
   main nav {
-    display: block;
+    display:  block;
     position: relative;
-    min-width: 12em;                                              /* matches <article> */
-    text-align: center;                           /* Centers inline-block <div>s, too! */
+    min-width:  12em;    /* matches <article> */
+    text-align: center;  /* Centers an inline-block <div>, too! */
     border-color:  rgb(209,192,169);
-    border-width: 0;
-    border-style: solid;
+    border-width:  0;
+    border-style:  solid;
     border-radius: 0.250em;
     width:   100%;
     margin:  0.250em;
@@ -246,19 +286,27 @@ main nav {
 
 }
 
-/********************************************************[ 12.5 em < screen < 37.5 em ]*/
+/******************************************[ 12.5 em < screen < 37.5 em ]*/
+/* Switch from ‘em’ to ‘%’ to allow dynamic/responsive sizing of spaces. */
 
-                                               /* Switch from ‘em’ to ‘%’ to allow     */
-                                               /* dynamic/responsive sizing of spaces. */
-@media all and ( min-width: 12.5em ) {         /*    see: css/notes-on-breakpoints.txt */
-                                                                   /*  1 % <- 0.125 em */
-  body {                                                           /*  2 % <- 0.250 em */
-    border-width: 2vw;                                             /*  3 % <- 0.375 em */
-  }                                                                /*  4 % <- 0.500 em */
-                                                                   /*  5 % <- 0.625 em */
-  article {                                                        /*  6 % <- 0.750 em */
-    margin:  0.250em 2% 0.250em 2%;                                /*  7 % <- 0.875 em */
-    padding: 0 2% 3% 2%;                                           /*  8 % <- 1.000 em */
+@media all and ( min-width: 12.5em ) {
+  /*  see: css/notes-on-breakpoints.txt */
+                    /*  1 % <- 0.125 em */
+                    /*  2 % <- 0.250 em */
+                    /*  3 % <- 0.375 em */
+                    /*  4 % <- 0.500 em */
+                    /*  5 % <- 0.625 em */
+                    /*  6 % <- 0.750 em */
+                    /*  7 % <- 0.875 em */
+                    /*  8 % <- 1.000 em */
+
+  body {
+    padding: 2%;
+  }
+
+  article {
+    margin:  0.250em 2% 0.250em 2%;
+    padding: 0 2% 3% 2%;
   }
 
   div.lightbox {
@@ -281,6 +329,10 @@ main nav {
     padding: 3% 4% 3% 4%;
   }
 
+  nav {
+    display: block;
+  }
+
   main nav {
     width:   96%;
     margin:  2%;
@@ -289,20 +341,27 @@ main nav {
 
 }
 
-/*******************************************************[ 37.5 em < screen < 45.25 em ]*/
+/*************************************************[ 37.5 em < screen < 45.25 em ]*/
+/* Limit width of <article>, to limit the length of lines of text.               */
+/* 37.5 display-em -> 56.25 print-em (a better estimate of number of characters) */
 
-                                      /* Limit width of <article>, to limit the length */
-                                      /* of lines of text.                             */
-
-@media all and ( min-width: 37.5em ) {         /*    see: css/notes-on-breakpoints.txt */
-                                                                   /*  1 % -> 0.375 em */
-  body {                                                           /*  2 % -> 0.750 em */
-    background-color: rgb(177,153,121);                            /*  3 % -> 1.125 em */
-    border-width: 0 0.750em;                                       /*  4 % -> 1.500 em */
-    border-style: solid;                                           /*  5 % -> 1.875 em */
-    border-color: rgb(177,153,121);                                /*  6 % -> 2.250 em */
-    padding: 2% 0;                                                 /*  7 % -> 2.625 em */
-  }                                                                /*  8 % -> 3.000 em */
+@media all and ( min-width: 37.5em ) {
+  /*  see: css/notes-on-breakpoints.txt */
+                    /*  1 % -> 0.375 em */
+                    /*  2 % -> 0.750 em */
+                    /*  3 % -> 1.125 em */
+                    /*  4 % -> 1.500 em */
+                    /*  5 % -> 1.875 em */
+                    /*  6 % -> 2.250 em */
+                    /*  7 % -> 2.625 em */
+                    /*  8 % -> 3.000 em */
+  body {
+    background-color: rgb(177,153,121);
+    border-width: 0 0.750em;
+    border-style: solid;
+    border-color: rgb(177,153,121);
+    padding: 2% 0;
+  }
 
   main {
     background-color: rgb(209,192,169);
@@ -340,6 +399,10 @@ main nav {
 
   nav {
     width: 96%;
+    border-width: 0.250em 0.750em 0 0.750em;
+    /* left & right borders match <article> margin */
+    border-style: solid;
+    border-radius: 0 0 0.250em 0.250em;
   }
 }
 
@@ -358,19 +421,21 @@ main nav {
     margin: 0;
   }
 
-  main nav {                           /* Becomes an empty divider between <articles>. */
+  main nav {
+    /* Collapses to become an empty divider between <articles>. */
     background-color: rgb(177,153,121);
-    display: inline-block;                                         /* Clear attributes */
-    position: relative;                                            /* set for <nav>    */
     top: 0;
     left: 0;
     border-width:  0;
     border-style:  solid;
-    border-radius: 0.1875em;                              /* Matches vertical padding. */
+    border-radius: 0.1875em; /* Matches vertical padding. */
     width:   96%;
     height: auto;
     margin:  0 2% 0.125em 2%;
     padding: 0.1875em 0.250em 0.1875em 0.250em;
+    /* Clear attributes set for <nav>    */
+    display: inline-block;
+    position: relative;
   }
 
   main nav a {
