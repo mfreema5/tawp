@@ -41,7 +41,7 @@ article, nav {
   border-radius: 0.250em;
 }
 
-section, .lightbox, {
+section, .lightbox {
   background-color: rgb(255,251,245);
   border-radius: 0.125em;
   /* Class "lightbox" is a way to give */
