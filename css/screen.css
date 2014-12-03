@@ -217,18 +217,15 @@ nav a:hover {
 @media all and ( min-width: 0 ) {
 
   body {
+    min-width: 12.5em; /* matches breakpoint */
     background-color: rgb(209,192,169);
     padding: 0.250em;
-/*
-    border-width: 0.250em;
-    border-style: solid;
-    border-color: rgb(209,192,169);
-*/
   }
 
   article {
     /* Force horizontal scroll when (em-px):(vw-px) ratio is high */
-    min-width: 12em;
+    min-width: 11.5em;
+    /* 12em - 0.5em for margins (border-box sizing) */
     margin:  0.250em;
     padding: 0 0.250em 0.375em 0.250em;
   }
