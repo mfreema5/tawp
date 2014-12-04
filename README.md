@@ -8,3 +8,6 @@ This will be both:
 
 A recent version of ‘tawp’ can be seen live at: [www.freeman.blue](http://www.freeman.blue).
 
+##Changed to using [haml] and [less]
+
+I've created `.haml` files for the `.html` files, and `.less` files for the `.css`.  So, if you make pull requests with changes directly to the `.html` or `.css` files, I won't be able to auto-merge them.  Not that I'll ignore them.  I'll take recommedations for improvements in any form you want to give them.  But changes to the files in `~/src` would be favourite.
