@@ -47,7 +47,7 @@ section,
   background-color: inherit;
   border-radius: 0.125em;
 }
-blockquote p {
+blockquote {
   font-family: Cambria, Georgia, "Liberation Serif", serif;
   font-style: normal;
   font-variant: normal;
@@ -252,8 +252,7 @@ th + th {
     padding: 0.375em 0.250em 0.125em 0.250em;
   }
   blockquote {
-    margin: 0.375em 1.625em 0.375em 1.625em;
-    padding: 0.375em 0.500em 0.375em 0.500em;
+    margin: 0.375em 0.875em 0.375em 0.875em;
   }
   nav {
     display: none;
@@ -320,8 +319,7 @@ th + th {
     padding: 3% 2% 1% 2%;
   }
   blockquote {
-    margin: 3% 13% 3% 13%
-    padding: 3% 4% 3% 4%;
+    margin: 3% 5% 3% 5%;
   }
   nav {
     display: block;
@@ -379,8 +377,7 @@ th + th {
     padding: 1.125em 0.750em 0.375em 0.750em;
   }
   blockquote {
-    margin: 1.125em 4.875em 1.125em 4.875em
-    padding: 1.125em 1.500em 1.125em 1.500em;
+    margin: 1.125em 1.625em 1.125em 1.625em;
   }
   nav {
     width: 96%;
