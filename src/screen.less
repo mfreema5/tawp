@@ -102,7 +102,7 @@ h5,h6,b,strong { font-weight: bold; }
 
 i,em { font-style: italic; }
 
-p {
+p, th, td {
   font-family: @default-font-stack;
 	font-style: normal;
 	font-variant: normal;
@@ -212,33 +212,40 @@ nav a:hover {
 
 /* table */
 table {
-  width: 100%;
-  border-collapse:collapse;
-  color: #606060;
-  border: 1px solid #9c9cab;
+  width: 96.25%;
+  border-collapse: collapse;
+  margin: 0.750em 0 1em 1.825%;
 }
 
-/* thead section, coulmns header style */
-table thead tr th {
+/* t-head section, columns header style */
+thead th {
   padding: 0.4em;
-  border: 1px solid #9c9cab;
-  background-color: #d1c0a9;
+  font-size: 1em;
+  color: @greenly-1;
+  background-color: @greenly-5;
+  border: 1px solid @purply-5;
 }
 
-/* tbody section, td style */
-table tbody tr td {
-  vertical-align:middle;
-  text-align:center;
-  border: 1px solid #9c9cab;
-  padding: 0.6em;
-  font-size:0.8em;
+/* t-body section, td style */
+tbody td {
+  vertical-align: middle;
+  text-align: left;
+  font-size: 0.9325em;
+  background-color: @greenly-1;
+  border: 1px solid @purply-5;
+  color: @greenly-5;
+  padding:   0.6em;
 }
 
-/* tbody section, odd rows style */  /* or not*/
-table tbody tr:nth-child(odd) {
-  /*background-color: #f3e2cb;*/
+/* tbody section, odd rows style */
+tbody tr:nth-child(odd) td {
+  background-color: @greenly-2;
 }
 
+/* first column left, the rest are centered */
+td + td, th + th {
+  text-align: center;
+}
 
 /*********************************************[ screen < 12.5 em ]*/
 /* This is a weirdly small size of viewport, thus not the default */

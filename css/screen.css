@@ -91,7 +91,9 @@ i,
 em {
   font-style: italic;
 }
-p {
+p,
+th,
+td {
   font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "DejaVu Sans Condensed", sans-serif;
   font-style: normal;
   font-variant: normal;
@@ -189,29 +191,36 @@ nav a:hover {
 }
 /* table */
 table {
-  width: 100%;
+  width: 96.25%;
   border-collapse: collapse;
-  color: #606060;
-  border: 1px solid #9c9cab;
+  margin: 0.750em 0 1em 1.825%;
 }
-/* thead section, coulmns header style */
-table thead tr th {
+/* t-head section, columns header style */
+thead th {
   padding: 0.4em;
-  border: 1px solid #9c9cab;
-  background-color: #d1c0a9;
+  font-size: 1em;
+  color: #f1f2f1;
+  background-color: #537969;
+  border: 1px solid #5b5b7c;
 }
-/* tbody section, td style */
-table tbody tr td {
+/* t-body section, td style */
+tbody td {
   vertical-align: middle;
-  text-align: center;
-  border: 1px solid #9c9cab;
+  text-align: left;
+  font-size: 0.9325em;
+  background-color: #f1f2f1;
+  border: 1px solid #5b5b7c;
+  color: #537969;
   padding: 0.6em;
-  font-size: 0.8em;
 }
 /* tbody section, odd rows style */
-/* or not*/
-table tbody tr:nth-child(odd) {
-  /*background-color: #f3e2cb;*/
+tbody tr:nth-child(odd) td {
+  background-color: #c3cac7;
+}
+/* first column left, the rest are centered */
+td + td,
+th + th {
+  text-align: center;
 }
 /*********************************************[ screen < 12.5 em ]*/
 /* This is a weirdly small size of viewport, thus not the default */
