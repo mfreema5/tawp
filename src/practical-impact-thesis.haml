@@ -124,13 +124,30 @@
             Another extremely simplified example: if there were five citations to articles published in &ldquo;Journal A&rdquo; in the same year that &ldquo;Journal A&rdquo; published a total of 20 articles, the citation ratio would be &ldquo;5:20&rdquo;, or &ldquo;0.25&rdquo;.
           %p
             We can extend our example to include comparing journals.
+          %table
+            %thead
+              %tr
+                %th Journal
+                %th Citation count
+                %th Cite-able pieces
+                %th Ratio
+            %tbody
+              %tr
+                %td Journal A
+                %td 5
+                %td 20
+                %td 0.25
+              %tr
+                %td Journal B
+                %td 10
+                %td 20
+                %td 0.50
+              %tr
+                %td Journal C
+                %td 4
+                %td 10
+                %td 0.40
           :markdown
-            |  Journal  | Citation count | Cite-able pieces |  Ratio  |
-            |-----------|----------------|------------------|---------|
-            | Journal A |  5             |  20              |  0.25   |
-            | Journal B |  10            |  20              |  0.50   |
-            | Journal C |  4             |  10              |  0.40   |
-
             * Leading periodicals in Field
               * Journal B &ndash; 0.50
               * Journal C &ndash; 0.40
