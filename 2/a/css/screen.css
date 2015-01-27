@@ -1,4 +1,11 @@
 /*****  screen.css: Screen Styles  *****/
+
+/** Toggle-text: off *****/
+.t-text { display: inline }
+.t-button { display: none }
+/*************************/
+
+
 html {
   box-sizing: border-box;
   background-color: #b19979;
