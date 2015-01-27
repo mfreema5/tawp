@@ -25,21 +25,12 @@
           Intended for practitioners
         </p></a>
 
-<span id="LN1">text 1 to toggle</span><button class="toggler" id="bLN" onclick="toggleSpan('LN1');"><span id="LN2"> + </span></button>
-
-<span id="LN3">text 3 to toggle</span><button class="toggler" id="bLN" onclick="toggleSpan('LN3');"><span id="LN4"> + </span></button>
+<span id="LN1">text 1 to toggle</span><span id="LN2">&nbsp;<button class="toggler" id="bLN" onclick="toggleSpan('LN1');"> ± </button>&nbsp;</span>
 
 <script>
   function toggleSpan (targetId) {
     var targetSpan = document.getElementById(targetId);
-    var d_value = ( targetSpan.style.display == 'none' ? 'inline' : 'none' );
-    css('#' + targetId, 'display', d_value);
-  };
-  function css(selector, property, value) {
-    for (var i=0; i < document.styleSheets.length; i++) {
-      try { document.styleSheets[i].insertRule(selector+ ' {'+property+':'+value+'}', document.styleSheets[i].cssRules.length);
-      } catch(err) {try { document.styleSheets[i].addRule(selector, property+':'+value);} catch(err) {}}
-    };
+    targetSpan.style.display = ( targetSpan.style.display == 'inline' ? 'none' : 'inline' );
   };
 </script>
 
