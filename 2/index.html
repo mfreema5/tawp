@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Choose your view</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="css/reset.css" media="screen,print" rel="stylesheet">
+    <link href="css/screen.css" rel="stylesheet">
+    <link href="css/gfx/favicon.ico" rel="icon" type="image/x-icon">
+    <script src="css/modernizr.custom.99475.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>
+        Practical impact &ndash; a thesis
+      </h1>
+      <article>
+        <h2>
+          Two ways to present the same content
+        </h2>
+        <a href="a/index.html"><p>
+          Intended for academic researchers
+        </p></a>
+        <a href="p/index.html"><p>
+          Intended for practitioners
+        </p></a>
+
+<p>
+  Some text to test. <button type="button" data-target1="bs1" data-target2="bs2" class="goDo"><span id="bs1" style="display: inline;">text1</span><span id="bs2" style="display: none;">text2</span></button>
+</p>
+<script>
+  function toggleElementDisplay (targetId) {
+    var targetBlock = document.getElementById(targetId);
+    targetBlock.style.display = ( targetBlock.style.display == 'none' ? 'inline' : 'none' );
+  };
+  var buttons = document.getElementsByClassName('goDo');
+  for(var i = 0; i < buttons.length; i++) {
+    var b_target1 = buttons[i].dataset.target1;
+    var b_target2 = buttons[i].dataset.target2;
+    buttons[i].addEventListener('click', function () {
+      toggleElementDisplay(b_target1);
+      toggleElementDisplay(b_target2);
+    });
+  };
+</script>
+
+      </article>
+    </main>
+    <!-- <nav></nav> -->
+    <footer></footer>
+  </body>
+</html>
