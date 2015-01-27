@@ -3,6 +3,9 @@
 /*  page. Lots of unused cruft. Meh.   */
 /***************************************/
 
+#LN1 { display: none; }
+#LN3 { display: inline; }
+
 html {
   box-sizing: border-box;
   background-color: #b19979;

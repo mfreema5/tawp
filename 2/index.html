@@ -25,20 +25,21 @@
           Intended for practitioners
         </p></a>
 
-<p>
-  Some text to test. <a class="spanners" id="bs12" href="#" onclick="toggleSpans('bs1','bs2');"><span id="bs1" style="display: inline;">text1</span><span id="bs2" style="display: none;">text2</span></a>
-</p>
-<p>
-  Some more text to test. <a class="spanners" id="bs34" href="#" onclick="toggleSpans('bs3','bs4');"><span id="bs3" style="display: inline;">text3</span><span id="bs4" style="display: none;">text4</span></a>
-</p>
+<span id="LN1">text 1 to toggle</span><button class="toggler" id="bLN" onclick="toggleSpan('LN1');"><span id="LN2"> + </span></button>
 
+<span id="LN3">text 3 to toggle</span><button class="toggler" id="bLN" onclick="toggleSpan('LN3');"><span id="LN4"> + </span></button>
 
 <script>
-  function toggleSpans (spanFirst, spanSecond) {
-    var targetSpan1 = document.getElementById(spanFirst);
-    var targetSpan2 = document.getElementById(spanSecond);
-    targetSpan1.style.display = ( targetSpan1.style.display == 'none' ? 'inline' : 'none' );
-    targetSpan2.style.display = ( targetSpan2.style.display == 'none' ? 'inline' : 'none' );
+  function toggleSpan (targetId) {
+    var targetSpan = document.getElementById(targetId);
+    var d_value = ( targetSpan.style.display == 'none' ? 'inline' : 'none' );
+    css('#' + targetId, 'display', d_value);
+  };
+  function css(selector, property, value) {
+    for (var i=0; i < document.styleSheets.length; i++) {
+      try { document.styleSheets[i].insertRule(selector+ ' {'+property+':'+value+'}', document.styleSheets[i].cssRules.length);
+      } catch(err) {try { document.styleSheets[i].addRule(selector, property+':'+value);} catch(err) {}}
+    };
   };
 </script>
 
