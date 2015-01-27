@@ -1,9 +1,36 @@
 /*****  screen.css: Screen Styles  *****/
 
-/** Toggle-text: on ********/
-.t-text   { display: none   }
-.t-button { display: inline }
+/** Toggle-text: on **********/
+.t-text     { display: none   }
+.audience-p { display: inline }
+/*****************************/
+
+/** Sidebar "gloss" ********/
+aside.audience-p {
+  display: inline-block;
+  float: right;
+  margin: 0 -27.5em 0 0;
+  padding: 0.375em;
+  width: 22.5em;
+  background-color: #f5eadb;   /* or #fcf3e8; ? */
+  border-color:  #d1c0a9;
+  border-width:  0.750em;
+  border-radius: 0.875em;
+  border-style:  solid;
+  color: rgb(116,143,132);
+  font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "DejaVu Sans Condensed", sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 1.125em;
+  }
+
+ .ref .audience-p {
+  display: block;
+  }
 /***************************/
+
 
 html {
   box-sizing: border-box;
@@ -232,6 +259,9 @@ th + th {
 /* This is a weirdly small size of viewport, thus not the default */
 /* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
 @media all and (min-width: 0) {
+
+  aside.audience-p { display: none; }
+
   body {
     min-width: 12.5em;
     /* matches breakpoint */
@@ -305,6 +335,9 @@ th + th {
   /*  6 % <- 0.750 em */
   /*  7 % <- 0.875 em */
   /*  8 % <- 1.000 em */
+
+  aside.audience-p { display: none; }
+
   body {
     padding: 2%;
   }
@@ -350,6 +383,9 @@ th + th {
   /*  6 % -> 2.250 em */
   /*  7 % -> 2.625 em */
   /*  8 % -> 3.000 em */
+
+  aside.audience-p { display: none; }
+
   body {
     background-color: #b19979;
     border-width: 0 0.750em;
@@ -395,6 +431,9 @@ th + th {
 }
 /**********************************[ 45.25 em < screen < 60 em ]*/
 @media all and (min-width: 45.25em) {
+
+  aside.audience-p { display: inline-block; }
+
   main {
     width: 37.5em;
     margin: 0 0 0 3.125em;
@@ -429,35 +468,5 @@ th + th {
 @media all and (min-width: 60em) {
   body {
     padding: 2% 1px;
-  }
-  nav {
-    /* nail it down */
-    border-radius: 0.9375em;
-    border-width: 0.325em;
-    position: fixed;
-    top: 3em;
-    left: 44.5em;
-    width: 12.50em;
-    height: 8.125em;
-    padding: 0.1875em;
-  }
-  nav div {
-    font-size: 100%;
-    text-align: center;
-    width: 11.250em;
-    padding: 0.375em 0.125em;
-  }
-  main nav {
-    border-radius: 0.1875em;
-    /* Matches vertical padding. */
-    border-width: 0;
-    position: relative;
-    /* reset value from <nav> */
-    width: 96%;
-    height: auto;
-    padding: 0.1875em 0.250em 0.1875em 0.250em;
-  }
-  main nav a {
-    display: none;
   }
 }

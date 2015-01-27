@@ -1,9 +1,9 @@
 /*****  screen.css: Screen Styles  *****/
 
-/** Toggle-text: off *****/
-.t-text { display: inline }
-.t-button { display: none }
-/*************************/
+/** Toggle-text: off *********/
+.t-text     { display: inline }
+.audience-p { display: none }
+/*****************************/
 
 
 html {
