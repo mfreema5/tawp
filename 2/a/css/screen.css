@@ -104,6 +104,10 @@ blockquote {
   font-weight: 400;
   background-color: inherit;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
+  font-weight: bold;
+}
 h1 {
   font-family: Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
   font-weight: bold;
@@ -114,20 +118,14 @@ h1 {
   margin-left: 0.125em;
 }
 h2 {
-  font-family: Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
-  font-weight: bold;
   font-size: 1.250em;
   line-height: 1.375em;
 }
 h3 {
-  font-family: Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
-  font-weight: bold;
   font-size: 1.125em;
   line-height: 1.250em;
 }
 h4 {
-  font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "DejaVu Sans Condensed", sans-serif;
-  font-weight: bold;
   font-size: 1.000em;
   line-height: 1.250em;
 }

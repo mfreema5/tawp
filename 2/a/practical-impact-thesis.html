@@ -46,41 +46,49 @@
             Null-hypothesis significance testing (NHST) is a well-established and widespread statistical technique.  It allows a researcher to calculate the probability that variables which appear to be correlated actually are correlated.  When there is a high probability that a correlation is real&mdash;as opposed to the result of random chance&mdash;that correlation is given the rather unfortunately-chosen description of “statistically significant.”
           </p>
           <aside class="audience-p">
-            <h4>
+            <h3>
               Regression and error
+            </h3>
+            <h4>
+              A short review
             </h4>
-            <p>
-              Multiple regression analysis operates on the mean values (the average) of variables.  Typically, the data being used in the analysis is from a sample, and does not represent the entire population.  Therefore, there is an error associated with the mean for each variable in the sample.  This is because the mean of the sample likely differs from mean of the population.
-            </p>
-            <p>
-              The error in the means causes an error in the regression analysis.  If a correlation is at the edge of the ability of an analysis to detect, the error that propagates from the sample means may shift the regression analysis result over that edge-of-detection.  The result might be pushed over the edge in either direction, i.e., from not-correlated to correlated, or from correlated to not-correlated.
-            </p>
-            <p>
-              If the regression analysis result is pushed from not-correlated to correlated, that's a Type I error.
-            </p>
-            <p>
-              If the regression analysis result is pushed from correlated to not-correlated, that's a Type II error.
-            </p>
-            <ul>
-              <li>
-                Correlation exists and is detected: No error.
-              </li>
-              <li>
-                Correlation does not exist and is detected: Type I error.
-              </li>
-              <li>
-                Correlation exists and is not detected: Type II error.
-              </li>
-              <li>
-                Correlation does not exist and is not detected: No error.
-              </li>
-            </ul>
-            <p>
-              Null-hypothesis significance testing finds the probability of a Type I error.  It is dependent on sample size, because the error in the means of the sample is also dependent on sample size.
-            </p>
-            <p>
-              For more background multiple regression analysis and NHST, see the online short course <a href="http://www.unt.edu/rss/class/Jon/ISSS_SC/Module010/isss_m10_1_simpleReg/">&ldquo;Simple (bivariate) Regression&rdquo;</a> <a href="references.html#Starkweather2010">(Starkweather 2010)</a>.
-            </p>
+            <span class="t-text" id="tog55">
+              <p>
+                Multiple regression analysis operates on the mean values (the average) of variables.  Typically, the data being used in the analysis is from a sample, and does not represent the entire population.  Therefore, there is an error associated with the mean for each variable in the sample.  This is because the mean of the sample likely differs from mean of the population.
+              </p>
+              <p>
+                The error in the means causes an error in the regression analysis.  If a correlation is at the edge of the ability of an analysis to detect, the error that propagates from the sample means may shift the regression analysis result over that edge-of-detection.  The result might be pushed over the edge in either direction, i.e., from not-correlated to correlated, or from correlated to not-correlated.
+              </p>
+              <p>
+                If the regression analysis result is pushed from not-correlated to correlated, that's a Type I error.
+              </p>
+              <p>
+                If the regression analysis result is pushed from correlated to not-correlated, that's a Type II error.
+              </p>
+              <ul>
+                <li>
+                  Correlation exists and is detected: No error.
+                </li>
+                <li>
+                  Correlation does not exist and is detected: Type I error.
+                </li>
+                <li>
+                  Correlation exists and is not detected: Type II error.
+                </li>
+                <li>
+                  Correlation does not exist and is not detected: No error.
+                </li>
+              </ul>
+              <p>
+                Null-hypothesis significance testing finds the probability of a Type I error.  It is dependent on sample size, because the error in the means of the sample is also dependent on sample size.
+              </p>
+              <p>
+                For more background multiple regression analysis and NHST, see the online short course <a href="http://www.unt.edu/rss/class/Jon/ISSS_SC/Module010/isss_m10_1_simpleReg/">&ldquo;Simple (bivariate) Regression&rdquo;</a> <a href="references.html#Starkweather2010">(Starkweather 2010)</a>.
+              </p>
+            </span>
+            <span>
+              <button class="toggle" onclick="toggleSpan('tog55');"> ± </button>
+            </span>
           </aside>
           <p>
             It's an unfortunate label because it's easy shortened to “significant”, and mistaken for a judgement on the importance of a empirical results, as opposed to being only a statement about the chances of it being in error.
