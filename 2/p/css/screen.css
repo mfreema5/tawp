@@ -31,6 +31,49 @@ aside.audience-p {
   }
 /***************************/
 
+/** Side Refs ****************/
+aside.side-ref {
+  display: none; /* hidden by default ; toggle to (display: inline-block;) */
+  float: right;
+  margin: -4em -36em 0 0;
+  padding: 0.125em 0.25em;
+  width: 31.75em;
+  background-color: rgb(241,241,242);
+  border-color:  rgb(122,122,146);
+  border-width:  0.750em;
+  border-radius: 0.875em;
+  border-style:  solid;
+}
+
+.side-ref p {
+  color: rgb( 91, 91,124);
+  font-family: Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 1.250em;
+  padding-bottom: 0.125em;
+  margin-bottom: 0;
+}
+
+.side-ref div {
+  width: 100%;
+  text-align: right;
+  margin: -0.125em 0.0625em 0.0625em 0;
+}
+
+.side-ref div a {
+  color: rgb(116,143,132);
+  font-family: Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
+  font-size:  0.750em;
+  line-height: 0.8125em;
+  font-style: italic;
+}
+/*****************************/
+
+
+
 
 html {
   box-sizing: border-box;
