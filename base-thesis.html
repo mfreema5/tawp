@@ -12,7 +12,6 @@
     <main>
       <article id="introduction">
         <h2>Introduction – How can we evaluate the value of research?</h2>
-        <aside class="references"></aside>
       </article>
       <nav class="interarticle"></nav>
       <article id="bibliometrics">
@@ -36,7 +35,6 @@
             <section class="level3">
               <h5 id="and-thus-the-journal-impact-factor">And thus the Journal Impact Factor</h5>
             </section>
-            <aside class="references"></aside>
           </section>
           <nav class="intersection"></nav>
           <section class="level2" id="refinements-on-the-journal-impact-factor">
@@ -45,34 +43,28 @@
           <nav class="intersection"></nav>
           <section class="level2" id="snip">
             <h4><em>SNIP</em> – Source Normalized Indicator of journal impact per Paper</h4>
-            <aside class="references"></aside>
           </section>
           <nav class="intersection"></nav>
-          <section class="level2" id="ajax/10-journal-level-sjr.html">
-            <span class="ajax"><h4 class="ajax">SJR &ndash; SCImago Journal Rank indicator</h4>  <button class="ajax" onclick="fetchText('ajax/10-journal-level-sjr.html')">Read more…</button></span>
-            <aside class="references"></aside>
+          <section class="level2" id="10-journal-level-sjr">
+            <span class="ajax"><h4 class="ajax">SJR &ndash; SCImago Journal Rank indicator</h4>  <button class="ajax" onclick="fetchText('ajax/10-journal-level-sjr.html','10-journal-level-sjr')">Read more…</button></span>
           </section>
           <nav class="intersection"></nav>
           <section class="level2" id="pagerank-eigenfactor.org">
             <h4>PageRank / Eigenfactor.org</h4>
-            <aside class="references"></aside>
           </section>
           <section class="level2" id="journal-level-metrics-are-poor-surrogates">
             <h4>Journal-level metrics are poor surrogates for research evaluation</h4>
-            <aside class="references"></aside>
           </section>
         </section>
         <section class="level1" id="article-level-metrics">
           <h3>Article-level metrics</h3>
           <section class="level2" id="h-index">
             <h4><em>h</em>-Index</h4>
-            <aside class="references"></aside>
           </section>
           <nav class="intersection"></nav>
           <section class="level2" id="altmetrics">
             <h4>Altmetrics</h4>
               <h5 id="bibliometrics-scientometrics-and-informetrics">Bibliometrics, scientometrics, and informetrics</h5>
-            <aside class="references"></aside>
           </section>
         </section>
       </article>
@@ -87,7 +79,6 @@
           <section class="level2">
             <h4 id="research-excellence-framework-ref">Research Excellence Framework (REF)</h4>
           </section>
-          <aside class="references"></aside>
         </section>
         <nav class="intersection"></nav>
         <section class="level1" id="evaluation-of-research-quality-in-the-examples">
@@ -98,7 +89,6 @@
           <section class="level2">
             <h4 id="rfq">RFQ</h4>
           </section>
-          <aside class="references"></aside>
         </section>
         <nav class="intersection"></nav>
         <section class="level1" id="evaluation-of-practical-impact-in-the-examples">
@@ -109,7 +99,6 @@
           <section class="level2">
             <h4 id="rfq">RFQ</h4>
           </section>
-          <aside class="references"></aside>
         </section>
       </article>
       <nav class="interarticle"></nav>
@@ -117,12 +106,10 @@
         <h2>Future research</h2>
         <section class="level1" id="can-altmetrics-provide-practical-impact-data">
           <h3>Can altmetrics provide practical impact data?</h3>
-          <aside class="references"></aside>
         </section>
         <nav class="intersection"></nav>
         <section class="level1" id="how-can-researchers-be-ahead-of-the-curve-in-evaluations-of-research-impact">
           <h3>How can researchers be “ahead of the curve” in evaluations of research impact?</h3>
-          <aside class="references"></aside>
         </section>
         <nav class="intersection"></nav>
       </article>
@@ -134,7 +121,7 @@
     </main>
     <footer></footer>
     <script>
-      function fetchText (targetHypertext) {
+      function fetchText (targetHypertext,targetID) {
         var xhr = new XMLHttpRequest();
           xhr.open("GET", targetHypertext, true);
 
@@ -142,7 +129,7 @@
           {
               if (xhr.readyState==4 && xhr.status==200)  
               {
-                  document.getElementById(targetHypertext).innerHTML=xhr.responseText;
+                  document.getElementById(targetID).innerHTML=xhr.responseText;
               }
           }
           xhr.send();
