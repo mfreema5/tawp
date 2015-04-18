@@ -48,11 +48,8 @@
             <aside class="references"></aside>
           </section>
           <nav class="intersection"></nav>
-          <section class="level2" id="sjr">
-            <h4>SJR</h4>
-            <p>
-              <button id="10-journal-level-sjr" onclick="loadNewText()">Read more…</button>
-            </p>
+          <section class="level2" id="ajax/10-journal-level-sjr.html">
+            <span class="ajax"><h4 class="ajax">SJR &ndash; SCImago Journal Rank indicator</h4>  <button class="ajax" onclick="fetchText('ajax/10-journal-level-sjr.html')">Read more…</button></span>
             <aside class="references"></aside>
           </section>
           <nav class="intersection"></nav>
@@ -136,6 +133,21 @@
       <nav class="interarticle"></nav>
     </main>
     <footer></footer>
+    <script>
+      function fetchText (targetHypertext) {
+        var xhr = new XMLHttpRequest();
+          xhr.open("GET", targetHypertext, true);
+
+          xhr.onreadystatechange = function ()
+          {
+              if (xhr.readyState==4 && xhr.status==200)  
+              {
+                  document.getElementById(targetHypertext).innerHTML=xhr.responseText;
+              }
+          }
+          xhr.send();
+      }
+    </script>
   </body>
 </html>
 
