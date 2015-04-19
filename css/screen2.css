@@ -238,6 +238,9 @@ span.ajax h3,
 span.ajax h4 {
   display: inline;
 }
+footer {
+  clear: both;
+}
 /*********************************************[ screen < 12.5 em ]*/
 /* This is a weirdly small size of viewport, thus not the default */
 /* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
