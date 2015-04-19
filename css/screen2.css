@@ -111,6 +111,7 @@ li {
 aside p {
   font-family: Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
   font-size: 0.875em;
+  text-align: end;
 }
 a {
   color: #537969;
@@ -118,6 +119,26 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+button.link {
+  font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "DejaVu Sans Condensed", sans-serif;
+  font-style: italic;
+  font-size: 0.875em;
+  line-height: 1.125em;
+  background-color: #FFFBF5;
+  vertical-align: middle;
+  border: 1px solid #b19979;
+  border-radius: 0.625em;
+  padding: 0.1875em 0.750em;
+}
+button.ajax {
+  font-size: inherit;
+  font-weight: bold;
+  line-height: 0.75;
+  background-color: #FFFBF5;
+  border: 1px solid #d1c0a9;
+  border-radius: 0.875em;
+  padding: 0.0625em 0.500em;
 }
 nav a {
   font-family: Frutiger, Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
@@ -157,12 +178,19 @@ aside {
   float: right;
   overflow: hidden;
 }
-.ref p {
+.bibliography {
+  list-style-position: inside;
+  list-style-type: none;
+  margin: 0.250em; 
   margin: 0.375em 0.125em 0.500em 1.375em;
-  /* increase left by 1 em */
-  text-indent: -1em;
+}
+.bibliography li {
+  list-style: inherit;
+  margin: 0.125em  0  0.625em 1.000em;
+  text-indent: -1.000em;
   /* for hacky hanging indents */
 }
+
 nav {
   /* see css/notes-on-breakpoints.txt for sizing */
   /* display: block; */
