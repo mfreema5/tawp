@@ -40,10 +40,6 @@ section {
   border-radius: 0.125em;
   overflow: hidden;
 }
-.subcontainer {
-  background-color: inherit;
-  border-radius: 0.125em;
-}
 blockquote {
   font-family: Cambria, Georgia, "Liberation Serif", serif;
   font-style: normal;
@@ -232,6 +228,16 @@ th + th {
 aside {
   display: none;
 }
+aside h4      { float: left;  }
+aside span    { float: right; }
+aside section { clear: both;  }
+span.ajax {
+  display: none;
+  color: #537969;
+}
+span.niljax {
+  display: inline;
+}
 /*********************************************[ screen < 12.5 em ]*/
 /* This is a weirdly small size of viewport, thus not the default */
 /* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
@@ -369,7 +375,6 @@ aside {
     padding: 0.3125em 0.625em 0.250em 0.500em;
   }
   section {
-  /*  margin: 0.375em; */
     padding: 0.3125em 0.3125em 0.125em 0.125em;
   }
   .subcontainer {
@@ -450,6 +455,7 @@ aside {
   nav a:hover {
     text-shadow: #9c9cab 0 0 28px;
     /* glows a little */
+  }
   main nav {
     border-radius: 0.1875em;
     /* Matches vertical padding. */
@@ -462,5 +468,31 @@ aside {
   }
   main nav a {
     display: none;
+  }
+  span.ajax {
+    display: inline;
+  }
+  span.niljax {
+    display: none;
+  }
+  aside {
+    border-radius: 0.9375em;
+    border-width: 0.325em;
+    border-color: #d1c0a9;
+    border-style: solid;
+    background-color: #f5eadb;
+    position: fixed;
+    bottom: 3em;
+    left: 44.5em;
+    min-width: 12.50em;
+    width: 26%;
+    padding: 0.375em;
+  }
+  aside div {
+    font-size: 0.8125em;
+    text-align: right;
+    width: 100%;
+    padding: 0.125em 0.125em;
+    overflow: hidden;
   }
 }
