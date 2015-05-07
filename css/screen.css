@@ -92,9 +92,10 @@ i,
 em {
   font-style: italic;
 }
-p,
-th,
-td {
+p {
+  font-family: inherit;
+}
+th, td {
   font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "DejaVu Sans Condensed", sans-serif;
   font-style: normal;
   font-variant: normal;
@@ -155,6 +156,7 @@ li,
   text-indent: -1em;
   /* for hacky hanging indents */
 }
+p.indent { margin-left: 0.4375em;}
 nav {
   /* see css/notes-on-breakpoints.txt for sizing */
   display: block;
@@ -174,6 +176,7 @@ nav {
   width: 92.16%;
   /* 100% - ((2 * 2%) + (2 * (2% * 96%))) = 100% - (4% + 3.84%) */
   max-width: 37.5em;
+  height: 4.375em;  /* Need this to place <aside> properly. */
   margin: 0 auto;
   padding: 0.125em 0.375em;
 }
@@ -197,6 +200,35 @@ nav a:hover {
   text-decoration: none;
   color: #7a7a92;
 }
+aside { display: none; } /* This gets changed by javascript. */
+aside {
+  bottom: 4.375em;
+  border-radius: 0;
+  /* copied from <nav> */
+  background-color: #f5eadb;
+  border-color: #d1c0a9;
+  border-width: 0.250em 0 0 0;
+  border-style: solid;
+  position: fixed;
+  left: 0em;
+  right: 0em;
+  width: 92.16%;
+  max-width: 37.5em;
+  margin: 0 auto;
+  padding: 0.125em 0.375em;
+}
+aside div {
+  font-size: 0.6875em;
+  text-align: center;
+  width: 100%;
+  padding: 0.125em 0.125em;
+  overflow: hidden;
+}
+aside h4      { float: left; font-size: 0.8125em; }
+aside span    { float: right; font-size: 0.6825em; }
+aside section { clear: both;  }
+span.ajax     { display: inline; color: #537969; }
+span.niljax   { display: none; }
 table {
   min-width: 14em;
   border-collapse: collapse;
@@ -225,23 +257,10 @@ td + td,
 th + th {
   text-align: center;
 }
-aside {
-  display: none;
-}
-aside h4      { float: left;  }
-aside span    { float: right; }
-aside section { clear: both;  }
-span.ajax {
-  display: none;
-  color: #537969;
-}
-span.niljax {
-  display: inline;
-}
 /*********************************************[ screen < 12.5 em ]*/
 /* This is a weirdly small size of viewport, thus not the default */
 /* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
-@media all and (min-width: 0) {
+@media all and (max-width: 12.5em) {
   body {
     min-width: 12.5em;
     /* matches breakpoint */
@@ -298,6 +317,8 @@ span.niljax {
   main nav a {
     color: #7a7a92;
   }
+  span.ajax   { display: none;   }
+  span.niljax { display: inline; }
 }
 /******************************************[ 12.5 em < screen < 37.5 em ]*/
 /* Switch from ‘em’ to ‘%’ to allow dynamic/responsive sizing of spaces. */
@@ -325,10 +346,6 @@ span.niljax {
   section {
   /*  margin: 1% 1% 2% 1%; */
     padding: 2% 2% 1% 1%;
-  }
-  .subcontainer {
-    margin: 1% 1% 1% 1%;
-    padding: 3% 2% 1% 2%;
   }
   blockquote {
     margin: 3% 5% 3% 5%;
@@ -377,19 +394,24 @@ span.niljax {
   section {
     padding: 0.3125em 0.3125em 0.125em 0.125em;
   }
-  .subcontainer {
-    margin: 0.375em;
-    padding: 1.125em 0.750em 0.375em 0.750em;
-  }
   blockquote {
     margin: 1.125em 1.625em 1.125em 1.625em;
   }
+  p.indent { margin-left: 0.8125em;}
   nav {
     width: 96%;
     border-width: 0.250em 0.750em 0 0.750em;
     /* left & right borders match <article> margin */
     border-style: solid;
     border-radius: 0 0 0.250em 0.250em;
+  }
+  aside {
+    bottom: 4.375em;
+    border-radius: 0;
+    /* copied from <nav> */
+    border-width: 0.250em 0.750em 0 0.750em;
+    border-style: solid;
+    width: 96%;
   }
 }
 /**********************************[ 45.25 em < screen < 60 em ]*/
@@ -402,6 +424,7 @@ span.niljax {
     left: 3.875em;
     width: 37.500em;
     margin: 0;
+    height: initial;
   }
   main nav {
     /* Collapses to become an empty divider between <articles>. */
@@ -422,6 +445,11 @@ span.niljax {
   }
   main nav a {
     display: none;
+  }
+  aside {
+    left: 3.875em;
+    width: 37.500em;
+    margin: 0;
   }
 }
 /****************************************[ 60 em < screen ]*/
@@ -469,18 +497,13 @@ span.niljax {
   main nav a {
     display: none;
   }
-  span.ajax {
-    display: inline;
-  }
-  span.niljax {
-    display: none;
-  }
+  span.ajax   { display: inline; }
+  span.niljax { display: none;   }
   aside {
     border-radius: 0.9375em;
     border-width: 0.325em;
     border-color: #d1c0a9;
     border-style: solid;
-    background-color: #f5eadb;
     position: fixed;
     bottom: 3em;
     left: 44.5em;
@@ -495,4 +518,5 @@ span.niljax {
     padding: 0.125em 0.125em;
     overflow: hidden;
   }
+  aside h4 { font-size: initial; }
 }
