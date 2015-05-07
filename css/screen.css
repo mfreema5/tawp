@@ -143,7 +143,7 @@ main nav {
 /* but through it, all things get done.” - me */
 /**********************************************/
 /*[ Default; no media query ]*********************/
-/* Targets a [12.5 em < screen < 37.5 em] screen */
+/* Targets a [ 25 em < screen < 37.5 em] screen */
 p {
   margin: 0.250em 0.125em 0.500em 0.250em;
   padding: 0.250em 0 0.250em 0;
@@ -182,7 +182,7 @@ nav {
 }
 nav div {
   display: inline-block;
-  font-size: 81.25%;
+  font-size: 0.8125em;
   background-color: #d1c0a9;
   border-radius: 0.9375em;
   text-align: center;
@@ -260,7 +260,7 @@ th + th {
 /*********************************************[ screen < 12.5 em ]*/
 /* This is a weirdly small size of viewport, thus not the default */
 /* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
-@media all and (max-width: 12.5em) {
+@media all and (min-width: 0em) {
   body {
     min-width: 12.5em;
     /* matches breakpoint */
@@ -320,7 +320,7 @@ th + th {
   span.ajax   { display: none;   }
   span.niljax { display: inline; }
 }
-/******************************************[ 12.5 em < screen < 37.5 em ]*/
+/********************************************[ 12.5 em < screen < 25 em ]*/
 /* Switch from ‘em’ to ‘%’ to allow dynamic/responsive sizing of spaces. */
 @media all and (min-width: 12.5em) {
   /*  see: css/notes-on-breakpoints.txt */
@@ -352,11 +352,39 @@ th + th {
   }
   nav {
     display: block;
+    height: 3.6875em;
+  }
+  nav div {
+    font-size: 0.7125em;
+    width: 30.5%;
+    margin: 0.250em 0.125em;
+    padding: 0.250em 0.125em;
+  }
+  aside {
+    bottom: 3.6875em;
   }
   main nav {
     width: 96%;
     margin: 2%;
     padding: 0.1875em 0.250em 0.1875em 0.250em;
+  }
+  span.ajax   { display: inline;   }
+  span.niljax { display: none; }
+}
+/*************************************[ 25 em < screen < 37.5 em ]*/
+/* navigation text can expand  */
+@media all and (min-width: 25em) {
+  nav {
+    height: 4.375em;
+  }
+  nav div {
+    font-size: 0.8125em;
+    width: 31.5%;
+    margin: 0.250em 0.125em;
+    padding: 0.375em 0.125em;
+  }
+  aside {
+    bottom: 4.375em;
   }
 }
 /**********************************[ 37.5 em < screen < 45.25 em ]*/
@@ -424,7 +452,6 @@ th + th {
     left: 3.875em;
     width: 37.500em;
     margin: 0;
-    height: initial;
   }
   main nav {
     /* Collapses to become an empty divider between <articles>. */
@@ -467,12 +494,13 @@ th + th {
     position: fixed;
     top: 3em;
     bottom: initial;  /* resets earlier value */
+    height: initial;
     left: 44.5em;
     width: 12.50em;
     padding: 0.1875em;
   }
   nav div {
-    font-size: 100%;
+    font-size: 0.9375em;
     text-align: center;
     width: 11.250em;
     padding: 0.375em 0.125em;
