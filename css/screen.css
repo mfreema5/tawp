@@ -35,13 +35,10 @@ nav {
   background-color: #f5eadb;
   border-radius: 0.250em;
 }
-section,
-.lightbox {
+section {
   background-color: #fcf3e8;
   border-radius: 0.125em;
-  /* Class "lightbox" is a way to give */
-  /* article text a light background,  */
-  /* to improve readability.           */
+  overflow: hidden;
 }
 .subcontainer {
   background-color: inherit;
@@ -61,30 +58,38 @@ h1 {
   line-height: 1.500em;
   /* font + 0.125em */
   margin-bottom: 0.250em;
-  margin-left: 0.125em;
+  margin-left: 0.250em;
+}
+h1 + h1 {
+  margin-top: -0.4375em;
+  margin-left: 0.5625em;
 }
 h2 {
   font-family: Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
   font-weight: bold;
   font-size: 1.250em;
   line-height: 1.375em;
+  margin-left: 0.250em;
 }
 h3 {
   font-family: Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
   font-weight: bold;
   font-size: 1.125em;
   line-height: 1.250em;
+  margin-left: 0.250em;
 }
 h4 {
   font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "DejaVu Sans Condensed", sans-serif;
   font-weight: bold;
   font-size: 1.000em;
   line-height: 1.250em;
+  margin-left: 0.250em;
 }
 h5,
 h6,
 b,
-strong {
+strong,
+caption {
   font-weight: bold;
 }
 i,
@@ -104,8 +109,13 @@ td {
   /* Fades place-holder text. */
 }
 ul {
-  list-style-position: inside;
   list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
+}
+ul, ol {
+  list-style-position: inside;
   margin: 0.125em  0  0.125em 0.625em;
 }
 li {
@@ -142,6 +152,7 @@ p {
   padding: 0.250em 0 0.250em 0;
   /* padding instead margin -> no collapse */
 }
+li, 
 .ref p {
   margin: 0.375em 0.125em 0.500em 1.375em;
   /* increase left by 1 em */
@@ -180,18 +191,19 @@ nav div {
   margin: 0.250em 0.125em;
   padding: 0.375em 0.125em;
 }
+nav span {
+  display: none;
+}
 nav a {
   color: #537969;
 }
 nav a:hover {
   text-decoration: none;
   color: #7a7a92;
-  text-shadow: #9c9cab 0 0 28px;
-  /* glows a little */
 }
 /* table */
 table {
-  width: 96.25%;
+  min-width: 14em;
   border-collapse: collapse;
   margin: 0.750em 0 1em 1.825%;
 }
@@ -237,15 +249,11 @@ th + th {
     min-width: 11.5em;
     /* 12em - 0.5em for margins (border-box sizing) */
     margin: 0.250em;
-    padding: 0 0.250em 0.375em 0.250em;
-  }
-  div.lightbox {
-    margin: 0.125em 0.125em 0.250em 0.125em;
-    padding: 0.125em 0.375em 0.250em 0.125em;
+    padding: 0.3125em 0.250em 0.375em 0.250em;
   }
   section {
-    margin: 0.125em 0.125em 0.250em 0.125em;
-    padding: 0.375em 0.375em 0.125em 0.125em;
+  /*  margin: 0.125em 0.125em 0.250em 0.125em; */
+    padding: 0.250em 0.250em 0.125em 0.125em;
   }
   .subcontainer {
     margin: 0.125em 0.125em 0.250em 0.125em;
@@ -302,17 +310,17 @@ th + th {
   body {
     padding: 2%;
   }
+  main {
+    padding: 0.3125em 0 3em 0;
+    /* Pad bottom to clear <nav>. */
+  }
   article {
     margin: 0.250em 2% 0.250em 2%;
-    padding: 0 2% 3% 2%;
-  }
-  div.lightbox {
-    margin: 1% 1% 2% 1%;
-    padding: 1% 3% 2% 1%;
+    padding: 1% 2% 3% 2%;
   }
   section {
-    margin: 1% 1% 2% 1%;
-    padding: 3% 3% 1% 1%;
+  /*  margin: 1% 1% 2% 1%; */
+    padding: 2% 2% 1% 1%;
   }
   .subcontainer {
     margin: 1% 1% 1% 1%;
@@ -356,21 +364,15 @@ th + th {
     max-width: 37.5em;
     margin: 0 auto;
     border: 0;
-    padding: 0 0 1em 0;
-    /* Pad bottom to clear <nav>. */
   }
   article {
     max-width: 37em;
     margin: 0.250em 0.750em;
-    padding: 0 0.750em 0.250em 0.750em;
-  }
-  div.lightbox {
-    margin: 0.375em 0.375em 0.750em 0.375em;
-    padding: 0.375em 1.125em 0.750em 0.375em;
+    padding: 0.3125em 0.625em 0.250em 0.500em;
   }
   section {
-    margin: 0.375em;
-    padding: 1.125em 1.125em 0.125em 0.375em;
+  /*  margin: 0.375em; */
+    padding: 0.3125em 0.3125em 0.125em 0.125em;
   }
   .subcontainer {
     margin: 0.375em;
@@ -424,15 +426,18 @@ th + th {
   body {
     padding: 2% 1px;
   }
+  main {
+    padding: 0.3125em 0 0.3125em 0;
+  }
   nav {
     /* nail it down */
     border-radius: 0.9375em;
     border-width: 0.325em;
     position: fixed;
     top: 3em;
+    bottom: initial;  /* resets earlier value */
     left: 44.5em;
     width: 12.50em;
-    height: 8.125em;
     padding: 0.1875em;
   }
   nav div {
@@ -441,6 +446,12 @@ th + th {
     width: 11.250em;
     padding: 0.375em 0.125em;
   }
+  nav span {
+    display: inline;
+  }
+  nav a:hover {
+    text-shadow: #9c9cab 0 0 28px;
+    /* glows a little */
   main nav {
     border-radius: 0.1875em;
     /* Matches vertical padding. */
