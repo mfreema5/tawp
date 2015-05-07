@@ -201,13 +201,11 @@ nav a:hover {
   text-decoration: none;
   color: #7a7a92;
 }
-/* table */
 table {
   min-width: 14em;
   border-collapse: collapse;
   margin: 0.750em 0 1em 1.825%;
 }
-/* t-head section, columns header style */
 thead th {
   padding: 0.4em;
   font-size: 1em;
@@ -215,7 +213,6 @@ thead th {
   background-color: #537969;
   border: 1px solid #5b5b7c;
 }
-/* t-body section, td style */
 tbody td {
   vertical-align: middle;
   text-align: left;
@@ -225,14 +222,15 @@ tbody td {
   color: #537969;
   padding: 0.6em;
 }
-/* tbody section, odd rows style */
 tbody tr:nth-child(odd) td {
   background-color: #c3cac7;
 }
-/* first column left, the rest are centered */
 td + td,
 th + th {
   text-align: center;
+}
+aside {
+  display: none;
 }
 /*********************************************[ screen < 12.5 em ]*/
 /* This is a weirdly small size of viewport, thus not the default */
