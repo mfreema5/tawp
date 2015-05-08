@@ -30,8 +30,7 @@ main {
   background-color: #d1c0a9;
   border-radius: 0.250em;
 }
-article,
-nav {
+article, nav {
   background-color: #f5eadb;
   border-radius: 0.250em;
 }
@@ -81,15 +80,10 @@ h4 {
   line-height: 1.250em;
   margin-left: 0.250em;
 }
-h5,
-h6,
-b,
-strong,
-caption {
+h5, h6, b, strong, caption {
   font-weight: bold;
 }
-i,
-em {
+i, em {
   font-style: italic;
 }
 p {
@@ -126,15 +120,9 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.nocolor {
-  color: inherit;
-}
 nav a {
   font-family: Frutiger, Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
   font-weight: 500;
-}
-main nav {
-  border-radius: 0.125em;
 }
 /* Layout *************************************/
 /* “CSS doesn't define where to place things; */
@@ -149,14 +137,15 @@ p {
   padding: 0.250em 0 0.250em 0;
   /* padding instead margin -> no collapse */
 }
-li, 
-.ref p {
+li, .ref p {
   margin: 0.375em 0.125em 0.500em 1.375em;
   /* increase left by 1 em */
   text-indent: -1em;
   /* for hacky hanging indents */
 }
-p.indent { margin-left: 0.4375em;}
+p.indent { 
+  margin-left: 0.4375em;
+}
 nav {
   /* see css/notes-on-breakpoints.txt for sizing */
   display: block;
@@ -191,7 +180,7 @@ nav div {
   padding: 0.375em 0.125em;
 }
 nav span {
-  display: none;
+  display: none;  /* Abbreviates text for narrow screens */
 }
 nav a {
   color: #537969;
@@ -278,44 +267,11 @@ th + th {
   /*  margin: 0.125em 0.125em 0.250em 0.125em; */
     padding: 0.250em 0.250em 0.125em 0.125em;
   }
-  .subcontainer {
-    margin: 0.125em 0.125em 0.250em 0.125em;
-    padding: 0.375em 0.250em 0.125em 0.250em;
-  }
   blockquote {
     margin: 0.375em 0.875em 0.375em 0.875em;
   }
   nav {
     display: none;
-  }
-  /* Display too small/weird for ‘position:fixed’ <nav> */
-  main nav {
-    display: block;
-    position: relative;
-    min-width: 12em;
-    /* matches <article> */
-    text-align: center;
-    /* Centers an inline-block <div>, too! */
-    border-color: #d1c0a9;
-    border-width: 0;
-    border-style: solid;
-    border-radius: 0.250em;
-    width: 100%;
-    margin: 0.250em;
-    padding: 0 0.250em 0.250em 0.250em;
-  }
-  main nav div {
-    display: inline-block;
-    font-size: 0.625em;
-    background-color: #d1c0a9;
-    border-radius: 0.875em;
-    text-align: center;
-    width: 33%;
-    margin: 0.250em 6%;
-    padding: 0.375em 1.125em;
-  }
-  main nav a {
-    color: #7a7a92;
   }
   span.ajax   { display: none;   }
   span.niljax { display: inline; }
@@ -363,13 +319,8 @@ th + th {
   aside {
     bottom: 3.6875em;
   }
-  main nav {
-    width: 96%;
-    margin: 2%;
-    padding: 0.1875em 0.250em 0.1875em 0.250em;
-  }
-  span.ajax   { display: inline;   }
-  span.niljax { display: none; }
+  span.ajax   { display: inline; }
+  span.niljax { display: none;   }
 }
 /*************************************[ 25 em < screen < 37.5 em ]*/
 /* navigation text can expand  */
@@ -425,7 +376,9 @@ th + th {
   blockquote {
     margin: 1.125em 1.625em 1.125em 1.625em;
   }
-  p.indent { margin-left: 0.8125em;}
+  p.indent { 
+    margin-left: 0.8125em;
+  }
   nav {
     width: 96%;
     border-width: 0.250em 0.750em 0 0.750em;
@@ -434,7 +387,6 @@ th + th {
     border-radius: 0 0 0.250em 0.250em;
   }
   aside {
-    bottom: 4.375em;
     border-radius: 0;
     /* copied from <nav> */
     border-width: 0.250em 0.750em 0 0.750em;
@@ -452,26 +404,6 @@ th + th {
     left: 3.875em;
     width: 37.500em;
     margin: 0;
-  }
-  main nav {
-    /* Collapses to become an empty divider between <articles>. */
-    background-color: #b19979;
-    top: 0;
-    left: 0;
-    border-width: 0;
-    border-style: solid;
-    border-radius: 0.1875em;
-    /* Matches vertical padding. */
-    width: 96%;
-    height: auto;
-    margin: 0 2% 0.125em 2%;
-    padding: 0.1875em 0.250em 0.1875em 0.250em;
-    /* Clear attributes set for <nav>    */
-    display: inline-block;
-    position: relative;
-  }
-  main nav a {
-    display: none;
   }
   aside {
     left: 3.875em;
@@ -493,7 +425,7 @@ th + th {
     border-width: 0.325em;
     position: fixed;
     top: 3em;
-    bottom: initial;  /* resets earlier value */
+    bottom: initial;
     height: initial;
     left: 44.5em;
     width: 12.50em;
@@ -510,23 +442,8 @@ th + th {
   }
   nav a:hover {
     text-shadow: #9c9cab 0 0 28px;
-    /* glows a little */
+    /* make it glow */
   }
-  main nav {
-    border-radius: 0.1875em;
-    /* Matches vertical padding. */
-    border-width: 0;
-    position: relative;
-    /* reset value from <nav> */
-    width: 96%;
-    height: auto;
-    padding: 0.1875em 0.250em 0.1875em 0.250em;
-  }
-  main nav a {
-    display: none;
-  }
-  span.ajax   { display: inline; }
-  span.niljax { display: none;   }
   aside {
     border-radius: 0.9375em;
     border-width: 0.325em;
