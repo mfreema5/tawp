@@ -334,7 +334,7 @@ th + th {
   nav div {
     font-size: 0.750em;
     width: 30.5%;
-    padding: 0.250em 0.125em;
+    padding: 0.125em 0.125em;
   }
   aside {
     border-width: 0.250em 0 0 0;
@@ -351,7 +351,7 @@ th + th {
   }
   nav div {
     font-size: 0.8125em;
-    padding: 0.375em 0.125em;
+    padding: 0.250em 0.125em;
   } 
   aside {
     bottom: 4.375em;
