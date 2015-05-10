@@ -182,7 +182,7 @@ nav {
   /* 100% - ((2 * 2%) + (2 * (2% * 96%))) = 100% - (4% + 3.84%) */
   max-width: 37.5em;
   height: 4.375em;  /* Need this to place <aside> properly. */
-  margin: 0 2%;
+  margin: 0 1.9375%;
   padding: 0.125em 0.375em;
 }
 nav div {
@@ -215,11 +215,9 @@ aside {
   border-width: 0.250em 0 0 0;
   border-style: solid;
   position: fixed;
-  left: 0em;
-  right: 0em;
   width: 92.16%;
   max-width: 37.5em;
-  margin: 0 auto;
+  margin: 0 1.9375%;
   padding: 0.125em 0.375em;
 }
 aside div {
@@ -292,6 +290,10 @@ th + th {
   nav {
     display: none;
   }
+  aside {
+    border-width: 0.250em 0 0.250em 0;
+    bottom: 0;
+  }
   span.ajax   { display: none;   }
   span.niljax { display: inline; }
 }
@@ -335,6 +337,7 @@ th + th {
     padding: 0.250em 0.125em;
   }
   aside {
+    border-width: 0.250em 0 0 0;
     bottom: 3.6875em;
   }
   span.ajax   { display: inline; }
@@ -411,6 +414,9 @@ th + th {
     border-width: 0.250em 0.750em 0 0.750em;
     border-style: solid;
     width: 96%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
   }
 }
 /**********************************[ 45.25 em < screen < 60 em ]*/

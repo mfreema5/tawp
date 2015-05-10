@@ -30,7 +30,7 @@ main {
   background-color: #d1c0a9;
   border-radius: 0.250em;
 }
-article, nav {
+article {
   background-color: #f5eadb;
   border-radius: 0.250em;
 }
@@ -39,6 +39,10 @@ section {
   border-radius: 0.125em;
   overflow: hidden;
 }
+nav, aside {
+  background-color: #f5eadb;
+}
+
 blockquote {
   font-family: Cambria, Georgia, "Liberation Serif", serif;
   font-style: normal;
@@ -147,7 +151,6 @@ p.indent {
   margin-left: 0.4375em;
 }
 nav {
-  /* see css/notes-on-breakpoints.txt for sizing */
   display: block;
   text-align: center;
   /* Centers an inline-block <div>, too! */
@@ -164,7 +167,7 @@ nav {
   /* 100% - ((2 * 2%) + (2 * (2% * 96%))) = 100% - (4% + 3.84%) */
   max-width: 37.5em;
   height: 4.375em;  /* Need this to place <aside> properly. */
-  margin: 0 2%;
+  margin: 0 1.9375%;
   padding: 0.125em 0.375em;
 }
 nav div {
@@ -189,19 +192,16 @@ nav a:hover {
 }
 aside { display: none; } /* This gets changed by javascript. */
 aside {
-  bottom: 4.375em;
   border-radius: 0;
   /* copied from <nav> */
-  background-color: #f5eadb;
   border-color: #d1c0a9;
   border-width: 0.250em 0 0 0;
   border-style: solid;
   position: fixed;
-  left: 0em;
-  right: 0em;
+  bottom: 4.375em;
   width: 92.16%;
   max-width: 37.5em;
-  margin: 0 auto;
+  margin: 0 1.9375%;
   padding: 0.125em 0.375em;
 }
 aside div {
@@ -271,6 +271,10 @@ th + th {
   nav {
     display: none;
   }
+  aside {
+    border-width: 0.250em 0 0.250em 0;
+    bottom: 0;
+  }
   span.ajax   { display: none;   }
   span.niljax { display: inline; }
 }
@@ -314,6 +318,7 @@ th + th {
     padding: 0.250em 0.125em;
   }
   aside {
+    border-width: 0.250em 0 0 0;
     bottom: 3.6875em;
   }
   span.ajax   { display: inline; }
@@ -375,11 +380,11 @@ th + th {
     margin-left: 0.8125em;
   }
   nav {
-    width: 96%;
     border-width: 0.250em 0.750em 0 0.750em;
     /* left & right borders match <article> margin */
     border-style: solid;
     border-radius: 0 0 0.250em 0.250em;
+    width: 96%;
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -390,6 +395,9 @@ th + th {
     border-width: 0.250em 0.750em 0 0.750em;
     border-style: solid;
     width: 96%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
   }
 }
 /**********************************[ 45.25 em < screen < 60 em ]*/
