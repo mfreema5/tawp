@@ -160,13 +160,11 @@ nav {
   /* (a.k.a., start top-left, go around clockwise)   */
   position: fixed;
   bottom: 0em;
-  left: 0em;
-  right: 0em;
   width: 92.16%;
   /* 100% - ((2 * 2%) + (2 * (2% * 96%))) = 100% - (4% + 3.84%) */
   max-width: 37.5em;
   height: 4.375em;  /* Need this to place <aside> properly. */
-  margin: 0 auto;
+  margin: 0 2%;
   padding: 0.125em 0.375em;
 }
 nav div {
@@ -276,9 +274,9 @@ th + th {
   span.ajax   { display: none;   }
   span.niljax { display: inline; }
 }
-/********************************************[ 12.5 em < screen < 25 em ]*/
+/****************************************[ 16.25 em < screen < 22.25 em ]*/
 /* Switch from ‘em’ to ‘%’ to allow dynamic/responsive sizing of spaces. */
-@media all and (min-width: 12.5em) {
+@media all and (min-width: 16.25em) {
   /*  see: css/notes-on-breakpoints.txt */
   /*  1 % <- 0.125 em */
   /*  2 % <- 0.250 em */
@@ -292,7 +290,7 @@ th + th {
     padding: 2%;
   }
   main {
-    padding: 0.3125em 0 3em 0;
+    padding: 0.3125em 0 3em 0 ;
     /* Pad bottom to clear <nav>. */
   }
   article {
@@ -300,8 +298,8 @@ th + th {
     padding: 1% 2% 3% 2%;
   }
   section {
-  /*  margin: 1% 1% 2% 1%; */
-    padding: 2% 2% 1% 1%;
+    margin:  1% 1% 2% 1%;
+    padding: 1% 3% 1% 1%;
   }
   blockquote {
     margin: 3% 5% 3% 5%;
@@ -311,9 +309,8 @@ th + th {
     height: 3.6875em;
   }
   nav div {
-    font-size: 0.7125em;
+    font-size: 0.5625em;
     width: 30.5%;
-    margin: 0.250em 0.125em;
     padding: 0.250em 0.125em;
   }
   aside {
@@ -322,16 +319,14 @@ th + th {
   span.ajax   { display: inline; }
   span.niljax { display: none;   }
 }
-/*************************************[ 25 em < screen < 37.5 em ]*/
+/**********************************[ 22.25 em < screen < 37.5 em ]*/
 /* navigation text can expand  */
-@media all and (min-width: 25em) {
+@media all and (min-width: 22.25em) {
   nav {
     height: 4.375em;
   }
   nav div {
     font-size: 0.8125em;
-    width: 31.5%;
-    margin: 0.250em 0.125em;
     padding: 0.375em 0.125em;
   }
   aside {
@@ -385,6 +380,9 @@ th + th {
     /* left & right borders match <article> margin */
     border-style: solid;
     border-radius: 0 0 0.250em 0.250em;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
   }
   aside {
     border-radius: 0;
@@ -428,20 +426,22 @@ th + th {
     bottom: initial;
     height: initial;
     left: 44.5em;
-    width: 12.50em;
+    min-width: 12.50em;
+    width: 26%;
     padding: 0.1875em;
   }
   nav div {
     font-size: 0.9375em;
     text-align: center;
-    width: 11.250em;
+    width: 96%;
+    margin: 0.250em 0;
     padding: 0.375em 0.125em;
   }
   nav span {
     display: inline;
   }
   nav a:hover {
-    text-shadow: #9c9cab 0 0 28px;
+    text-shadow: #9c9cab 0 0 14px;
     /* make it glow */
   }
   aside {
