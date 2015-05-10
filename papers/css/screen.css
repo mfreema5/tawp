@@ -1,0 +1,491 @@
+/*****  screen.css: Screen Styles  *****/
+html {
+  box-sizing: border-box;
+  background-color: #b19979;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/*  Typography, color, etc.   */
+/*  Layout is farther down.   */
+/******************************/
+/*  Basic element hierarchy:  */
+/*  <header>                  */
+/*  <body>                    */
+/*    <main>                  */
+/*      <article> <h1>        */
+/*        <section> <h2>      */
+/*          <section> <h3>    */
+/*            <section> <h4>  */
+/*    <nav>                   */
+/*    <aside>                 */
+/******************************/
+
+/* font-family: 'Merriweather', serif; */
+/* font-family: 'Merriweather Sans', sans-serif; */
+/*    Merriweather:                    */
+/*      300italic <-- normal, italic   */
+/*      300       <-- normal           */
+/*      700       <-- bold             */
+/*    Merriweather Sans:               */
+/*      300       <-- normal           */
+/*      700       <-- bold             */
+
+body {
+  font-family:  'Merriweather', serif;
+  font-style:   normal;
+  font-weight:  300;
+}
+main {
+  background-color: #d1c0a9;
+  border-radius: 0.250em;
+}
+article {
+  font-family:  'Merriweather', serif;
+  font-style:   normal;
+  font-weight:  400;
+}
+article, nav {
+  background-color: #f5eadb;
+  border-radius: 0.250em;
+}
+section {
+  background-color: #fcf3e8;
+  border-radius: 0.125em;
+}
+blockquote {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-style:   normal;
+  font-weight:  300;
+  background-color: inherit;
+}
+aside {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-style:   normal;
+  font-weight:  300;
+}
+h1 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-style:   normal;
+  font-weight:  700;
+  font-size:    1.375em;
+  line-height:  1.125;
+  /* font + 0.125em */
+  margin-bottom: 0.250em;
+  margin-left:   0.125em;
+}
+h2 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-style:   normal;
+  font-weight:  700;
+  font-size:    1.250em;
+  line-height:  1.250;
+}
+h3 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-style:   normal;
+  font-weight:  700;
+  font-size:    1.125em;
+  line-height:  1.250;
+}
+h4 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-style:   normal;
+  font-weight:  300;
+  font-size:    1.000em;
+  line-height:  1.250;
+}
+h5, h6, b, strong {
+  font-weight: 700;
+}
+i, em {
+  font-style: italic;
+}
+p {
+  font-family: inherit;
+}
+th, td {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-style:   normal;
+  font-weight:  300;
+}
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
+}
+ul, ol {
+  list-style-position: inside;
+  margin: 0.125em  0  0.125em 0.625em;
+}
+li {
+  list-style: inherit;
+  margin: 0.125em  0  0.125em 0.5em;
+}
+a {
+  color: #537969;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.ajax a{
+  color: #795363;
+  text-decoration: none;
+}
+.ajax a:hover {
+  text-decoration: none;
+  text-shadow: #795376 0 0 1px;
+}
+nav a {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-style:   normal;
+  font-weight:  300;
+}
+/* Layout *************************************/
+/* “CSS doesn't define where to place things; */
+/* it defines HOW to place them.              */
+/* Like the Tao, it does nothing,             */
+/* but through it, all things get done.” - me */
+/**********************************************/
+/*[ Default; no media query ]*********************/
+/* Targets a [12.5 em < screen < 37.5 em] screen */
+p {
+  margin: 0.250em 0.125em 0.500em 0.250em;
+  padding: 0.250em 0 0.250em 0;
+  /* padding instead margin -> no collapse */
+}
+.ref p, li {
+  margin: 0.375em 0.125em 0.500em 1.375em;
+  /* increase left by 1 em */
+  text-indent: -1em;
+  /* for hacky hanging indents */
+}
+nav {
+  /* see css/notes-on-breakpoints.txt for sizing */
+  display: block;
+  text-align: center;
+  /* Centers an inline-block <div>, too! */
+  border-color: #d1c0a9;
+  border-width: 0.250em 0 0 0;
+  border-style: solid;
+  border-radius: 0 0 0.250em 0.250em;
+  /* syntax for border-radius:                       */
+  /* top left, top right, bottom right, bottom left; */
+  /* (a.k.a., start top-left, go around clockwise)   */
+  position: fixed;
+  bottom: 0em;
+  left: 0em;
+  right: 0em;
+  width: 92.16%;
+  /* 100% - ((2 * 2%) + (2 * (2% * 96%))) = 100% - (4% + 3.84%) */
+  max-width: 37.5em;
+  height: 4.375em;  /* Need this to place <aside> properly. */
+  margin: 0 auto;
+  padding: 0.125em 0.375em;
+}
+nav div {
+  display: inline-block;
+  font-size: 0.8125em;
+  background-color: #d1c0a9;
+  border-radius: 0.9375em;
+  text-align: center;
+  width: 31.5%;
+  margin: 0.250em 0.125em;
+  padding: 0.375em 0.125em;
+}
+nav span {
+  display: none;  /* Abbreviates text for narrow screens */
+}
+nav a {
+  color: #537969;
+}
+nav a:hover {
+  text-decoration: none;
+  color: #7a7a92;
+}
+aside { display: none; } /* This gets changed by javascript. */
+aside {
+  bottom: 4.375em;
+  border-radius: 0;
+  /* copied from <nav> */
+  background-color: #f5eadb;
+  border-color: #d1c0a9;
+  border-width: 0.250em 0 0 0;
+  border-style: solid;
+  position: fixed;
+  left: 0em;
+  right: 0em;
+  width: 92.16%;
+  max-width: 37.5em;
+  margin: 0 auto;
+  padding: 0.125em 0.375em;
+}
+aside div {
+  font-size: 0.6875em;
+  text-align: center;
+  width: 100%;
+  padding: 0.125em 0.125em;
+  overflow: hidden;
+}
+aside h4      { float: left; font-size: 0.8125em; }
+aside span    { float: right; font-size: 0.6825em; }
+aside section { clear: both;  }
+span.ajax     { display: inline; color: #537969; }
+span.niljax   { display: none; }
+table {
+  width: 96.25%;
+  border-collapse: collapse;
+  margin: 0.750em 0 1em 1.825%;
+}
+thead th {
+  padding: 0.4em;
+  font-size: 1em;
+  color: #f1f2f1;
+  background-color: #537969;
+  border: 1px solid #5b5b7c;
+}
+tbody td {
+  vertical-align: middle;
+  text-align: left;
+  font-size: 0.9325em;
+  background-color: #f1f2f1;
+  border: 1px solid #5b5b7c;
+  color: #537969;
+  padding: 0.6em;
+}
+tbody tr:nth-child(odd) td {
+  background-color: #c3cac7;
+}
+td + td,
+th + th {
+  text-align: center;
+}
+/********************************************[ screen < 16.25 em ]*/
+/* This is a weirdly small size of viewport, thus not the default */
+/* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
+@media all and (min-width: 0) {
+  body {
+    min-width: 12.5em;
+    /* matches breakpoint */
+    background-color: #d1c0a9;
+    padding: 0.250em;
+  }
+  article {
+    /* Force horizontal scroll when (em-px):(vw-px) ratio is high */
+    min-width: 11.5em;
+    /* 12em - 0.5em for margins (border-box sizing) */
+    margin: 0.250em;
+    padding: 0.250em 0.250em 0.375em 0.250em;
+  }
+  section {
+    margin: 0.125em 0.125em 0.250em 0.125em;
+    padding: 0.3125em 0.375em 0.125em 0.125em;
+  }
+  table {
+    min-width: 11em;
+  }
+  blockquote {
+    margin: 0.375em 0.250em 0.375em 0.250em;
+  }
+  nav {
+    display: none;
+  }
+  span.ajax   { display: none;   }
+  span.niljax { display: inline; }
+}
+/*******************************************[ 16.25 em < screen < 25 em ]*/
+/* Switch from ‘em’ to ‘%’ to allow dynamic/responsive sizing of spaces. */
+@media all and (min-width: 16.25em) {
+  /*  see: css/notes-on-breakpoints.txt */
+  /*  1 % <- 0.125 em */
+  /*  2 % <- 0.250 em */
+  /*  3 % <- 0.375 em */
+  /*  4 % <- 0.500 em */
+  /*  5 % <- 0.625 em */
+  /*  6 % <- 0.750 em */
+  /*  7 % <- 0.875 em */
+  /*  8 % <- 1.000 em */
+  body {
+    padding: 2%;
+  }
+  main {
+    padding: 0.3125em 0 3em 0;
+    /* Pad bottom to clear <nav>. */
+  }
+  article {
+    margin: 0.250em 2% 0.250em 2%;
+    padding: 1% 2% 3% 2%;
+  }
+  section {
+    margin: 1% 1% 2% 1%;
+    padding: 1% 3% 1% 1%;
+  }
+  blockquote {
+    margin: 3% 5% 3% 5%;
+  }
+  nav {
+    display: block;
+    height: 3.6875em;
+  }
+  nav div {
+    font-size: 0.750em;
+    width: 30.5%;
+    padding: 0.250em 0.125em;
+  }
+  aside {
+    bottom: 3.6875em;
+  }
+  span.ajax   { display: inline; }
+  span.niljax { display: none;   }
+}
+/*************************************[ 25 em < screen < 37.5 em ]*/
+/* navigation text can expand  */
+@media all and (min-width: 25em) {
+  nav {
+    height: 4.375em;
+  }
+  nav div {
+    font-size: 0.8125em;
+    width: 30.5%;
+    padding: 0.375em 0.125em;
+  } 
+  aside {
+    bottom: 4.375em;
+  }
+}
+/**********************************[ 37.5 em < screen < 45.25 em ]*/
+/* Limit width of <article>, to limit the length of lines of text */
+/* 37.5 display-em -> 56.25 print-em                              */
+/* Print-em better estimates the number of characters on a line   */
+@media all and (min-width: 37.5em) {
+  /*  see: css/notes-on-breakpoints.txt */
+  /*  1 % -> 0.375 em */
+  /*  2 % -> 0.750 em */
+  /*  3 % -> 1.125 em */
+  /*  4 % -> 1.500 em */
+  /*  5 % -> 1.875 em */
+  /*  6 % -> 2.250 em */
+  /*  7 % -> 2.625 em */
+  /*  8 % -> 3.000 em */
+  body {
+    background-color: #b19979;
+    border-width: 0 0.750em;
+    border-style: solid;
+    border-color: #b19979;
+    padding: 2% 0;
+  }
+  main {
+    background-color: #d1c0a9;
+    max-width: 37.5em;
+    margin: 0 auto;
+    border: 0;
+    padding: 0.3125em 0 1em 0;
+    /* Pad bottom to clear <nav>. */
+  }
+  article {
+    max-width: 37em;
+    margin: 0.250em 0.750em;
+    padding: 0.625em 0.750em 0.250em 0.750em;
+  }
+  section {
+    margin: 0.375em;
+    padding: 0.750em 1.125em 0.125em 0.375em;
+  }
+  blockquote {
+    margin: 1.125em 1.625em 1.125em 1.625em;
+  }
+  nav {
+    width: 96%;
+    border-width: 0.250em 0.750em 0 0.750em;
+    /* left & right borders match <article> margin */
+    border-style: solid;
+    border-radius: 0 0 0.250em 0.250em;
+  }
+  aside {
+    border-radius: 0;
+    /* copied from <nav> */
+    border-width: 0.250em 0.750em 0 0.750em;
+    border-style: solid;
+    width: 96%;
+  }
+}
+/**********************************[ 45.25 em < screen < 60 em ]*/
+@media all and (min-width: 45.25em) {
+  main {
+    width: 37.5em;
+    margin: 0 0 0 3.125em;
+  }
+  nav {
+    left: 3.875em;
+    width: 37.500em;
+    margin: 0;
+  }
+  aside {
+    left: 3.875em;
+    width: 37.500em;
+    margin: 0;
+  }
+}
+/****************************************[ 60 em < screen ]*/
+@media all and (min-width: 60em) {
+  body {
+    padding: 2% 1px;
+  }
+  main {
+    padding: 0.3125em 0 0.3125em 0;
+  }
+  nav {
+    /* nail it down */
+    border-radius: 0.9375em;
+    border-width: 0.325em;
+    position: fixed;
+    top: 3em;
+    bottom: initial;
+    height: initial;
+    left: 44.5em;
+    min-width: 12.50em;
+    width: 26%;
+    padding: 0.1875em;
+  }
+  nav div {
+    font-size: 0.9375em;
+    text-align: center;
+    width: 96%;
+    margin: 0.250em 0;
+    padding: 0.375em 0.125em;
+  }
+  .tiny {
+    font-size: 0.9375em;
+  }
+  nav span {
+    display: inline;
+  }
+  nav a:hover {
+    text-shadow: #9c9cab 0 0 14px;
+    /* glows a little */
+  }
+  aside {
+    border-radius: 0.9375em;
+    border-width: 0.325em;
+    border-color: #d1c0a9;
+    border-style: solid;
+    position: fixed;
+    bottom: 3em;
+    left: 44.5em;
+    min-width: 12.50em;
+    width: 26%;
+    padding: 0.375em;
+  }
+  aside div {
+    font-size: 0.8125em;
+    text-align: right;
+    width: 100%;
+    padding: 0.125em 0.125em;
+    overflow: hidden;
+  }
+  aside h4 { font-size: initial; }
+}
