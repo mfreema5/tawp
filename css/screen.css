@@ -3,9 +3,7 @@ html {
   box-sizing: border-box;
   background-color: #b19979;
 }
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
 /* Typography, color, etc. */
@@ -16,9 +14,7 @@ html {
 /*  <body>                      */
 /*    <main> <h1>               */
 /*      <article> <h2>          */
-/*        <div.lightbox>        */
 /*        <section> <h3>        */
-/*          <div.subcontainer>  */
 /*          <blockquote>        */
 /*    <nav>                     */
 /*    <footer>                  */
@@ -99,10 +95,6 @@ th, td {
   font-variant: normal;
   font-weight: 400;
 }
-.lorem {
-  color: #d1c0a9;
-  /* Fades place-holder text. */
-}
 ul {
   list-style-type: disc;
 }
@@ -139,7 +131,6 @@ nav a {
 p {
   margin: 0.250em 0.125em 0.500em 0.250em;
   padding: 0.250em 0 0.250em 0;
-  /* padding instead margin -> no collapse */
 }
 li, .ref p {
   margin: 0.375em 0.125em 0.500em 1.375em;
@@ -160,7 +151,6 @@ nav {
   border-radius: 0 0 0.250em 0.250em;
   /* syntax for border-radius:                       */
   /* top left, top right, bottom right, bottom left; */
-  /* (a.k.a., start top-left, go around clockwise)   */
   position: fixed;
   bottom: 0em;
   width: 92.16%;
@@ -281,7 +271,6 @@ th + th {
 /****************************************[ 16.25 em < screen < 22.25 em ]*/
 /* Switch from ‘em’ to ‘%’ to allow dynamic/responsive sizing of spaces. */
 @media all and (min-width: 16.25em) {
-  /*  see: css/notes-on-breakpoints.txt */
   /*  1 % <- 0.125 em */
   /*  2 % <- 0.250 em */
   /*  3 % <- 0.375 em */
@@ -343,7 +332,6 @@ th + th {
 /* 37.5 display-em -> 56.25 print-em                              */
 /* Print-em better estimates the number of characters on a line   */
 @media all and (min-width: 37.5em) {
-  /*  see: css/notes-on-breakpoints.txt */
   /*  1 % -> 0.375 em */
   /*  2 % -> 0.750 em */
   /*  3 % -> 1.125 em */
@@ -419,12 +407,8 @@ th + th {
 }
 /****************************************[ 60 em < screen ]*/
 @media all and (min-width: 60em) {
-  body {
-    padding: 2% 1px;
-  }
-  main {
-    padding: 0.3125em 0 0.3125em 0;
-  }
+  body { padding: 2% 1px; }
+  main { padding: 0.3125em 0 0.3125em 0; }
   nav {
     /* nail it down */
     border-radius: 0.9375em;
