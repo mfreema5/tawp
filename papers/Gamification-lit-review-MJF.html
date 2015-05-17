@@ -532,11 +532,11 @@
     <script>
       function hideElement (targetEID,targetDisplay) {
         var targetElement = document.getElementById(targetEID);
-        targetElement.style.display = ( targetElement.style.display == 'block' ? 'none' : 'none' );
+        targetElement.style.display = ( targetElement.style.display = 'none' );
       }
       function showElement (targetEID,targetDisplay) {
         var targetElement = document.getElementById(targetEID);
-        targetElement.style.display = ( targetElement.style.display == 'none' ? 'block' : 'block' );
+        targetElement.style.display = ( targetElement.style.display = 'block' );
       }
       function fetchText (targetHypertext,targetID) {
         var xhr = new XMLHttpRequest();
