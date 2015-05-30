@@ -27,7 +27,7 @@ The horizontal axis is the possible values for some measure.  The vertical axis 
 
 The probability of a result that is bounded by some specific value is equal to the total area under the curve to the appropriate side of that value.  In the example graphic (figure NN), that's the shaded area.
 
-In the case of linear regression, the probability that most people are familiar with is the “*p* value”, a.k.a, “alpha”, “confidence level”, etc.  In the social sciences, the most common value for it is 5%, often reported as “p<.05”.
+In the case of linear regression, the probability that most people are familiar with is the “*p* value”, a.k.a, “alpha”, “confidence level”, etc.  In the social sciences, the most common value for it is 5%, often reported as “*p*<.05”.
 
 When you're using a null-hypothesis significance test to analyze a sample, a confidence level of 5% means that there is a 5% chance that population correlation is not zero.  You don't know the population correlation because you measured and analyzed a sample of the population.  What you have is the sample correlation.  The population correlation is related to the sample correlation by a probability curve.  
 
@@ -35,9 +35,29 @@ In the next example graphic (figure NN), the mean value of the probability curve
 
 If you take the previous example graphic and swap the axes, you get the next example (figure NN).  Now, the “null” line is at the bottom of the graph, the horizontal axis is probabilities, and the vertical axis is the value of correlations.  The rest of the visual representations in this document will use this “sideways” arrangement.
 
+Why is this is a useful convention? Hopefully that will become obvious as you progress through the sections, but I'll give a brief explanation now—don't worry if it doesn't make sense just yet. 
 
+The “sideways” arrangment makes it easier to see the relationship between the four characteristics in question.  On a conventionally arranged graph the probability curves related to *alpha* (confidence level) and *beta* (statistical power) overlap, and it's also more difficult to distinguish between the mean values for the sample correlation and the population correlation.  So, the example graphics are sideways in order to make it easier to keep the various concepts separate and therefore less confusing, yet still see the relationships between them.
 
+## Probability curves and linear regression
 
+Let's say you measure a variety of characteristics of a presumably representative sample of a population.  You can do a linear regression analysis of the measurements, and precisely calculate the correlations between the characteristics you measured.  But, your results are only precise descriptions of the sample.  They aren't precise descriptions of the population, because there is always some amount of error, some amount of potential discrepancy, between the mean value of some characteristic for a sample, and the mean value of that characteristic for the population.
+
+So, you can't precisely determine the correlation between characteristics for the population. But what you can determine precisely is the probability that the population's correlation falls within some range of values.  In the case of null-hypothesis significance testing, your goal is to calculate the probability that the population correlation is above zero.  When you report that a correlation is, e.g., “statistically significant at ‘p<.05’”, you're reporting the probability that you calculated—based on the sample correlation—that the population's correlation is greater than zero.  In the case of ‘p<.05’, that probability is 0.95, in other words, 95%.
+
+You can think about that probability calculation as being a probability curve that you draw around the sample correlation, which you determined from your measurements.  In the example graphic [figure NN], the horizontal line that splits the curve marks the value of the sample correlation.  The probability curve describes the correlation of the population.
+
+This is an important distinction to understand.  In the example graphic [figure NN], the straight line is about the *sample*.  The curve is about the *population*.
+
+The next example graphic [figure NN], is the opposite of that. The straight line is about the *population*.  The curve is about the *sample*.  The probability curve and bisecting line are on the opposite side of the vertical axis from the previous graph because they show the opposite relationship.
+
+What is that relationship?  It's the probability of finding some particular value for a sample correlation, based on what the population correlation is.  Even though you may not be able to ever directly measure the population correlation, it does exist and it does have some precise—if unknown—value.  And that value establishes the probabilities of the sample correlation value you'll determine.
+
+That probability curve is what *beta*, a.k.a. “statistical power”, describes.
+
+But before I explain that, let's back up and reconsider the graphic in which the probability curve is related to the population correlation.  because what curve is what *alpha*, a.k.a., “confidence level”, or “*p* value”, describes.
+
+## Confidence level & Statistical power – alpha & beta
 
 
 
