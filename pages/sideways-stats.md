@@ -61,11 +61,41 @@ The next example graphic [figure NN], is the opposite of that. The straight line
 
 What is that relationship?  It's the probability of finding some particular value for a sample correlation, based on what the population correlation is.  Even though you may not be able to ever directly measure the population correlation, it does exist and it does have some precise—if unknown—value.  And that value establishes the probabilities of the sample correlation value you'll determine.
 
-That probability curve is what *beta*, a.k.a. “statistical power”, describes.
-
-But before I explain that, let's back up and reconsider the graphic in which the probability curve is related to the population correlation.  because what curve is what *alpha*, a.k.a., “confidence level”, or “*p* value”, describes.
+That probability curve is what *beta*, a.k.a. “statistical power”, describes.  But before I explain that, let's back up and review the graphic in which the probability curve is related to the population correlation.    In that graph, the curve is describe by *alpha*, a.k.a., “confidence level”, or “*p* value”.
 
 ## Confidence level & Statistical power – alpha & beta
+
+The next example graphic [figure NN] has three curves in it, showing three different values for *alpha*.  The three probability curves are all identical, but the value of the sample correlation increases from left to right.  That increase in the sample correlation shifts the curve upward (in our sideways view) and that means that the value for *alpha* decreases, since the percentage of the area “under” the probability curve that is bounded by the null line decreases.
+
+![Figure NN: Three values for alpha](./images/three-alphas-200.png)
+
+This is what you would expect to happen.  Remember that *alpha*, a.k.a., the “confidence level”, or “*p* value”, indicates the probability that the population correlation is above zero.  Which is another way of saying that it measures the chances that the correlation is “real”, and not an a result of random error.  Yet another way of looking at it is to say that *alpha* is a measure of the chance of making a “Type I” error.
+
+So, the larger the sample correlation is, the less likely it is that no such correlation exists in the population, and that all you have found is random error.  If the sample correlation is quite small, it's easy to believe that the correlation is the result of sampling errors, because it wouldn't take much error to create the illusion of a small correlation.  But it would take a very large and therefore unlikely amount of sampling error to create the illusion of a large correlation.
+
+The next example graphic [figure NN] takes advantage of the sideways arrangment (finally!), and shows both the population and the sample probability curves for some hypothetical linear regression.
+
+![Figure NN: Basic relationship of alpha and beta](./images/basic-alpha-beta-es-n-200.png)
+
+The curve on the **right** is the **population** probability curve, and 5% of its area is below the null line.  Therefore, the line that bisects that curve marks the lowest sample correlation that would be statistically significant at “*p*<.05”.
+
+The curve on the **left** is the **sample** probability curve.  And the shaded portion of its area is the value of the *statistical power* of the analysis.  The unshaded area is the value of *beta*.
+
+On the right side of the graphic, which has the population probability curve, the value of *alpha* is equal to the area bounded by the null line.  On the left side, which has the sample probability curve, the value of *beta* is equal to the area bounded by the line that bisects the curve on the right.  Again, that line is the minimum statistically significant sample correlation at a 95% confidence level.
+
+The line that bisects the sample probability curve on the left side of the graph is the population correlation value.  The probability curve around it describes the sample correlation that you will find.  In the graphic, if we assume that the shaded portion of the area is 60% of the total area, then the graph indicates that if we take a sample of that population and test it for a correlation, there is a 60% chance that we will find a statistically significant correlation (*p*<.05).
+
+In other words, the fact that 60% of the sample correlation probability curve is higher than the minimum statistically significant sample correlation value (*p*<.05), means that there is a 60% chance that the sample correlation we find will be a value that is equal to or greater than that minimum value.
+
+The shape of the sample probability curve on the left side of the graph perfectly mirrors the shape of the population probability curve on the right side of the graph.  They will always be perfect mirrors, because they are both defined by the same thing: the *sample size*, a.k.a., “N”.
+
+In the next section we'll look at how the shape of those probability is related to sample size.
+
+## Sample size – “N”
+
+
+
+
 
 
 
