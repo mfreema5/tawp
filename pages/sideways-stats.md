@@ -87,16 +87,37 @@ The line that bisects the sample probability curve on the left side of the graph
 
 In other words, the fact that 60% of the sample correlation probability curve is higher than the minimum statistically significant sample correlation value (*p*<.05), means that there is a 60% chance that the sample correlation we find will be a value that is equal to or greater than that minimum value.
 
+The next example graphic [figure NN] has three graphs in it, with the statistical power increasing from left to right, while *beta* is decreasing.
+
+![Figure NN: Three values for beta](./images/three-betas-200.png)
+
+The value for *alpha* is the same for all three graphs, and therefore the minimum sample correlation that is statistically significant is also the same for all three.  The statistical power increases because the population correlation increases.  As it gets higher in the sideways graph, it gets farther away from the minimum statistically significant sample correlation, and therefore the proportion of the area “under” the sample probability curve that has that minimum correlation as a lower bound gets larger.
+
 The shape of the sample probability curve on the left side of the graph perfectly mirrors the shape of the population probability curve on the right side of the graph.  They will always be perfect mirrors, because they are both defined by the same thing: the *sample size*, a.k.a., “N”.
 
 In the next section we'll look at how the shape of those probability is related to sample size.
 
 ## Sample size – “N”
 
+The larger the sample size in an analysis the less influence random error has on the sample correlation.  Therefore, the population probability curve that surrounds the sample correlation will be less spread out for larger sample sizes.  The next example graphic [figure NN] represents how the population probability curve tightens as the sample size increases.  The sample size, “N”, increases from left to right for the three examples.
 
+![Figure NN: Probabilities tighten as N increases](./images/changing-N-and-alpha-200.png)
 
+In those three examples, *alpha* is constant, and therefore as the probability curve tightens the line that bisects the probability curve drops closer to the null line.  In other words, at the same confidence level, the larger the sample size is, the lower the minimum correlation that is statistically significant becomes.
 
+This is why one of criticisms of null-hypothesis significance testing is that it ‘doesn't indicate anything other than the fact that a sufficiently large sample was used.’  In other words, *any* non-zero correlation can be statistically significant at *any* confidence level—the only thing you have to do is find a way to increase the sample size far enough.
 
+The next example graphic [figure NN] is a departure from the others, in that it's a graph that is drawn to scale.  It shows the relation between sample size and the minimum statistically significant correlation (*p*<.05).
+
+![Figure NN: Relation of statistical significance to sample size](./images/correlation-vs-samplesize-200.png)
+
+So, we've seen how *alpha* determines the placement of the population probability curve.  We now know that the shape of the population probability curve is determined by *sample size*.  So, between *sample size* and *alpha*, the minimum sample correlation that is statistically significant is determined.  And that minimum correlation sets the lower bound for determining the *statistical power* of the analysis.
+
+Just like with the population probability curve, the shape of the sample probability curve is determined by *sample size*. So with *sample size* and the minimum statistically significant sample correlation that is determined by *sample size* and *alpha* we are almost able to determine the *statistical power*.  All we need to do is figure out where the line that bisects the sample probability curve falls on our sideways graph.
+
+I've been referring to that line as the population correlation.  Because conceptually that's what it is.  But there's another way to think about it—you can also call that the “*effect size*”.  The next section covers that, which is the last of the four characteristics of linear regressions analysis that I set out to discuss.
+
+## Effect size
 
 
 
