@@ -107,7 +107,7 @@ In those three examples, *alpha* is constant, and therefore as the probability c
 
 This is why one of criticisms of null-hypothesis significance testing is that it ‘doesn't indicate anything other than the fact that a sufficiently large sample was used.’  In other words, *any* non-zero correlation can be statistically significant at *any* confidence level—the only thing you have to do is find a way to increase the sample size far enough.
 
-The next example graphic [figure NN] is a departure from the others, in that it's a graph that is drawn to scale.  It shows the relation between sample size and the minimum statistically significant correlation (*p*<.05).
+The next example graphic [figure NN] is a departure from the others, in that it's a graph that is drawn to scale.  It shows the relation between sample size and the minimum statistically significant correlation (*p*<.05).  The relation is what we would expect from the sideways examples—as N get larger, the minimum statistically significant sample correlation drops.
 
 ![Figure NN: Relation of statistical significance to sample size](./images/correlation-vs-samplesize-200.png)
 
@@ -119,7 +119,66 @@ I've been referring to that line as the population correlation.  Because concept
 
 ## Effect size
 
+…
 
+…
+
+…
+
+## Type I and Type II errors
+
+A Type I error is a “false positive”.  When you find a correlation in a sample that doesn't exist in the population, that's a Type I error.
+
+A Type II error is a “false negative”.  When there is a correlation in a population that you should have found in your sample, but you didn't, that's a Type II error.
+
+The following two sections look at ways to think about those errors in the framework of “sideways statistics”.
+
+### Sideways Type I errors
+
+The example graphic [figure NN] represents a linear regression done at a 95% confidence level.  The population probability curve on the right side of the graph has 5% of its area bounded by null, and the line that bisects it is the minimum sample correlation that would be statistically significant.  Since this is an example of a Type I error, the sample population curve on the left side of the graph has been centered on null.
+
+![Figure NN: Sideways Type I error](./images/foobar-200.png)
+
+A Type I error would be any analysis that found a statistically significant sample correlation.  On the sample population curve, on the left side of the graph, the area that's shaded covers the sample correlations that would be Type I error.  That area is 5% of the total area “under” the sample population—that area will always be exactly equal to the area of the population probability curve that below the null line, because the two curves are identical in shape.  
+
+When the sample probability curve is centered on the null line, the two curves are in perfect symmetry.  The area of one curve that is bounded by the bisecting line of the other curve is identical to the area of the other curve that is bounded by its bisecting line.
+
+That the two areas are identical also simply makes sense.  A “95% confidence level” means that there is a 5% chance of a Type I error, so of course the part of the sample probability curve that would be a Type I error is 5%.
+
+### Sideways Type II errors
+
+The example graphic [figure NN] represents an extreme example of a Type II error.  It shows a linear regression done at a 95% confidence level, that has a statistical power of 90%.  
+
+![Figure NN: Sideways Type II error - 90% statistical power](./images/foobar-200.png)
+
+A Type II error would be any sample correlation that falls below the minimum statistically significant correlation, which is marked by the line that bisects the population probability curve on the right side of the graph.  Therefore, the area of the sample probability curve that is NOT shaded covers the sample correlations that would be a Type II error.
+
+In contrast to the previous example, the next example graphic [figure NN] represents a much more common example of linear regressions in the social sciences.  It shows a linear regression done at a 95% confidence level, that has a statistical power of 50%. 
+
+![Figure NN: Sideways Type II error - 50% statistical power](./images/foobar-200.png)
+
+The area that is NOT shaded “under” the sample probability curve on the left side of the graph covers the sample correlations that would be a Type II error.  Hopefully that area looks disconcertingly large.  Because it is.
+
+A statistical power of 50% means that there is a 50:50 chance of making a Type II error.  Which means that in the aggregated studies in some field, for every correlation reported as part of a linear regression with a 50% statistical power, there is another correlation that wasn't found and that wasn't reported, but that has just as strong of an effect as the correlation that did get reported.
+
+Let's look again at the first example, to consider another implication of Type II errors.
+
+![Figure NN: Sideways Type II error - 90% statistical power](./images/foobar-200.png)
+
+If your sample correlation falls in the unshaded area on the left side of the graph, “under” the sample probability curve, your result is not statistically significant.  Therefore, it is generally considered unpublishable.  It's not viewed as a negative result, it's viewed as a non-result.
+
+But is that appropriate?  If you calculate a statistical power of 90%, and then you fail to get a statistically significant sample correlation, there is a 10% that you just have bad luck.  But there's a 90% chance that there's something wrong with effect size you were expecting.  (Assuming you didn't merely make a mistake in the calculations along the way.)
+
+For the purposes of calculating *statistical power*, you estimated the effect size based on one of two things:
+
+1. The results of previous studies of the same correlation
+1. The results of previous studies of related correlations, combined with accept theories about the relation between those correlations and the one you're studying
+
+If you are doing a replication study, that's you used the first approach.  And when you failed to find a statistically significant result, that means that there's a 90% chance that those previous studies were wrong.
+
+If you aren't doing a replication study, you likely used the second approach.  So, when you failed to find a statistically significant result, either the previous related studies were wrong, or the accepted theories that relates those studies to yours are wrong.
+
+In any of those cases, a 90% chance would seem to be enough to warrant attention.  If a 95% confidence level is enough to get a positive result published, what's the required level of confidence in a negative result to get published?
 
 
 
