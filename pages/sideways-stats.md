@@ -11,9 +11,9 @@ Those four characteristics are deterministic.  Meaning, if you know any three of
 
 Another way to look at the relationship between those four is to think of them as being in balance with each other.  If one of them changes, at least one of the others must also change, in order to maintain the balance. If you are interested in any of those characteristics, you will likely find it helpful to understand the others and the relationship between them.
 
-Most importantly, in my opinion, you need to understand these four and how they are related if you want to properly understand what “statistical significance” actually means, and if you want to avoid fooling yourself into believing that statistical significance alone is evidence evidence of a meaningful result. 
+Most importantly, in my opinion, you need to understand these four and how they are related if you want to properly understand what “statistical significance” actually means, and if you want to avoid fooling yourself into believing that statistical significance alone is evidence evidence of a meaningful result.
 
-I rely heavily of visual representations to help explain things in this document.  If you are not a “visual thinker”, you may well find the text too sparse to be useful to you.  I do not rely much on equations, rigorous derivations or formal logic.
+I rely heavily on visual representations of concepts to help explain things in this document.  If you are not a “visual thinker”, you may well find the text too sparse to be useful to you.  I do not rely much on equations, rigorous derivations or formal logic.
 
 This document is not meant to be a complete discussion of linear regression or related methods.  Not only is focused on a narrow range of applications of regression it also does not consider all possible cases.
 
@@ -115,15 +115,37 @@ So, we've seen how *alpha* determines the placement of the population probabilit
 
 Just like with the population probability curve, the shape of the sample probability curve is determined by *sample size*. So with *sample size* and the minimum statistically significant sample correlation that is determined by *sample size* and *alpha* we are almost able to determine the *statistical power*.  All we need to do is figure out where the line that bisects the sample probability curve falls on our sideways graph.
 
-I've been referring to that line as the population correlation.  Because conceptually that's what it is.  But there's another way to think about it—you can also call that the “*effect size*”.  The next section covers that, which is the last of the four characteristics of linear regressions analysis that I set out to discuss.
+I've been referring to that line as the population correlation.  Because I wanted to maintain symmetry in my descriptions of the sideways statistical graphics.  So, since the right side of the graph has the population probability curve that is bisected by the sample correlation, the left side of the graph which has the sample probability curve should be bisected by something called the “population correlation”.
+
+But that line is also the last of the four characteristics of linear regressions that I set out to discuss—the “effect size”.  That's what the next section will cover.
 
 ## Effect size
 
-…
+Descriptions of what the “effect size” is can sometimes be esoteric, but since we've limited ourselves to talking about linear regressions that use null-hypothesis significance testing, we can simply say that it's the correlation that exist in the population.
 
-…
+The somewhat confusing thing is that most of the time we don't know the value of the *effect size*—since if we knew the population correlation, we wouldn't need to be trying to find a sample correlation—yet we need to know its value in order to determine the *statistical power* of an analysis.
 
-…
+One mistake that you might make is to use your sample correlation as an estimate of the population correlation, which is the *effect size*.  Doing that defeats the main purpose of *statistical power*, since you are forcing it to always be 50%.  A *statistical power* of 50% is of effectively no use in avoiding or discussing Type II errors.  
+
+And, regardless of what method you use to determine *effect size*, if you don't use it to calculate *statistical power* until after you've collected and analyzed your data, you've already missed out the chance to you it to help determine the right *sample size* for your study.
+
+Let's go back to the basic example graphic [figure NN] that shows both the population and the sample probability curves for some hypothetical linear regression.
+
+![Figure NN: Basic relationship of alpha and beta](./images/basic-alpha-beta-es-n-200.png)
+
+The statistical power is the shaded area “under” the sample probability curve of the left side of the graph.  The size of that area is determined by two things: the shape of the probability curves, and the distance between the lines that bisects the curves.
+
+The two curves are identical, and are a result of the *sample size*.
+
+The height of the line that bisects the population probability curve on the right side of the graph is a result of the shape of the probability curves combined with the *confidence level* of the analysis.
+
+The height of the line that bisects the sample probability curve is the *effect size* of the analysis, a.k.a., the population correlation.
+
+In general, a larger sample size will give you a larger statistical power.  Think of it this way: if the two bisecting lines (the sample and population correlations) are a great distance apart, then even if the probability curves are wide and low, there will be a large area that's between the bisection lines.  But if the two lines are close together, the probability curves will need to be very tight in order to find a large area between the two bisecting lines.  See the next example graphic, [figure NN].
+
+![Figure NN: Impact of sample size on statistical power](./images/N-impact-on-power-200.png)
+
+Now that we've gone through the four characteristics and how they're related, we can apply them to our understanding of the two types of error associated linear regressions and null hypothesis significance testing.
 
 ## Type I and Type II errors
 
@@ -180,6 +202,22 @@ If you aren't doing a replication study, you likely used the second approach.  S
 
 In any of those cases, a 90% chance would seem to be enough to warrant attention.  If a 95% confidence level is enough to get a positive result published, what's the required level of confidence in a negative result to get published?
 
+There doesn't seem to be one.  The utility of negative results from studies with large statistical power remains largely unused.
+
+## Conclusion
+
+This document discussed four inter-related characteristics of linear regression analysis:
+
+* confidence level
+* statistical power
+* sample size
+* effect size
+
+It used “sideways” graphics to keep those four concepts separate while showing how they are related to each other, and how changes in one characteristic will impact another.
+
+As an example of how understanding those four based on the sideways graphics can be useful in understanding other issues related to linear regression, it briefly discussed why a Type II error may in fact be a valuable result, if the analysis had a large statistical power.
+
+Hopefully you've found it helpful to look at statistics sideways.  
 
 
 
