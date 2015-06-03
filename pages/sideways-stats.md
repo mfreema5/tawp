@@ -143,7 +143,7 @@ The height of the line that bisects the sample probability curve is the *effect 
 
 In general, a larger sample size will give you a larger statistical power.  Think of it this way: if the two bisecting lines (the sample and population correlations) are a great distance apart, then even if the probability curves are wide and low, there will be a large area that's between the bisection lines.  But if the two lines are close together, the probability curves will need to be very tight in order to find a large area between the two bisecting lines.  See the next example graphic, [figure NN].
 
-![Figure NN: Impact of sample size on statistical power](./images/N-impact-on-power-200.png)
+![Figure NN: Impact of sample size on statistical power](./images/N-impact-on-power-overlapped-200.png)
 
 Now that we've gone through the four characteristics and how they're related, we can apply them to our understanding of the two types of error associated linear regressions and null hypothesis significance testing.
 
