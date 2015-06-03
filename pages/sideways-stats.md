@@ -159,7 +159,7 @@ The following two sections look at ways to think about those errors in the frame
 
 The example graphic [figure NN] represents a linear regression done at a 95% confidence level.  The population probability curve on the right side of the graph has 5% of its area bounded by null, and the line that bisects it is the minimum sample correlation that would be statistically significant.  Since this is an example of a Type I error, the sample population curve on the left side of the graph has been centered on null.
 
-![Figure NN: Sideways Type I error](./images/foobar-200.png)
+![Figure NN: Sideways Type I error](./images/type-1-errors-200.png)
 
 A Type I error would be any analysis that found a statistically significant sample correlation.  On the sample population curve, on the left side of the graph, the area that's shaded covers the sample correlations that would be Type I error.  That area is 5% of the total area “under” the sample population—that area will always be exactly equal to the area of the population probability curve that below the null line, because the two curves are identical in shape.  
 
@@ -171,13 +171,13 @@ That the two areas are identical also simply makes sense.  A “95% confidence l
 
 The example graphic [figure NN] represents an extreme example of a Type II error.  It shows a linear regression done at a 95% confidence level, that has a statistical power of 90%.  
 
-![Figure NN: Sideways Type II error - 90% statistical power](./images/foobar-200.png)
+![Figure NN: Sideways Type II error - 90% statistical power](./images/type-2-errors-90-200.png)
 
 A Type II error would be any sample correlation that falls below the minimum statistically significant correlation, which is marked by the line that bisects the population probability curve on the right side of the graph.  Therefore, the area of the sample probability curve that is NOT shaded covers the sample correlations that would be a Type II error.
 
 In contrast to the previous example, the next example graphic [figure NN] represents a much more common example of linear regressions in the social sciences.  It shows a linear regression done at a 95% confidence level, that has a statistical power of 50%. 
 
-![Figure NN: Sideways Type II error - 50% statistical power](./images/foobar-200.png)
+![Figure NN: Sideways Type II error - 50% statistical power](./images/type-2-errors-50-200.png)
 
 The area that is NOT shaded “under” the sample probability curve on the left side of the graph covers the sample correlations that would be a Type II error.  Hopefully that area looks disconcertingly large.  Because it is.
 
@@ -185,7 +185,7 @@ A statistical power of 50% means that there is a 50:50 chance of making a Type I
 
 Let's look again at the first example, to consider another implication of Type II errors.
 
-![Figure NN: Sideways Type II error - 90% statistical power](./images/foobar-200.png)
+![Figure NN: Sideways Type II error - 90% statistical power](./images/type-2-errors-90-200.png)
 
 If your sample correlation falls in the unshaded area on the left side of the graph, “under” the sample probability curve, your result is not statistically significant.  Therefore, it is generally considered unpublishable.  It's not viewed as a negative result, it's viewed as a non-result.
 
