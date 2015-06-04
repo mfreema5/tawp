@@ -1,39 +1,53 @@
 # Sideways statistics
 
-This document is about the relationship between four characteristics of linear regressions.  Those characteristics are:
+## Prologue
 
-* confidence level
-* statistical power
-* sample size
-* effect size
+You might want to first take a detour and go look at the collection of example graphics with brief explanations, available at: [link].
 
-Those four characteristics are deterministic.  Meaning, if you know any three of them, you can determine the fourth.
+Hopefully that will encourage you to slog your way through all the excessive text that follows.
 
-Another way to look at the relationship between those four is to think of them as being in balance with each other.  If one of them changes, at least one of the others must also change, in order to maintain the balance. If you are interested in any of those characteristics, you will likely find it helpful to understand the others and the relationship between them.
+## Background
 
-Most importantly, in my opinion, you need to understand these four and how they are related if you want to properly understand what “statistical significance” actually means, and if you want to avoid fooling yourself into believing that statistical significance alone is evidence evidence of a meaningful result.
+This page is the result of me wanting to understand these four characteristics of linear regressions:
 
-I rely heavily on visual representations of concepts to help explain things in this document.  If you are not a “visual thinker”, you may well find the text too sparse to be useful to you.  I do not rely much on equations, rigorous derivations or formal logic.
+1. confidence level / *alpha*
+1. statistical power / *beta*
+1. sample size
+1. effect size
 
-This document is not meant to be a complete discussion of linear regression or related methods.  Not only is focused on a narrow range of applications of regression it also does not consider all possible cases.
+I wanted to know not only what they are, but how they are related to each other, since they are deterministic&mdash;by which I mean that given any three of them, you can calculate the fourth.
 
-I came up with the graphics and explanations in this document to help myself understand the relationship between statistical significance, statistical power, sample size, and effect size.  I don't expect or intend them to do anything more than that.  But, I am hoping that they can help other people to understand those four features of linear regressions, too.
+The reason I was interested in those four is because they all come up in discussions of statistical significance.  More specifically, in discussions of the use of null-hypothesis significance testing as part of empirical studies in the social science that employ multivariate linear regressions.  I've been downright obsessed with null-hypothesis significance testing for a while now, to the point where it almost derailed my Master's thesis in technical communication and information design.  (See: [link].)
 
-## Why sideways?
+At some point I realized that to be able to make rational arguments about null-hypothesis significance testing, I needed to understand those four inter-related characteristics of linear regressions.  After reading about them in a variety of books, I also realized that I was going to have to come to my own understanding of them, since none of the explanations I was reading were working for me.
 
-I've called this “Sideways statistics” because of the graphics I created to help myself understand the four deterministic features of linear regressions.  So, let's get to the graphics.
+I tend to be a visual thinker, so I what I eventually came up with a way to represent the relationship between those four characteristics graphically.  I think that I understand them now.
 
-The first graph (figure NN) is a standard probability curve.  Hopefully you've seen it before, because I'm just going to do a quick review of what it means.
+But the best way to check if you understand something is to try to explain it to someone else.  So, I'm writing this page in an attempt to explain the graphics I used to understand the four significance-related characteristics of linear regressions.
+
+I haven't yet tried to apply visual representations such as these to issues regarding the use of null-hypothesis significance testing.  Presumably, that will be the next step, once I'm completely satisfied with my understanding of these four characteristics.
+
+### Caveat emptor
+
+I've been a chemist, a quality manager, a copy editor, and a specialty gas consultant, and I'm aiming to be a technical writer, but I am not a statistician.  You should confirm the validity of anything you read here before applying it.  Especially since my interest in the use of these four characteristics of statistical analysis is a narrow one.  While I may not be wrong in my understanding of how they apply to linear regressions in the social sciences, my ideas about them may be way off-base in regard to other applications.
+
+## What are “sideways” statistics?
+
+I've called this “Sideways statistics” because of the graphics I ended up creating to help myself understand the four deterministic features of linear regressions.  If you haven't seen one yet, checkout the first example, (figure NN).  Don't worry if it is meaningless to you; I only put it here so you can know where we're headed.
+
+![Figure NN: A “sideways” graph](./images/basic-alpha-beta-es-n-200.png)
+
+The next example (figure NN) is a more conventional graph, and is a standard probability curve.  Hopefully you've seen it before, because I'm only going to do a quick review of what it means.
 
 ![Figure NN: Probability curve](./images/basic-prob-curve-200.png)
 
-The horizontal axis is the possible values for some measure.  The vertical axis is the probability of getting the value on the horizontal axis when you make a measurement.  But we aren't usually interested in the probability of a specific value.  Instead we're interested in the probability of getting a result that is bounded by some specific value.  Where “bounded by” means that the result in which we're interested is anything that is, for example, “greater than or equal to” the specific value.  We could also be looking for any of the “less than or equal to” values.
+The horizontal axis is the possible values for some measure.  The vertical axis is the probability of getting each value on the horizontal axis when you make a measurement.  Typically, however, we aren't interested in the probability of a specific value, but rather we're interested in the probability of getting a result that is bounded by some specific value.  In other words, we're interested in the probability of getting a result that is “greater than or equal to” or that is “less than or equal to” some value.
 
-The probability of a result that is bounded by some specific value is equal to the total area under the curve to the appropriate side of that value.  In the example graphic (figure NN), that's the shaded area.
+The probability of getting a result that is bounded by a specific value is equal to the total area under the curve on the appropriate side of that value.  In the example graphic (figure NN), the the shaded area is the probability of getting a result that's “less than or equal to” the bounding value.
 
-In the case of linear regression, the probability that most people are familiar with is the “*p* value”, a.k.a, “alpha”, “confidence level”, etc.  In the social sciences, the most common value for it is 5%, often reported as “*p*<.05”.
+In the case of linear regression, the probability that comes up most often is the “*p* value”, a.k.a, “alpha”, “confidence level”, etc.  In the social sciences, the most common value for *alpha* is 5%, often reported as “*p*<.05”.
 
-When you're using a null-hypothesis significance test to analyze a sample, a confidence level of 5% means that there is a 5% chance that population correlation is not zero.  You don't know the population correlation because you measured and analyzed a sample of the population.  What you have is the sample correlation.  The population correlation is related to the sample correlation by a probability curve.  
+When you're using a null-hypothesis significance test to analyze a sample, a confidence level of 5% means that there is a 5% chance that population correlation is not zero.  You don't precisely know the population correlation because you measured and analyzed only a sample of the population, instead of the entire population.  So, what you've found is the sample correlation, and the population correlation is related to the sample correlation by a probability curve.  
 
 ![Figure NN: Basic correlation with alpha = 5%](./images/basic-alpha-200.png)
 
@@ -53,19 +67,19 @@ Let's say you measure a variety of characteristics of a presumably representativ
 
 So, you can't precisely determine the correlation between characteristics for the population. But what you can determine precisely is the probability that the population's correlation falls within some range of values.  In the case of null-hypothesis significance testing, your goal is to calculate the probability that the population correlation is above zero.  When you report that a correlation is, e.g., “statistically significant at ‘p<.05’”, you're reporting the probability that you calculated—based on the sample correlation—that the population's correlation is greater than zero.  In the case of ‘p<.05’, that probability is 0.95, in other words, 95%.
 
-You can think about that probability calculation as being a probability curve that you draw around the sample correlation, which you determined from your measurements.  In the example graphic [figure NN], the horizontal line that splits the curve marks the value of the sample correlation.  The probability curve describes the correlation of the population.
+You can think about that probability calculation as being a probability curve that you draw around the sample correlation, which you determined from your measurements.  In the example graphic (figure NN), the horizontal line that splits the curve marks the value of the sample correlation.  The probability curve describes the correlation of the population.
 
-This is an important distinction to understand.  In the example graphic [figure NN], the straight line is about the *sample*.  The curve is about the *population*.
+This is an important distinction to understand.  In the example graphic (figure NN), the straight line is about the *sample*.  The curve is about the *population*.
 
-The next example graphic [figure NN], is the opposite of that. The straight line is about the *population*.  The curve is about the *sample*.  The probability curve and bisecting line are on the opposite side of the vertical axis from the previous graph because they show the opposite relationship.
+The next example graphic (figure NN), is the opposite of that. The straight line is about the *population*.  The curve is about the *sample*.  The probability curve and bisecting line are on the opposite side of the vertical axis from the previous graph because they show the opposite relationship.
 
 What is that relationship?  It's the probability of finding some particular value for a sample correlation, based on what the population correlation is.  Even though you may not be able to ever directly measure the population correlation, it does exist and it does have some precise—if unknown—value.  And that value establishes the probabilities of the sample correlation value you'll determine.
 
 That probability curve is what *beta*, a.k.a. “statistical power”, describes.  But before I explain that, let's back up and review the graphic in which the probability curve is related to the population correlation.    In that graph, the curve is describe by *alpha*, a.k.a., “confidence level”, or “*p* value”.
 
-## Confidence level & Statistical power – alpha & beta
+## Confidence level & Statistical power – *alpha* & *beta*
 
-The next example graphic [figure NN] has three curves in it, showing three different values for *alpha*.  The three probability curves are all identical, but the value of the sample correlation increases from left to right.  That increase in the sample correlation shifts the curve upward (in our sideways view) and that means that the value for *alpha* decreases, since the percentage of the area “under” the probability curve that is bounded by the null line decreases.
+The next example graphic (figure NN) has three curves in it, showing three different values for *alpha*.  The three probability curves are all identical, but the value of the sample correlation increases from left to right.  That increase in the sample correlation shifts the curve upward (in our sideways view) and that means that the value for *alpha* decreases, since the percentage of the area “under” the probability curve that is bounded by the null line decreases.
 
 ![Figure NN: Three values for alpha](./images/three-alphas-200.png)
 
@@ -73,7 +87,7 @@ This is what you would expect to happen.  Remember that *alpha*, a.k.a., the “
 
 So, the larger the sample correlation is, the less likely it is that no such correlation exists in the population, and that all you have found is random error.  If the sample correlation is quite small, it's easy to believe that the correlation is the result of sampling errors, because it wouldn't take much error to create the illusion of a small correlation.  But it would take a very large and therefore unlikely amount of sampling error to create the illusion of a large correlation.
 
-The next example graphic [figure NN] takes advantage of the sideways arrangment (finally!), and shows both the population and the sample probability curves for some hypothetical linear regression.
+The next example graphic (figure NN) takes advantage of the sideways arrangment (finally!), and shows both the population and the sample probability curves for some hypothetical linear regression.
 
 ![Figure NN: Basic relationship of alpha and beta](./images/basic-alpha-beta-es-n-200.png)
 
@@ -87,7 +101,7 @@ The line that bisects the sample probability curve on the left side of the graph
 
 In other words, the fact that 60% of the sample correlation probability curve is higher than the minimum statistically significant sample correlation value (*p*<.05), means that there is a 60% chance that the sample correlation we find will be a value that is equal to or greater than that minimum value.
 
-The next example graphic [figure NN] has three graphs in it, with the statistical power increasing from left to right, while *beta* is decreasing.
+The next example graphic (figure NN) has three graphs in it, with the statistical power increasing from left to right, while *beta* is decreasing.
 
 ![Figure NN: Three values for beta](./images/three-betas-200.png)
 
@@ -99,7 +113,7 @@ In the next section we'll look at how the shape of those probability is related 
 
 ## Sample size – “N”
 
-The larger the sample size in an analysis the less influence random error has on the sample correlation.  Therefore, the population probability curve that surrounds the sample correlation will be less spread out for larger sample sizes.  The next example graphic [figure NN] represents how the population probability curve tightens as the sample size increases.  The sample size, “N”, increases from left to right for the three examples.
+The larger the sample size in an analysis the less influence random error has on the sample correlation.  Therefore, the population probability curve that surrounds the sample correlation will be less spread out for larger sample sizes.  The next example graphic (figure NN) represents how the population probability curve tightens as the sample size increases.  The sample size, “N”, increases from left to right for the three examples.
 
 ![Figure NN: Probabilities tighten as N increases](./images/changing-N-and-alpha-200.png)
 
@@ -107,7 +121,7 @@ In those three examples, *alpha* is constant, and therefore as the probability c
 
 This is why one of criticisms of null-hypothesis significance testing is that it ‘doesn't indicate anything other than the fact that a sufficiently large sample was used.’  In other words, *any* non-zero correlation can be statistically significant at *any* confidence level—the only thing you have to do is find a way to increase the sample size far enough.
 
-The next example graphic [figure NN] is a departure from the others, in that it's a graph that is drawn to scale.  It shows the relation between sample size and the minimum statistically significant correlation (*p*<.05).  The relation is what we would expect from the sideways examples—as N get larger, the minimum statistically significant sample correlation drops.
+The next example graphic (figure NN) is a departure from the others, in that it's a graph that is drawn to scale.  It shows the relation between sample size and the minimum statistically significant correlation (*p*<.05).  The relation is what we would expect from the sideways examples—as N get larger, the minimum statistically significant sample correlation drops.
 
 ![Figure NN: Relation of statistical significance to sample size](./images/correlation-vs-samplesize-200.png)
 
@@ -129,7 +143,7 @@ One mistake that you might make is to use your sample correlation as an estimate
 
 And, regardless of what method you use to determine *effect size*, if you don't use it to calculate *statistical power* until after you've collected and analyzed your data, you've already missed out the chance to you it to help determine the right *sample size* for your study.
 
-Let's go back to the basic example graphic [figure NN] that shows both the population and the sample probability curves for some hypothetical linear regression.
+Let's go back to the basic example graphic (figure NN) that shows both the population and the sample probability curves for some hypothetical linear regression.
 
 ![Figure NN: Basic relationship of alpha and beta](./images/basic-alpha-beta-es-n-200.png)
 
@@ -141,7 +155,7 @@ The height of the line that bisects the population probability curve on the righ
 
 The height of the line that bisects the sample probability curve is the *effect size* of the analysis, a.k.a., the population correlation.
 
-In general, a larger sample size will give you a larger statistical power.  Think of it this way: if the two bisecting lines (the sample and population correlations) are a great distance apart, then even if the probability curves are wide and low, there will be a large area that's between the bisection lines.  But if the two lines are close together, the probability curves will need to be very tight in order to find a large area between the two bisecting lines.  See the next example graphic, [figure NN].
+In general, a larger sample size will give you a larger statistical power.  Think of it this way: if the two bisecting lines (the sample and population correlations) are a great distance apart, then even if the probability curves are wide and low, there will be a large area that's between the bisection lines.  But if the two lines are close together, the probability curves will need to be very tight in order to find a large area between the two bisecting lines.  See the next example graphic, (figure NN).
 
 ![Figure NN: Impact of sample size on statistical power](./images/N-impact-on-power-overlapped-200.png)
 
@@ -157,7 +171,7 @@ The following two sections look at ways to think about those errors in the frame
 
 ### Sideways Type I errors
 
-The example graphic [figure NN] represents a linear regression done at a 95% confidence level.  The population probability curve on the right side of the graph has 5% of its area bounded by null, and the line that bisects it is the minimum sample correlation that would be statistically significant.  Since this is an example of a Type I error, the sample population curve on the left side of the graph has been centered on null.
+The example graphic (figure NN) represents a linear regression done at a 95% confidence level.  The population probability curve on the right side of the graph has 5% of its area bounded by null, and the line that bisects it is the minimum sample correlation that would be statistically significant.  Since this is an example of a Type I error, the sample population curve on the left side of the graph has been centered on null.
 
 ![Figure NN: Sideways Type I error](./images/type-1-errors-200.png)
 
@@ -169,13 +183,13 @@ That the two areas are identical also simply makes sense.  A “95% confidence l
 
 ### Sideways Type II errors
 
-The example graphic [figure NN] represents an extreme example of a Type II error.  It shows a linear regression done at a 95% confidence level, that has a statistical power of 90%.  
+The example graphic (figure NN) represents an extreme example of a Type II error.  It shows a linear regression done at a 95% confidence level, that has a statistical power of 90%.  
 
 ![Figure NN: Sideways Type II error - 90% statistical power](./images/type-2-errors-90-200.png)
 
 A Type II error would be any sample correlation that falls below the minimum statistically significant correlation, which is marked by the line that bisects the population probability curve on the right side of the graph.  Therefore, the area of the sample probability curve that is NOT shaded covers the sample correlations that would be a Type II error.
 
-In contrast to the previous example, the next example graphic [figure NN] represents a much more common example of linear regressions in the social sciences.  It shows a linear regression done at a 95% confidence level, that has a statistical power of 50%. 
+In contrast to the previous example, the next example graphic (figure NN) represents a much more common example of linear regressions in the social sciences.  It shows a linear regression done at a 95% confidence level, that has a statistical power of 50%. 
 
 ![Figure NN: Sideways Type II error - 50% statistical power](./images/type-2-errors-50-200.png)
 
@@ -206,18 +220,7 @@ There doesn't seem to be one.  The utility of negative results from studies with
 
 ## Conclusion
 
-This document discussed four inter-related characteristics of linear regression analysis:
+The utility of “sideways statistics” in both understanding and demonstrating Type I and Type II errors makes me hopeful that they will be useful in considering the issues surrounding the use of null hypothesis statistical significance.  But even if they aren't, I still think they're useful, since they can help to understand the relationship between *confidence level*, *statistical power*, *sample size*, and *effect size*.
 
-* confidence level
-* statistical power
-* sample size
-* effect size
-
-It used “sideways” graphics to keep those four concepts separate while showing how they are related to each other, and how changes in one characteristic will impact another.
-
-As an example of how understanding those four based on the sideways graphics can be useful in understanding other issues related to linear regression, it briefly discussed why a Type II error may in fact be a valuable result, if the analysis had a large statistical power.
-
-Hopefully you've found it helpful to look at statistics sideways.  
-
-
+For me, at least, being able to imagine a visual representation of those four characteristics in relation to each other, and then “see” what happens when one of them changes is a huge help in understanding linear regressions.  Hopefully, you will now also find statistics easier to understand, by looking at them sideways.
 
