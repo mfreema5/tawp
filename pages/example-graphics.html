@@ -1,40 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="generator" content="pandoc">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="css/screen-example-graphics.css" rel="stylesheet">
     <title>Sideways statistics - collection of example graphics</title>
-    <style type="text/css">code{white-space: pre;}</style>
+    <meta name="author" content="Michael J. Freeman">
+    <meta name="description" content="Sideways stats &ndash; just the graphics, ma'am.">
+    <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="css/gfx/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="192x192" href="../css/gfx/favicon-192x192.png" type="image/png">
+    <link rel="icon" sizes="152x152" href="../css/gfx/favicon-152x152.png" type="image/png">
+    <link rel="icon" sizes="120x120" href="../css/gfx/favicon-120x120.png" type="image/png">
+    <link rel="shortcut icon" href="../css/gfx/favicon.ico" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:300,300italic,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <h1>Sideways statistics - collection of example graphics</h1>
-    <article>
-      <section style="width: 100%;">
-        <h2>Going sideways</h2>
-        <img src="./images/large/basic-prob-curve.png" alt="basic-prob-curve" style="max-width:100%;height:auto;" />
-        <img src="./images/large/basic-alpha.png" alt="basic-alpha" style="max-width:100%;height:auto;" />
-        <img src="./images/large/basic-alpha-sideways.png" alt="basic-alpha-sideways" style="max-width:100%;height:auto;" />
-      </section>
-      <section style="width: 100%;">
-        <h2>What's what</h2>
-        <img src="./images/large/basic-alpha-beta-es-n.png" alt="basic-alpha-beta-es-n" style="max-width:100%;height:auto;" />
-        <img src="./images/large/three-alphas.png" alt="three-alphas" style="max-width:100%;height:auto;" />
-        <img src="./images/large/three-betas.png" alt="three-betas" style="max-width:100%;height:auto;" />
-      </section>
-      <section style="width: 100%;">
-        <h2>The impact of sample size</h2>
-        <img src="./images/large/correlation-vs-samplesize.png" alt="correlation-vs-samplesize" style="max-width:100%;height:auto;" />
-        <img src="./images/large/changing-N-and-alpha.png" alt="changing-N-and-alpha" style="max-width:100%;height:auto;" />
-        <img src="./images/large/N-impact-on-power.png" alt="N-impact-on-power" style="max-width:100%;height:auto;" />
-        <img src="./images/large/N-impact-on-power-overlapped.png" alt="N-impact-on-power-overlapped" style="max-width:100%;height:auto;" />
-      </section>
-      <section style="width: 100%;">
-        <h2>Types of error</h2>
-        <img src="./images/large/type-1-errors.png" alt="type-1-errors" style="max-width:100%;height:auto;" />
-        <img src="./images/large/type-2-errors-50.png" alt="type-2-errors-50" style="max-width:100%;height:auto;" />
-        <img src="./images/large/type-2-errors-90.png" alt="type-2-errors-90" style="max-width:100%;height:auto;" />
-      </section>
-    </article>
+    <main>
+      <h1>Sideways statistics</h1>
+      <h1>The example graphics</h1>
+      <article>
+        <section>
+          <h2>Going sideways</h2>
+          <div class="w1296">
+            <img src="./images/large/basic-prob-curve.png" alt="basic-prob-curve" />
+            <p>A probability curve.  The shaded area is the probability of a value less than the upper bound.</p>
+          </div>
+          <div class="w1392">
+            <img src="./images/large/basic-alpha.png" alt="basic-alpha" />
+            <p>The probability of a population correlation. The shaded area is 5% of the total, and are the values &#8804; 0.</p>
+          </div>
+          <div class="w792">
+            <img src="./images/large/basic-alpha-sideways.png" alt="basic-alpha-sideways" />
+            <p>Same as previous, but with the axis swapped &ndash; it's “sideways”.</p>
+          </div>
+        </section>
+        <section>
+          <h2>What's what</h2>
+          <div class="w1596">
+            <img src="./images/large/basic-alpha-beta-es-n.png" alt="basic-alpha-beta-es-n" />
+            <p>The shaded area to the right is the “<i>p</i>-value”, to the left is the <em>statistical power</em>.  The line bisecting the curve on the left is the <em>effect size</em>.  The shape of the curves is determined by the <em>sample size</em>.</p>
+          </div>
+          <div class="w4632">
+            <img src="./images/large/three-alphas.png" alt="three-alphas" />
+            <p>As <i>alpha</i> becomes smaller, the minimum correlation that is statistically significant becomes higher.</p>
+          </div>
+          <div class="w4632">
+            <img src="./images/large/three-betas.png" alt="three-betas" />
+            <p>The greater the distance between the <em>effect size</em> and the minimum statistically significant sample correlation, the larger the <em>statistical power</em>.</p>
+          </div>
+        </section>
+        <section>
+          <h2>The impact of sample size</h2>
+          <div class="w562">
+            <img src="./images/large/correlation-vs-samplesize.png" alt="correlation-vs-samplesize" />
+            <p>The minimum correlation that is statistically significant is a function of the <em>sample size</em>.</p>
+          </div>
+          <div class="w3444">
+            <img src="./images/large/changing-N-and-alpha.png" alt="changing-N-and-alpha" />
+            <p>Larger <em>sample sizes</em> have tighter probability curves, so the minimum correlation that is statistically significant becomes lower.</p>
+          </div>
+          <div class="w3408">
+            <img src="./images/large/N-impact-on-power.png" alt="N-impact-on-power" />
+            <p>Larger <em>sample sizes</em> have tighter probability curves, so the <em>statistical power</em> increases.</p>
+          </div>
+          <div class="w5160">
+            <img src="./images/large/N-impact-on-power-overlapped.png" alt="N-impact-on-power-overlapped" />
+            <p>The area of the overlapped graphs that is blue is where the increase in <em>statistical power</em> happens.</p>
+          </div>
+        </section>
+        <section>
+          <h2>Types of error</h2>
+          <div class="w1920">
+            <img src="./images/large/type-1-errors.png" alt="type-1-errors" />
+            <p>A 5% probability of a Type I error.</p>
+          </div>
+          <div style="clear: both;">
+          <div class="w1920">
+            <img src="./images/large/type-2-errors-50.png" alt="type-2-errors-50" />
+            <p>A 50% probability of a Type II error.</p>
+          </div>
+          <div class="w1920">
+            <img src="./images/large/type-2-errors-90.png" alt="type-2-errors-90" />
+            <p>A 10% probability of a Type II error.</p>
+          </div>
+        </section>
+      </article>
+    </main>
   </body>
 </html>
