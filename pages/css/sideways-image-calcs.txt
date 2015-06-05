@@ -1,0 +1,75 @@
+correlation-vs-samplesize.png       Image Size :  562x 302
+
+562 /  562 = 100% - max-width: 25em;
+      562 /  562 => 31.25% - max-width: 20em;
+
+basic-prob-curve.png                Image Size : 1296x 768
+basic-alpha.png                     Image Size : 1392x 792
+basic-alpha-sideways.png            Image Size :  792x1392
+
+ 792 / 1392 = 56.875% - max-width: 14.21875em;
+       792 / 1392 = 17.75% - max-width: 11.375em;
+1296 / 1392 = 93.125% - max-width: 23.28125em;
+      1296 / 1392 = 29.125% - max-width: 18.625em;
+1392 / 1392 = 100.00% - max-width: 25em;
+      1392 / 1392 = 31.25% - max-width: 20em;
+
+
+population-probability.png	        Image Size : 1056x1512
+sample-probability.png              Image Size : 1056x1512
+
+1056 / 1596 = 66.165% - max-width: 16.5625em
+      1056 / 1596 => 20.6875% - max-width: 13.25em
+
+
+basic-alpha-beta-es-n.png           Image Size : 1596x1596
+
+1596 / 1596 = 100.00% - max-width: 25em;
+      1596 / 1596 => 31.25% - max-width: 20em;
+
+
+three-alphas.png                    Image Size : 4632x1920
+three-betas.png                     Image Size : 4632x1920
+changing-N-and-alpha.png            Image Size : 3444x1920
+N-impact-on-power.png               Image Size : 3408x1920
+N-impact-on-power-overlapped.png    Image Size : 5160x1920
+
+3408 / 5160 = 66.000% - max-width: 49.5000em;
+3444 / 5160 = 66.750% - max-width: 50.0625em;
+4632 / 5160 = 89.750% - max-width: 67.3125em;
+5160 / 5160 = 100.00% - max-width: 75em;
+
+
+type-1-errors.png                   Image Size : 1920x1752
+type-2-errors-50.png                Image Size : 1920x1752
+type-2-errors-90.png                Image Size : 1920x1752
+
+1920 / 1920 = 100% - max-width: 25em;
+        1920 / 1920 = 37.5% - max-width: 24.125em;
+1920 / 1596 = 120.500% - max-width: 30.125em;
+
+
+
+
+
+class="w562"   correlation-vs-samplesize.png        
+
+class="w1296"  basic-prob-curve.png                 
+class="w1392"  basic-alpha.png                      
+class="w792"   basic-alpha-sideways.png             
+
+class="w1056"  sample-probability.png
+class="w1056"  population-probability.png
+
+class="w1596"  basic-alpha-beta-es-n.png            
+
+class="w4632"  three-alphas.png                     
+class="w4632"  three-betas.png                      
+class="w3444"  changing-N-and-alpha.png             
+class="w3408"  N-impact-on-power.png                
+class="w5160"  N-impact-on-power-overlapped.png     
+
+class="w1920"  type-1-errors.png                    
+class="w1920"  type-2-errors-50.png                 
+class="w1920"  type-2-errors-90.png     
+
