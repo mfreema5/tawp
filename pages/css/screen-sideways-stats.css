@@ -37,9 +37,12 @@ h3 {
   line-height:  1.250;
 }
 
-h4, h5, h6, b, strong, caption { font-weight: bold; }
-i, em { font-style: italic;  }
-
+h4, h5, h6, b, strong, caption { 
+  font-weight: bold; 
+}
+i, em { 
+  font-style: italic;  
+}
 body { 
   font-family: 'Merriweather Sans', sans-serif; 
   font-style:   normal;
@@ -73,6 +76,52 @@ section {
   overflow: hidden;
   width: 100%;
 }
+ul { 
+  list-style-type: disc;
+}
+ol { 
+  list-style-type: decimal;
+}
+a {
+  color: #713d8a;
+  text-decoration: none;
+}
+a:hover { 
+  text-decoration: underline; 
+}
+
+/********************************[ default layout ]**/
+body  {
+  margin: 0.625em;
+}
+article {
+  padding: 0.3125em;
+}
+p {
+  margin: 0.250em 0.125em 0.500em 0.250em;
+  padding: 0.250em 0 0.250em 0;
+  max-width: 48em;
+}
+ul, ol {
+  list-style-position: inside;
+  margin:  0.125em 0.1250em 0.125em 0.25em;
+  padding: 0.125em 0.1875em 0.125em 0.3125em;
+}
+li {
+  list-style: inherit;
+  margin: 0.125em  0  0.125em 0.5em;
+}
+li {
+  max-width: 37.5em;
+  margin: 0.375em 0.125em 0.500em 1.375em;
+  /* increase left by 1.375 em */
+  text-indent: -1.375em;
+  /* for hacky hanging indents */
+}
+img {
+  max-width:  100%;
+  height:     auto;
+}
 .w562, 
 .w792, 
 .w1056, 
@@ -84,97 +133,108 @@ section {
 .w4632, 
 .w5160 {
   background-color: #ffffff;
-  border-style: solid;
-  border-radius: 0.250em;
-  border-width: 0.125em;
-  border-color: #7160A2;
-  display: block;
-  float: right;
-  clear: right;
-  margin: 0.625em 0.0625em 0.625em 1.875em;
-  padding: 0.125em;
+  border-style:     solid;
+  border-radius:    0.250em;
+  border-width:     0.125em;
+  border-color:     #7160A2;
+  display:          block;
+  width:      98.75%;
+  max-width:  12em;
+  float:      none;
+  margin:     0.1875em auto;
+  padding:    0.1250em;
+}
+.w3444, 
+.w4632, 
+.w5160  {
+  max-width: 24.625em;
 }
 
-ul    { list-style-type: disc;    }
-ol    { list-style-type: decimal; }
-
-ul, ol {
-  list-style-position: inside;
-  margin: 0.125em  0  0.125em 0.625em;
-}
-li {
-  list-style: inherit;
-  margin: 0.125em  0  0.125em 0.5em;
-}
-a {
-  color: #713d8a;
-  text-decoration: none;
-}
-
-a:hover { text-decoration: underline; }
-
-/* Layout *************************************/
-article {
-  padding: 0.3125em 0.3125em 0.3125em 3.125em;
-  max-width: 64em;
-}
-p {
-  margin: 0.250em 0.125em 0.500em 0.250em;
-  padding: 0.250em 0 0.250em 0;
-  max-width: 48em;
-}
-li {
-  max-width: 37.5em;
-  margin: 0.375em 0.125em 0.500em 1.375em;
-  /* increase left by 1 em */
-  text-indent: -1em;
-  /* for hacky hanging indents */
-}
-img {
-  max-width:  100%;
-  height:     auto;
-}
-.w562 {
-  width:   31.25%;
-  max-width: 20em;
-}
-.w792 {
-  width:       17.75%;
-  max-width: 11.375em;
-}
-.w1056 {
-  width:    20.6875%;
-  max-width: 13.25em;
-}
-.w1296 {
-  width:   31.25%;
-  max-width: 20em;
-}
-.w1392 {
-  width:   31.25%;
-  max-width: 20em;
-}
-.w1596 {
-  width:   31.25%;
-  max-width: 20em;
-}
-.w1920 {
-  width:        37.5%;
-  max-width: 24.125em;
-}
-.w3444 {
-  width:       66.750%;
-  max-width: 50.0625em;
-  float: none;
-}
-.w4632 {
-  width:       89.750%;
-  max-width: 67.3125em;
-  float: none;
-}
-.w5160 {
-  width:   98.75%;
-  max-width: 75em;
-  float: none;
+/********************************[ 25 em < screen ]**/
+@media all and (min-width: 25em) {
+  body  {
+    margin-right: 2.5%;
+  }
+  article {
+    padding: 0.3125em 0.3125em 0.3125em 7.8125%;
+    max-width: 64em;
+  }
+  ul, ol {
+    margin:  0.125em 0.125em 0.125em 0.625em;
+    padding: 0.125em 0.7500% 0.125em 6.25%;
+  }
+  .w562, 
+  .w792, 
+  .w1056, 
+  .w1296, 
+  .w1392, 
+  .w1596, 
+  .w1920 {
+    float:    right;
+    clear:    right;
+    margin:   0.625em 0.0625em 0.625em 1.875em;
+    padding:  0.125em;
+  }
+  .w3444, 
+  .w4632, 
+  .w5160  {
+    float:    none;
+    clear:    both;
+    margin:   0.1875em;
+    padding:  0.1250em;
+  }
+  .w562 {
+    width:     43.75%;
+    max-width: 25.0em;
+  }
+  .w792 {
+    width:     17.7500%;
+    max-width: 11.375em;
+  }
+  .w1056 {
+    width:     20.6875%;
+    max-width: 13.250em;
+  }
+  .w1296 {
+    width:     31.25%;
+    max-width: 20.0em;
+  }
+  .w1392 {
+    width:     31.25%;
+    max-width: 20.0em;
+  }
+  .w1596 {
+    width:     31.25%;
+    max-width: 20.0em;
+  }
+  .w1920 {
+    width:     37.5000%;
+    max-width: 24.125em;
+  }
+  .w3444 {
+    width:     66.75000%;
+    max-width: 50.0625em;
+  }
+  .w4632 {
+    width:     89.75000%;
+    max-width: 67.3125em;
+  }
+  .w5160 {
+    width:     98.75%;
+    max-width: 75.0em;
+  }
 }
 
+/********************************[ 40 em < screen ]**/
+@media all and (min-width: 40em) {
+  body  {
+    margin-right: 1em;
+  }
+  article {
+    padding: 0.3125em 0.3125em 0.3125em 3.125em;
+    max-width: 64em;
+  }
+  ul, ol {
+    padding: 0.125em 0.300em 0.125em 2.500em;
+  }
+}

@@ -57,8 +57,6 @@ section {
   width: 100%;
 }
 .w562, 
-.w792, 
-.w1296, 
 .w1392, 
 .w1596, 
 .w1920, 
@@ -75,7 +73,6 @@ section {
   margin: 0.1875em;
   padding: 0.125em;
 }
-
 
 p     { font-family:     inherit; }
 ul    { list-style-type: disc;    }
@@ -111,32 +108,23 @@ li {
   /* for hacky hanging indents */
 }
 img {
-  max-width:  100%;
+  max-width:  98.75%;
   height:     auto;
 }
 .w562 {
-  width: 100%;
+  width: 98.75%;
   max-width: 25em;
 }
-.w792 {
-  width: 56.875%;
-  max-width: 14.21875em;
-  clear: left;
-}
-.w1296 {
-  width: 100%;
-  max-width: 24em;
-}
 .w1392 {
-  width: 100%;
+  width: 98.75%;
   max-width: 25em;
 }
 .w1596 {
-  width: 100%;
+  width: 98.75%;
   max-width: 25em;
 }
 .w1920 {
-  width: 100%;
+  width: 98.75%;
   max-width:  30.125em;
 }
 .w3408 {
@@ -152,7 +140,7 @@ img {
   max-width: 67.3125em;
 }
 .w5160 {
-  width: 100%;
+  width: 98.75%;
   max-width: 75em;
 }
 
