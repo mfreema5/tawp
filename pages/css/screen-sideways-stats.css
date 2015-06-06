@@ -28,13 +28,15 @@ h2 {
   font-weight:  700;
   font-size:    1.250em;
   line-height:  1.250;
+  margin:       0.9375em 0 0.750em 0;
 }
 h3 {
   font-family: 'Merriweather Sans', sans-serif;
-  font-style:   normal;
+  font-style:   italic;
   font-weight:  700;
   font-size:    1.125em;
   line-height:  1.250;
+  margin:       0.9375em 0 0.5625em 0;
 }
 
 h4, h5, h6, b, strong, caption { 
@@ -59,7 +61,6 @@ div p {
   font-family: 'Merriweather Sans', sans-serif;
   font-style:   normal;
   font-weight:  300;
-  font-size:    0.875em;
 }
 main {
   background-color: #cdc6e1;
@@ -101,6 +102,9 @@ p {
   margin: 0.250em 0.125em 0.500em 0.250em;
   padding: 0.250em 0 0.250em 0;
   max-width: 48em;
+}
+div p {
+  font-size:    0.625em;
 }
 ul, ol {
   list-style-position: inside;
@@ -158,6 +162,9 @@ img {
   article {
     padding: 0.3125em 0.3125em 0.3125em 7.8125%;
     max-width: 64em;
+  }
+  div p {
+    font-size:    0.875em;
   }
   ul, ol {
     margin:  0.125em 0.125em 0.125em 0.625em;
