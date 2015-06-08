@@ -9,7 +9,6 @@ html {
 /* Typography, color, etc. */
 h1 {
   font-family: 'Merriweather Sans', sans-serif;
-  font-style:   normal;
   font-weight:  700;
   font-size:    1.625em;
   line-height:  1.500em;
@@ -47,19 +46,16 @@ i, em {
 }
 body { 
   font-family: 'Merriweather Sans', sans-serif; 
-  font-style:   normal;
   font-weight:  300;
 }
 p { 
   font-family: 'Merriweather Sans', sans-serif; 
-  font-style:   normal;
   font-weight:  300;
   font-size:    1.0625em;
   line-height:  1.250em;
 }
 div p {
   font-family: 'Merriweather Sans', sans-serif;
-  font-style:   normal;
   font-weight:  300;
 }
 main {
