@@ -40,6 +40,18 @@ N-impact-on-power-overlapped.png    Image Size : 5160x1920
 5160 / 5160 = 100.00% - max-width: 75em;
 
 
+changing-N-and-alpha-R.png          Image Size : 3072x1946
+
+3076 / 5160 = 59.625% - max-width:  44.6875em;  44.71875
+1920 / 1946 = 98.675% - max-width:  44.1250em;  19.6875em;
+              58.8125%
+
+
+N-impact-on-power-overlapped.png    Image Size : 5120x2253
+5120 / 5160 = 99.250% - max-width: 74.4375em;
+1920 / 2253 = 85.250% - max-width: 63.9375em
+
+
 type-1-errors.png                   Image Size : 1920x1752
 type-2-errors-50.png                Image Size : 1920x1752
 type-2-errors-90.png                Image Size : 1920x1752

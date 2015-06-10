@@ -128,15 +128,15 @@ img {
 }
 .w3444 {
   width:     98.75%;
-  max-width: 50.0625em;
+  max-width: 44.1250em;
 }
 .w4632 {
   width:     98.75%;
   max-width: 67.3125em;
 }
 .w5160 {
-  width:     98.75%;
-  max-width: 75em;
+  width:     85.25%;
+  max-width: 63.9375em;
 }
 
 /********************************[ 25 em < screen ]**/
@@ -173,8 +173,8 @@ img {
     max-width: 49.50em;
   }
   .w3444 {
-    width:     66.75%;
-    max-width: 50.0625em;
+    width:     58.8125%;
+    max-width: 44.1250em;
   }
   .w4632 {
     width:     89.75%;
