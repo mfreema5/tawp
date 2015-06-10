@@ -86,6 +86,12 @@ a {
 a:hover { 
   text-decoration: underline; 
 }
+#caveat {
+  display: none;
+}
+#show_caveat {
+  display: inline;
+}
 
 /********************************[ default layout ]**/
 body  {
