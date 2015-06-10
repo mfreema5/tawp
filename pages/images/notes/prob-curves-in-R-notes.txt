@@ -1,0 +1,46 @@
+X <- seq(-6,6,0.2)
+Xmean <- 0
+Xstdev <- 1.0
+Y <- ( ( 1 / Xstdev * sqrt( 2 * pi ) ) * exp( -1 * ( ( X - Xmean )^2 / ( 2 * Xstdev^2 ) ) ) )
+plot(X, Y, type='l', xlim=c(-6,6) , ylim=c(0,5) , xlab='', ylab='')
+
++++++
+
+1.87500 * 1.6 = 3.00
+1.56250 * 1.6 = 2.50
+1.25000 * 1.6 = 2.00
+1.09375 * 1.6 = 1.75
+0.93750 * 1.6 = 1.50
+0.78125 * 1.6 = 1.25
+0.62500 * 1.6 = 1.00
+
++++++
+
+ProbData <- function(Xstdev,X)
+{
+Xmean <- 0
+Y <- ( ( 1 / Xstdev * sqrt( 2 * pi ) ) * exp( -1 * ( ( X - Xmean )^2 / ( 2 * Xstdev^2 ) ) ) )
+return(Y)
+}
+
+SDval <- c( 0.62500, 0.78125, 0.93750, 1.09375, 1.25000, 1.56250, 1.87500 )
+
+Xval <- seq( -6, 6, 0.05 )
+
+ProbCurve <- matrix( data = NA, nrow=length(Xval), ncol=length(SDval), dimnames=list( format(Xval), format(SDval) ) )
+
+for (i in 1:length(SDval) ) {
+  ProbCurve[,i] <- ProbData( SDval[i], Xval )
+}
+
+ProbCurvePX <- ProbCurve
+
+ProbCurvePX[] <- as.integer( ProbCurvePX * 300 )
+
+row.names(ProbCurvePX) <- round( 100 * (as.numeric(row.names(ProbCurvePX)) + 6 ), 0 )
+
+write.table( ProbCurve, file="prob-curve-numeric.csv", append = FALSE, quote = TRUE, sep = ";", eol = "\n", dec = ".", row.names = TRUE, col.names = TRUE )
+
+write.table( ProbCurvePX, file="prob-curve-pixels.csv", append = FALSE, quote = TRUE, sep = ";", eol = "\n", dec = ".", row.names = TRUE, col.names = TRUE )
+
+
