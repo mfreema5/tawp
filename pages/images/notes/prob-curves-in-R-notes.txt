@@ -39,8 +39,19 @@ ProbCurvePX[] <- as.integer( ProbCurvePX * 100 )
 
 row.names(ProbCurvePX) <- round( 100 * (as.numeric(row.names(ProbCurvePX)) + 6 ), 0 )
 
+
+Rows <- matrix( data = NA, nrow=length(Xval), ncol=length(SDval) )
+
+for (i in 1:7) Rows[,i] <- row.names(ProbCurvePX)
+
+Pairs <- c( NA, NA, NA, NA, NA, NA, NA)
+
+for (i in 1:7) Pairs[i] <- paste(ProbCurvePX[,i] + 5, Rows[,i], sep=",", collapse=" ")
+
+
 write.table( ProbCurve, file="prob-curve-numeric.csv", append = FALSE, quote = TRUE, sep = ";", eol = "\n", dec = ".", row.names = TRUE, col.names = TRUE )
 
 write.table( ProbCurvePX, file="prob-curve-pixels.csv", append = FALSE, quote = TRUE, sep = ";", eol = "\n", dec = ".", row.names = TRUE, col.names = TRUE )
 
+write( Pairs , file="prob-curve-pairs.txt", ncolumns = 1 , append = FALSE, sep="\n" )
 
