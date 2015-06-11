@@ -46,7 +46,7 @@ for (i in 1:7) Rows[,i] <- row.names(ProbCurvePX)
 
 Pairs <- c( NA, NA, NA, NA, NA, NA, NA)
 
-for (i in 1:7) Pairs[i] <- paste(ProbCurvePX[,i] + 5, Rows[,i], sep=",", collapse=" ")
+for (i in 1:7) Pairs[i] <- paste(ProbCurvePX[,i] + 12, Rows[,i], sep=",", collapse=" ")
 
 
 write.table( ProbCurve, file="prob-curve-numeric.csv", append = FALSE, quote = TRUE, sep = ";", eol = "\n", dec = ".", row.names = TRUE, col.names = TRUE )
