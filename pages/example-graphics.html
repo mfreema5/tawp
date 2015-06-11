@@ -4,20 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <link href="css/screen-example-graphics.css" rel="stylesheet">
-    <title>Sideways statistics - collection of example graphics</title>
+    <title>Sideways statistics – collection of example graphics</title>
     <meta name="author" content="Michael J. Freeman">
-    <meta name="description" content="Sideways stats &ndash; just the graphics, ma'am.">
+    <meta name="description" content="Sideways stats &ndash; just the graphs, ma'am.">
     <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="css/gfx/favicon.ico" type="image/x-icon">
     <link rel="icon" sizes="192x192" href="../css/gfx/favicon-192x192.png" type="image/png">
     <link rel="icon" sizes="152x152" href="../css/gfx/favicon-152x152.png" type="image/png">
     <link rel="icon" sizes="120x120" href="../css/gfx/favicon-120x120.png" type="image/png">
     <link rel="shortcut icon" href="../css/gfx/favicon.ico" type="image/x-icon" />
     <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700,700italic,300,300italic' rel='stylesheet' type='text/css'>
+    <script src="css/modernizr.custom.30817.js"></script>
   </head>
   <body>
     <main>
       <h1>Sideways statistics</h1>
-      <h1>‘Just the graphics, ma'am.’</h1>
+      <h1>‘Just the graphs, ma'am.’</h1>
       <article>
         <p>Collection of graphics from the <a href='sideways-stats.html'>Sideways statistics webpage</a>.</p>
       </article>
@@ -41,11 +42,11 @@
         <section>
           <h2>What's what</h2>
           <div class="w1596">
-            <img src="./images/large/basic-alpha-beta-es-n.svg" onerror="this.onerror=null; this.src='images/large/basic-alpha-beta-es-n.png'" alt="basic-alpha-beta-es-n" />
+            <img src="./images/large/basic-alpha-beta-es-n.svg" alt="basic-alpha-beta-es-n" />
             <p>The shaded area to the right is the “<i>p</i>-value”, to the left is the <em>statistical power</em>.  The line bisecting the curve on the left is the <em>effect size</em>.  The shape of the curves is determined by the <em>sample size</em>.</p>
           </div>
           <div class="w4632">
-            <img src="./images/large/three-alphas.svg" onerror="this.onerror=null; this.src='images/large/three-alphas.png'" alt="three-alphas" />
+            <img src="./images/large/three-alphas.svg" alt="three-alphas" />
             <p>As <i>alpha</i> becomes smaller, the minimum correlation that is statistically significant becomes higher.</p>
           </div>
           <div class="w4632">
@@ -60,11 +61,11 @@
             <p>The minimum correlation that is statistically significant is a function of the <em>sample size</em>.</p>
           </div>
           <div class="w3444">
-            <img src="./images/large/changing-N-and-alpha.svg" onerror="this.onerror=null; this.src='images/large/changing-N-and-alpha.png'"  alt="changing-N-and-alpha" />
+            <img src="./images/large/changing-N-and-alpha.svg"  alt="changing-N-and-alpha" />
             <p>Larger <em>sample sizes</em> have tighter probability curves, so the minimum correlation that is statistically significant becomes lower.</p>
           </div>
           <div class="w5160">
-            <img src="./images/large/N-impact-on-power-overlapped.svg" onerror="this.onerror=null; this.src='images/large/N-impact-on-power-overlapped.png'" alt="N-impact-on-power-overlapped" />
+            <img src="./images/large/N-impact-on-power-overlapped.svg" alt="N-impact-on-power-overlapped" />
             <p>Larger <em>sample sizes</em> have tighter probability curves, so the <em>statistical power</em> increases. The area of the overlapped graphs that is blue is where the increase in <em>statistical power</em> happens.</p>
           </div>
         </section>
@@ -86,5 +87,21 @@
         </section>
       </article>
     </main>
+    <footer>
+      <meta name="creator" content="不爽老男人">
+    </footer>
+    <script>
+      if (!Modernizr.svg) {
+          var imgs = document.getElementsByTagName('img');
+          var svgExtension = /.*\.svg$/
+          var l = imgs.length;
+          for(var i = 0; i < l; i++) {
+              if(imgs[i].src.match(svgExtension)) {
+                  imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
+                  console.log(imgs[i].src);
+              }
+          }
+      }
+    </script>
   </body>
 </html>

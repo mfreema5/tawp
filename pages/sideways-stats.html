@@ -6,13 +6,14 @@
     <link href="css/screen-sideways-stats.css" rel="stylesheet">
     <title>Sideways statistics</title>
     <meta name="author" content="Michael J. Freeman">
-    <meta name="description" content="Sideways stats &ndash; another way of understanding the four inter-relatied characteristics of linear regressions.">
+    <meta name="description" content="Sideways stats &ndash; another way to look at the characteristics of linear regressions.">
     <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="css/gfx/favicon.ico" type="image/x-icon">
     <link rel="icon" sizes="192x192" href="../css/gfx/favicon-192x192.png" type="image/png">
     <link rel="icon" sizes="152x152" href="../css/gfx/favicon-152x152.png" type="image/png">
     <link rel="icon" sizes="120x120" href="../css/gfx/favicon-120x120.png" type="image/png">
     <link rel="shortcut icon" href="../css/gfx/favicon.ico" type="image/x-icon" />
     <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700,700italic,300,300italic' rel='stylesheet' type='text/css'>
+    <script src="css/modernizr.custom.30817.js"></script>
   </head>
   <body>
     <main>
@@ -20,7 +21,7 @@
       <h1>Another way to look at the characteristics of linear regressions</h1>
       <article>
         <h2>Prologue</h2>
-        <p>You might want to first take a detour and go look at the collection of example graphics with brief explanations: <a href='example-graphics.html'>“Sideways stats &ndash; just the graphics, ma'am”</a>. </p>
+        <p>You might want to first take a detour and go look at the collection of example graphics with brief explanations: <a href='example-graphics.html'>“Sideways stats &ndash; just the graphs, ma'am”</a>. </p>
         <p>Hopefully that will encourage you to slog your way through all the excessive text that follows.</p>
       </article>
       <article>
@@ -48,7 +49,7 @@
       <article>
         <h2>What are “sideways” statistics?</h2>
         <div class="w1596">
-          <img src="images/large/basic-alpha-beta-es-n.svg" onerror="this.onerror=null; this.src='images/large/basic-alpha-beta-es-n.png'" alt="Figure 01: A “sideways” graph" />
+          <img src="images/large/basic-alpha-beta-es-n.svg" alt="Figure 01: A “sideways” graph" />
           <p>Figure 01</p>
         </div>
         <p>I've called this “Sideways statistics” because of the graphics I ended up creating to help myself understand the four deterministic features of linear regressions. If you haven't seen one yet, checkout the first example, (figure 01). Don't worry if it is meaningless to you; I only put it here so you can know where we're headed.</p>
@@ -96,14 +97,14 @@
         <h2>Confidence level &amp; Statistical power – <i>alpha</i> &amp; <i>beta</i></h2>
         <p>The next example graphic (figure 07) has three curves in it, showing three different values for <i>alpha</i>. The three probability curves are all identical, but the value of the sample correlation increases from left to right. That increase in the sample correlation shifts the curve upward (in our sideways view) and that means that the value for <i>alpha</i> decreases, since the percentage of the area “under” the probability curve that is bounded by the null line decreases.</p>
         <div class="w4632">
-          <img src="images/large/three-alphas.svg" onerror="this.onerror=null; this.src='images/large/three-alphas.png'" alt="Figure 07: Three values for alpha" />
+          <img src="images/large/three-alphas.svg" alt="Figure 07: Three values for alpha" />
           <p>Figure 07</p>
         </div>
         <p>This is what you would expect to happen. Remember that <i>alpha</i>, a.k.a., the “confidence level”, or “<i>p</i> value”, indicates the probability that the population correlation is above zero. Which is another way of saying that it measures the chances that the correlation is “real”, and not an a result of random error. Yet another way of looking at it is to say that <i>alpha</i> is a measure of the chance of making a “Type I” error.</p>
         <p>So, the larger the sample correlation is, the less likely it is that no such correlation exists in the population, and that all you have found is random error. If the sample correlation is quite small, it's easy to believe that the correlation is the result of sampling errors, because it wouldn't take much error to create the illusion of a small correlation. But it would take a very large and therefore unlikely amount of sampling error to create the illusion of a large correlation.</p>
         <p>The next example graphic (figure 08) takes advantage of the sideways arrangment (finally!), and shows both the population and the sample probability curves for some hypothetical linear regression.</p>
         <div class="w1596">
-          <img src="images/large/basic-alpha-beta-es-n.svg" onerror="this.onerror=null; this.src='images/large/basic-alpha-beta-es-n.png'" alt="Figure 08: Basic relationship of alpha and beta" />
+          <img src="images/large/basic-alpha-beta-es-n.svg" alt="Figure 08: Basic relationship of alpha and beta" />
           <p>Figure 08</p>
         </div>
         <p>The curve on the <strong>right</strong> is the <strong>population</strong> probability curve, and 5% of its area is below the null line. Therefore, the line that bisects that curve marks the lowest sample correlation that would be statistically significant at “<i>p</i>&lt;.05”.</p>
@@ -124,7 +125,7 @@
       <h2>Sample size – “N”</h2>
         <p>The larger the sample size in an analysis the less influence random error has on the sample correlation. Therefore, the population probability curve that surrounds the sample correlation will be less spread out for larger sample sizes. The next example graphic (figure 10) represents how the population probability curve tightens as the sample size increases. The sample size, “N”, increases from left to right for the three examples.</p>
         <div class="w3444">
-          <img src="images/large/changing-N-and-alpha.svg" onerror="this.onerror=null; this.src='images/large/changing-N-and-alpha.png'" alt="Figure 10: Probabilities tighten as N increases" />
+          <img src="images/large/changing-N-and-alpha.svg" alt="Figure 10: Probabilities tighten as N increases" />
           <p>Figure 10</p>
         </div>
         <p>In those three examples, <i>alpha</i> is constant, and therefore as the probability curve tightens the line that bisects the probability curve drops closer to the null line. In other words, at the same confidence level, the larger the sample size is, the lower the minimum correlation that is statistically significant becomes.</p>
@@ -145,7 +146,7 @@
         <p>The somewhat confusing thing is that most of the time we don't know the value of the <i>effect size</i>—since if we knew the population correlation, we wouldn't need to be trying to find a sample correlation—yet we need to know its value in order to determine the <i>statistical power</i> of an analysis.</p>
         <p>One mistake that you might make is to use your sample correlation as an estimate of the population correlation, which is the <i>effect size</i>. Doing that defeats the main purpose of <i>statistical power</i>, since you are forcing it to always be 50%. A <i>statistical power</i> of 50% is of effectively no use in avoiding or discussing Type II errors.</p>
         <div class="w1596">
-          <img src="images/large/basic-alpha-beta-es-n.svg" onerror="this.onerror=null; this.src='images/large/basic-alpha-beta-es-n.png'" alt="Figure 12: Basic relationship of alpha and beta" />
+          <img src="images/large/basic-alpha-beta-es-n.svg" alt="Figure 12: Basic relationship of alpha and beta" />
           <p>Figure 12</p>
         </div>
         <p>And, regardless of what method you use to determine <i>effect size</i>, if you don't use it to calculate <i>statistical power</i> until after you've collected and analyzed your data, you've already missed out on the chance to use it to help determine the right <i>sample size</i> for your study.</p>
@@ -156,7 +157,7 @@
         <p>The height of the line that bisects the sample probability curve is the <i>effect size</i> of the analysis, a.k.a., the population correlation.</p>
         <p>In general, a larger sample size will give you a larger statistical power. Think of it this way: if the two bisecting lines (the sample and population correlations) are a great distance apart, then even if the probability curves are wide and low, there will be a large area that's between the bisection lines. But if the two lines are close together, the probability curves will need to be very tight in order to find a large area between the two bisecting lines. See the next example graphic, (figure 13).</p>
         <div class="w5160">
-          <img src="./images/large/N-impact-on-power-overlapped.svg" onerror="this.onerror=null; this.src='images/large/N-impact-on-power-overlapped.png'" alt="Figure 13: Impact of sample size on statistical power" />
+          <img src="./images/large/N-impact-on-power-overlapped.svg" alt="Figure 13: Impact of sample size on statistical power" />
           <p>Figure 13</p>
         </div>
         <p>Now that we've gone through the four characteristics and how they're related, we can apply them to our understanding of the two types of error associated linear regressions and null hypothesis significance testing.</p>
@@ -213,7 +214,20 @@
       </article>
     </main>
     <footer>
-      <address style="display: none; margin-left: 4em;">不爽老男人</address>
+      <meta name="creator" content="不爽老男人">
     </footer>
+    <script>
+      if (!Modernizr.svg) {
+          var imgs = document.getElementsByTagName('img');
+          var svgExtension = /.*\.svg$/
+          var l = imgs.length;
+          for(var i = 0; i < l; i++) {
+              if(imgs[i].src.match(svgExtension)) {
+                  imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
+                  console.log(imgs[i].src);
+              }
+          }
+      }
+    </script>
   </body>
 </html>
