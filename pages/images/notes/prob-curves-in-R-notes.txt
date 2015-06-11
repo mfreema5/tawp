@@ -35,7 +35,7 @@ for (i in 1:length(SDval) ) {
 
 ProbCurvePX <- ProbCurve
 
-ProbCurvePX[] <- as.integer( ProbCurvePX * 300 )
+ProbCurvePX[] <- as.integer( ProbCurvePX * 100 )
 
 row.names(ProbCurvePX) <- round( 100 * (as.numeric(row.names(ProbCurvePX)) + 6 ), 0 )
 
