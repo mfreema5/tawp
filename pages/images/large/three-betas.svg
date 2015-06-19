@@ -15,11 +15,7 @@
    id="svg3336"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="three-betas.svg"
-   style="shape-rendering:crispEdges"
-   inkscape:export-filename="/Users/MJF/Dropbox/NHST-share/graphics/three-betas.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
+   sodipodi:docname="three-betas.svg">
   <defs
      id="defs3338" />
   <sodipodi:namedview
@@ -29,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.31723122"
-     inkscape:cx="933.12782"
-     inkscape:cy="730.73281"
+     inkscape:zoom="0.3125"
+     inkscape:cx="933"
+     inkscape:cy="730"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="false"
