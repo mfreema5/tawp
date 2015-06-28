@@ -86,10 +86,12 @@ a {
 a:hover { 
   text-decoration: underline; 
 }
-#caveat {
+#caveat,
+#unpublishable {
   display: none;
 }
-#show_caveat {
+#show_caveat.
+#show_unpublishable {
   display: inline;
 }
 
@@ -100,6 +102,10 @@ body  {
 article {
   padding: 0.3125em;
 }
+section > section {
+  display: inline;
+}
+
 p {
   margin: 0.250em 0.125em 0.500em 0.250em;
   padding: 0.250em 0 0.250em 0;
@@ -218,7 +224,7 @@ img {
   }
   .w1920 {
     width:     37.5000%;
-    max-width: 24.125em;
+    max-width: 20.125em;
   }
   .w3444 {
     width:     58.8125%;

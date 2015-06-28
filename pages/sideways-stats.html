@@ -170,41 +170,37 @@
         <section>
           <h3>Sideways Type I errors</h3>
           <div class="w1920">
-            <img src="images/large/type-1-errors.png" alt="Figure 14: Sideways Type I error" />
+            <img src="images/large/type-1-errors.svg" alt="Figure 14: Sideways Type I error" />
             <p>Figure 14</p>
           </div>
-          <p>The example graphic (figure 14) represents a linear regression done at a 95% confidence level. The population probability curve on the right side of the graph has 5% of its area bounded by null, and the line that bisects it is the minimum sample correlation that would be statistically significant. Since this is an example of a Type I error, the sample population curve on the left side of the graph has been centered on null.</p>
-          <p>A Type I error would be any analysis that found a statistically significant sample correlation. On the sample population curve, on the left side of the graph, the area that's shaded covers the sample correlations that would be Type I error. That area is 5% of the total area “under” the sample population—that area will always be exactly equal to the area of the population probability curve that below the null line, because the two curves are identical in shape.</p>
-          <p>When the sample probability curve is centered on the null line, the two curves are in perfect symmetry. The area of one curve that is bounded by the bisecting line of the other curve is identical to the area of the other curve that is bounded by its bisecting line.</p>
-          <p>That the two areas are identical also simply makes sense. A “95% confidence level” means that there is a 5% chance of a Type I error, so of course the part of the sample probability curve that would be a Type I error is 5%.</p>
+          <p>The example graphic (figure 14) represents a linear regression done at a 95% confidence level. The population probability curve on the right side of the graph has 5% of its area bounded by null, and the line that bisects it is the minimum sample correlation that would be statistically significant.</p>
+          <p>The unusual thing in this graphic is the sample probability curve on the left side of the graph, which has been centered on the null line.  It is there because that is what is involved in a Type I error&mdash;a population for which there is no correlation.</p>
+          <p>A Type I error would be any analysis that found a statistically significant sample correlation, despite the fact that no correlation exists in the population. On the sample probability curve, on the left side of the graph, the area that's shaded covers the sample correlations that would be Type I error. That area is 5% of the total area “under” the sample probability curve.</p>
+          <p>When the population correlation is null, the area of the sample probability curve that extends above the line of the minimum statistically significant sample correlation will always be exactly equal to the area of the population probability curve that's below the null line, because the two curves are identical in shape and are in perfect symmetry. So, the area of one curve that is bounded by the bisecting line of the other curve is identical to the area of the other curve that is bounded by its bisecting line.</p>
+          <p>That the two areas are identical also simply makes sense. A “95% confidence level” means that there is a 5% chance of a Type I error, so of course the part of the sample probability curve that covers a Type I error is 5%.</p>
         </section>
         <section>
           <h3>Sideways Type II errors</h3>
           <div class="w1920">
-            <img src="images/large/type-2-errors-90.png" alt="Figure 15: Sideways Type II error - 90% statistical power" />
+            <img src="images/large/type-2-errors.svg" alt="Figure 15: Sideways Type II error" />
             <p>Figure 15</p>
           </div>
-          <p>The example graphic (figure 15) represents an extreme example of a Type II error. It shows a linear regression done at a 95% confidence level, that has a statistical power of 90%.</p>
-          <p>A Type II error would be any sample correlation that falls below the minimum statistically significant correlation, which is marked by the line that bisects the population probability curve on the right side of the graph. Therefore, the area of the sample probability curve that is NOT shaded covers the sample correlations that would be a Type II error.</p>
-          <p>In contrast to the previous example, the next example graphic (figure 16) represents a much more common example of linear regressions in the social sciences. It shows a linear regression done at a 95% confidence level, that has a statistical power of 50%.</p>
-          <div class="w1920">
-            <img src="images/large/type-2-errors-50.png" alt="Figure 16: Sideways Type II error - 50% statistical power" />
-            <p>Figure 16</p>
-          </div>
-          <p>The area that is NOT shaded “under” the sample probability curve on the left side of the graph covers the sample correlations that would be a Type II error. Hopefully that area looks disconcertingly large. Because it is.</p>
-          <p>A statistical power of 50% means that there is a 50:50 chance of making a Type II error. Which means that in the aggregated studies in some field, for every correlation reported as part of a linear regression with a 50% statistical power, there is another correlation that wasn't found and that wasn't reported, but that has just as strong of an effect as the correlation that did get reported.</p>
-          <p>Let's go back again to the first example of a Type II error (figure 15), to consider another implication of Type II errors.</p>
-          <p>If your sample correlation falls in the unshaded area on the left side of the graph, “under” the sample probability curve, your result is not statistically significant. Therefore, it is generally considered unpublishable. It's not viewed as a negative result, it's viewed as a non-result.</p>
-          <p>But is that appropriate? If you calculate a statistical power of 90%, and then you fail to get a statistically significant sample correlation, there is a 10% that you just have bad luck. But there's a 90% chance that there's something wrong with effect size you were expecting. (Assuming you didn't merely make a mistake in the calculations along the way.)</p>
-          <p>For the purposes of calculating <i>statistical power</i>, you estimated the effect size based on one of two things:</p>
-          <ol>
-            <li>The results of previous studies of the same correlation</li>
-            <li>The results of previous studies of related correlations, combined with accept theories about the relation between those correlations and the one you're studying</li>
-          </ol>
-          <p>If you are doing a replication study, that's you used the first approach. And when you failed to find a statistically significant result, that means that there's a 90% chance that those previous studies were wrong.</p>
-          <p>If you aren't doing a replication study, you likely used the second approach. So, when you failed to find a statistically significant result, either the previous related studies were wrong, or the accepted theories that relates those studies to yours are wrong.</p>
-          <p>In any of those cases, a 90% chance would seem to be enough to warrant attention. If a 95% confidence level is enough to get a positive result published, what's the required level of confidence in a negative result to get published?</p>
-          <p>There doesn't seem to be one. The utility of negative results from studies with large statistical power remains largely unused.</p>
+          <p>The example graphic (figure 15) represents a Type II error. It shows a linear regression done at a 95% confidence level, that has a statistical power of 84%.</p>
+          <p>Remember that a Type II error is when a population correlation exists, but the sample fails to find it.  So, on the graph, a Type II error would be any sample correlation that is below the minimum statistically significant correlation. Therefore, the area of the sample probability curve on the left side of the graphic that is shaded covers the sample correlations that would be a Type II error.</p>
+          <section>
+            <h3>Unpublishable?</h3>
+            <p>If your sample correlation is low enough that it would cross the shaded area on the left side of the graph, your result is not statistically significant. Therefore, it is generally considered unpublishable. It's not viewed as a ‘negative result’; rather, it's viewed as a non-result.</p>
+            <p>But is that appropriate? If you calculate a statistical power of 84%, and then you fail to get a statistically significant sample correlation, there is a 16% that you just have bad luck. But there's a 84% chance that there's something wrong with effect size you were expecting.</p>
+            <p>For the purposes of calculating <i>statistical power</i>, you estimated the effect size based on one of two things:</p>
+            <ol>
+              <li>The results of previous studies of the same correlation</li>
+              <li>The results of previous studies of related correlations, combined with accept theories about the relation between those correlations and the one you're studying</li>
+            </ol>
+            <p>If you are doing a replication study, that's you used the first approach. And when you failed to find a statistically significant result, that means that there's a 84% chance that those previous studies were wrong.</p>
+            <p>If you aren't doing a replication study, you likely used the second approach. So, when you failed to find a statistically significant result, either the previous related studies were wrong, or the accepted theories that relates those studies to yours are wrong.</p>
+            <p>In any of those cases, a 84% chance would seem to be enough to warrant attention. If a 95% confidence level is enough to get a positive result published, what's the required level of confidence in a negative result to get published?</p>
+            <p>There doesn't seem to be one. The utility of negative results from studies with large statistical power remains largely unused.</p>
+          </section>
         </section>
       </article>
       <article>
