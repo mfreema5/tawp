@@ -48,30 +48,30 @@
       </article>
       <article>
         <h2>What are “sideways” statistics?</h2>
-        <div class="w1596">
+        <div class="w1056">
           <img src="images/large/basic-alpha-beta-es-n.svg" alt="Figure 01: A “sideways” graph" />
           <p>Figure 01</p>
         </div>
         <p>I've called this “Sideways statistics” because of the graphics I ended up creating to help myself understand the four deterministic features of linear regressions. If you haven't seen one yet, checkout the first example, (figure 01). Don't worry if it is meaningless to you; I only put it here so you can know where we're headed.</p>
-        <p>The next example (figure 02) is a more conventional graph, and is a standard probability curve. Hopefully you've seen it before, because I'm only going to do a quick review of what it means.</p>
-        <div class="w1296">
-          <img src="images/large/basic-prob-curve.png" alt="Figure 02: Probability curve" />
+        <p>To explain how I got to the graphics such as in Figure 01, let's start with a graph of a standard probability curve, such as Figure 02.  I'm assuming you've seen something like it before.  (Indeed, you may have seen Figure 02 before, since it's adapted from <a href="https://commons.wikimedia.org/wiki/File:Standard_deviation_diagram.svg">a graphic</a> on Wikimedia Commons.)</p>
+        <div class="w562">
+          <img src="images/large/Standard_deviation_diagram.svg" alt="Figure 02a: Probability curve" />
           <p>Figure 02</p>
         </div>
         <p>The horizontal axis is the possible values for some measure. The vertical axis is the probability of getting each value on the horizontal axis when you make a measurement. Typically, however, we aren't interested in the probability of a specific value, but rather we're interested in the probability of getting a result that is bounded by some specific value. In other words, we're interested in the probability of getting a result that is “greater than or equal to” or that is “less than or equal to” some value.</p>
-        <p>The probability of getting a result that is bounded by a specific value is equal to the total area under the curve on the appropriate side of that value. In the example graphic (figure 02), the the shaded area is the probability of getting a result that's “less than or equal to” the bounding value.</p>
-        <p>In the case of linear regression, the probability that comes up most often is the “<i>p</i> value”, a.k.a, “alpha”, “confidence level”, etc. In the social sciences, the most common value for <i>alpha</i> is 5%, often reported as “<i>p</i>&lt;.05”.</p>
-        <div class="w1392">
-          <img src="images/large/basic-prob-alpha.png" alt="Figure 03: Basic correlation with alpha = 5%" />
+        <div class="w1296">
+          <img src="images/large/basic-prob-alpha.svg" alt="Figure 03: Basic correlation with alpha = 5%" />
           <p>Figure 03</p>
         </div>
+        <p>The probability of getting a result that is bounded by a specific value is equal to the total area under the curve on the appropriate side of that value. In the next example graphic (figure 03), the the shaded area is the probability of getting a result that's “less than or equal to” the bounding value.</p>
+        <p>In the case of linear regression, the probability that comes up most often is the “<i>p</i> value”, a.k.a, “alpha”, “confidence level”, etc. In the social sciences, the most common value for <i>alpha</i> is 5%, often reported as “<i>p</i>&lt;.05”.  The shaded area in Figure 03 is 5% of the total area.</p>
         <p>When you're using a null-hypothesis significance test to analyze a sample, a confidence level of 5% means that there is a 5% chance that population correlation is not zero. You don't precisely know the population correlation because you measured and analyzed only a sample of the population, instead of the entire population. So, what you've found is the sample correlation, and the population correlation is related to the sample correlation by a probability curve.</p>
-        <p>In the next example graphic (figure 03), the mean value of the probability curve is the value of the sample correlation of some hypothetical analysis. The probability curve shows what values the population correlation may have, based on the sample correlation value. (It also depends on the size of the sample, but we'll get to that later.) In the example graphic, 5% of the total area under the curve is bounded by a measured value of zero. So, there is a 5% probability that the population correlation is “less than or equal to” zero. That's the “null” in “null hypothesis significance testing”.</p>
-        <div class="w792">
-          <img src="images/large/basic-prob-alpha-sideways.png" alt="Figure 04: Sideways correlation with alpha = 5%" />
+        <p>For the example that is Figure 03, the mean value of the probability curve is the value of the sample correlation of some hypothetical analysis. The probability curve shows what values the population correlation may have, based on the sample correlation value. (It also depends on the size of the sample, but we'll get to that later.) In the example graphic, 5% of the total area under the curve is bounded by a measured value of <b>zero</b>. So, there is a 5% probability that the population correlation is “less than or equal to” zero. That's the “null” in “null hypothesis significance testing”.</p>
+        <div class="w1596">
+          <img src="images/large/basic-prob-alpha-sideways.svg" alt="Figure 04: Sideways correlation with alpha = 5%" />
           <p>Figure 04</p>
         </div>
-        <p>If you take the previous example graphic and swap the axes, you get the next example (figure 04). Now, the “null” line is at the bottom of the graph, the horizontal axis is probabilities, and the vertical axis is the value of correlations. The rest of the visual representations in this document will use this “sideways” arrangement.</p>
+        <p>You can take the previous example graphic and stand it up on end, as is shown in the next example (figure 04). Doing so puts the “null” line at the bottom of the graph, and makes the horizontal axis the probabilities, while the vertical axis is the value of correlations. The rest of the visual representations in this document will use this “sideways” arrangement.</p>
         <p>Why is this is a useful convention? Hopefully that will become obvious as you progress through the sections, but I'll give a brief explanation now—don't worry if it doesn't make sense just yet.</p>
         <p>The “sideways” arrangment makes it easier to see the relationship between the four characteristics in question. On a conventionally arranged graph the probability curves related to <i>alpha</i> (confidence level) and <i>beta</i> (statistical power) overlap, and it's also more difficult to distinguish between the mean values for the sample correlation and the population correlation. So, the example graphics are sideways in order to make it easier to keep the various concepts separate and therefore less confusing, yet still see the relationships between them.</p>
       </article>
