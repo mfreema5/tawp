@@ -52,7 +52,7 @@
           <img src="images/large/basic-alpha-beta-es-n.svg" alt="Figure 01: A “sideways” graph" />
           <p>Figure 01</p>
         </div>
-        <p>I've called this “Sideways statistics” because of the graphics I ended up creating to help myself understand the four deterministic features of linear regressions. If you haven't seen one yet, checkout the first example, (figure 01). Don't worry if it is meaningless to you; I only put it here so you can know where we're headed.</p>
+        <p>I've called this “Sideways statistics” because of the graphics I ended up creating to help myself understand the four deterministic features of linear regressions. If you haven't seen one yet, checkout the first example, (Figure 01). Don't worry if it is meaningless to you; I only put it here so you can know where we're headed.</p>
         <p>To explain how I got to the graphics such as in Figure 01, let's start with a graph of a standard probability curve, such as Figure 02.  I'm assuming you've seen something like it before.  (Indeed, you may have seen Figure 02 before, since it's adapted from <a href="https://commons.wikimedia.org/wiki/File:Standard_deviation_diagram.svg">a graphic</a> on Wikimedia Commons.)</p>
         <div class="w562">
           <img src="images/large/Standard_deviation_diagram.svg" alt="Figure 02a: Probability curve" />
@@ -61,48 +61,55 @@
         <p>The horizontal axis is the possible values for some measure. The vertical axis is the probability of getting each value on the horizontal axis when you make a measurement. Typically, however, we aren't interested in the probability of a specific value, but rather we're interested in the probability of getting a result that is bounded by some specific value. In other words, we're interested in the probability of getting a result that is “greater than or equal to” or that is “less than or equal to” some value.</p>
         <div class="w1296">
           <img src="images/large/basic-prob-alpha.svg" alt="Figure 03: Basic correlation with alpha = 5%" />
-          <p>Figure 03</p>
+          <p>Figure 03a</p>
         </div>
-        <p>The probability of getting a result that is bounded by a specific value is equal to the total area under the curve on the appropriate side of that value. In the next example graphic (figure 03), the the shaded area is the probability of getting a result that's “less than or equal to” the bounding value.</p>
-        <p>In the case of linear regression, the probability that comes up most often is the “<i>p</i> value”, a.k.a, “alpha”, “confidence level”, etc. In the social sciences, the most common value for <i>alpha</i> is 5%, often reported as “<i>p</i>&lt;.05”.  The shaded area in Figure 03 is 5% of the total area.</p>
+        <p>The probability of getting a result that is bounded by a specific value is equal to the total area under the curve on the appropriate side of that value. In the next example graphic (Figure 03), the the shaded area is the probability of getting a result that's “less than or equal to” the bounding value.</p>
+        <p>In the case of linear regression, the probability that comes up most often is the “<i>p</i> value”, a.k.a, “alpha”, “confidence level”, etc. In the social sciences, the most common value for <i>alpha</i> is 5%, often reported as “<i>p</i>&lt;.05”.  The shaded area in Figure 03a is 5% of the total area.</p>
         <p>When you're using a null-hypothesis significance test to analyze a sample, a confidence level of 5% means that there is a 5% chance that population correlation is not zero. You don't precisely know the population correlation because you measured and analyzed only a sample of the population, instead of the entire population. So, what you've found is the sample correlation, and the population correlation is related to the sample correlation by a probability curve.</p>
-        <p>For the example that is Figure 03, the mean value of the probability curve is the value of the sample correlation of some hypothetical analysis. The probability curve shows what values the population correlation may have, based on the sample correlation value. (It also depends on the size of the sample, but we'll get to that later.) In the example graphic, 5% of the total area under the curve is bounded by a measured value of <b>zero</b>. So, there is a 5% probability that the population correlation is “less than or equal to” zero. That's the “null” in “null hypothesis significance testing”.</p>
+        <p>For the example that is Figure 03a, the mean value of the probability curve is the value of the sample correlation of some hypothetical analysis. The probability curve shows what values the population correlation may have, based on the sample correlation value. (It also depends on the size of the sample, but we'll get to that later.) In the example graphic, 5% of the total area under the curve is bounded by a measured value of <b>zero</b>. So, there is a 5% probability that the population correlation is “less than or equal to” zero. That's the “null” in “null hypothesis significance testing”.</p>
         <div class="w1596">
           <img src="images/large/basic-prob-alpha-sideways.svg" alt="Figure 04: Sideways correlation with alpha = 5%" />
+          <p>Figure 03b</p>
+        </div>
+        <p>You can take the previous example graphic and stand it up on end, as is shown in the next example (Figure 03b). Doing so puts the “null” line at the bottom of the graph, and makes the horizontal axis the probabilities, while the vertical axis is the value of correlations. The rest of the visual representations in this document will use this “sideways” arrangement.</p>
+        <p>Why is this is a useful convention?  The “sideways” arrangment makes it easier to see the relationship between two probability curves, because we can place them next to each other, such as in Figure 04.</p>
+        <div class="w1296">
+          <img src="images/large/basic-prob-alpha-sideways-dual.svg" alt="Figure 04: Comparing two sideways graphs" />
           <p>Figure 04</p>
         </div>
-        <p>You can take the previous example graphic and stand it up on end, as is shown in the next example (figure 04). Doing so puts the “null” line at the bottom of the graph, and makes the horizontal axis the probabilities, while the vertical axis is the value of correlations. The rest of the visual representations in this document will use this “sideways” arrangement.</p>
-        <p>Why is this is a useful convention? Hopefully that will become obvious as you progress through the sections, but I'll give a brief explanation now—don't worry if it doesn't make sense just yet.</p>
-        <p>The “sideways” arrangment makes it easier to see the relationship between the four characteristics in question. On a conventionally arranged graph the probability curves related to <i>alpha</i> (confidence level) and <i>beta</i> (statistical power) overlap, and it's also more difficult to distinguish between the mean values for the sample correlation and the population correlation. So, the example graphics are sideways in order to make it easier to keep the various concepts separate and therefore less confusing, yet still see the relationships between them.</p>
+        <p>When considering the relationship between the four characteristics of linear regressions, there are two probabilities involved, “alpha” and “beta”.  As was mentioned above, “alpha” is also referred to as the “<i>p</i> value”, or the “confidence level”, etc.  It is a proportion of the population probability curve, which is the curve that's around a given sample correlation and that defines the values of the population's correlation that are expected based on the sample's value.</p>
+        <p>The other probability is “beta”, which is the proportion of the sample probability curve that is <em>not</em> the “statistical power”.  More simply, ‘1 - &beta; = statistical power’.  The sample probability curve is the curve that's around a population's correlation, and which defines the likely resulting correlation of any sample taken from that population.  It doesn't matter that typically you don't know the population correlation&mdash;it exists whether or not you know it, or even <em>can</em> know it.  And therefore the sample probability curve exists, as does “beta” and the “statistical power”.</p>
+        <p>This then is the point of making the graphics sideways: it makes it possible to arrange two probability curves “back-to-back” and see how they are related to each other, and therefore makes it easier to see how “alpha”, “beta”, “sample size”, and “effect size” are related to each other.</p>
       </article>
       <article>
         <h2>Probability curves and linear regression</h2>
+        <p>The last part of the previous section about probability curves and “alpha” and “beta” is not, for me at least, intuitively obvious, so let's go over it again.</p>
         <p>Let's say you measure a variety of characteristics of a presumably representative sample of a population. You can do a linear regression analysis of the measurements, and precisely calculate the correlations between the characteristics you measured. But, your results are only precise descriptions of the sample. They aren't precise descriptions of the population, because there is always some amount of error, some amount of potential discrepancy, between the mean value of some characteristic for a sample, and the mean value of that characteristic for the population.</p>
-        <div class="w1056">
-          <img src="images/large/sample-probability.png" alt="Figure 05: Population probability around sample correlation" />
-          <p>Figure 05</p>
+        <div class="w1296">
+          <img src="images/large/population-probability.svg" alt="Figure 05: Population probability around sample correlation" />
+          <p>Figure 05 &ndash; Sample correlation bisects population probability curve</p>
         </div>
         <p>So, you can't precisely determine the correlation between characteristics for the population. But what you can determine precisely is the probability that the population's correlation falls within some range of values. In the case of null-hypothesis significance testing, your goal is to calculate the probability that the population correlation is above zero. When you report that a correlation is, e.g., “statistically significant at ‘p&lt;.05’”, you're reporting the probability that you calculated—based on the sample correlation—that the population's correlation is greater than zero. In the case of ‘p&lt;.05’, that probability is 0.95, in other words, 95%.</p>
-        <p>You can think about that probability calculation as being a probability curve that you draw around the sample correlation, which you determined from your measurements. In the example graphic (figure 05), the horizontal line that splits the curve marks the value of the sample correlation. The probability curve describes the correlation of the population.</p>
-        <p>This is an important distinction to understand. In the example graphic (figure 05), the straight line is about the <em>sample</em>. The curve is about the <em>population</em>.</p>
-        <div class="w1056">
-          <img src="images/large/population-probability.png" alt="Figure 06: Sample probability around population correlation" />
-          <p>Figure 06</p>
+        <p>You can think about that probability calculation as being a probability curve that you draw around the sample correlation, which you determined from your measurements. In the example graphic (Figure 05), the horizontal line that splits the curve marks the value of the sample correlation. The probability curve describes the correlation of the population.</p>
+        <p>This is an important distinction to understand. In the example graphic (Figure 05), the straight line is about the <em>sample</em>. The curve is about the <em>population</em>.</p>
+        <div class="w1296">
+          <img src="images/large/sample-probability.svg" alt="Figure 06: Sample probability around population correlation" />
+          <p>Figure 06 &ndash; Population correlation bisects sample probability curve</p>
         </div>
-        <p>The next example graphic (figure 06), is the opposite of that. The straight line is about the <em>population</em>. The curve is about the <em>sample</em>. The probability curve and bisecting line are on the opposite side of the vertical axis from the previous graph because they show the opposite relationship.</p>
+        <p>The next example graphic (Figure 06), is the opposite of that. The straight line is about the <em>population</em>. The curve is about the <em>sample</em>. The probability curve and bisecting line are on the opposite side of the vertical axis from the previous graph because they show the opposite relationship.</p>
         <p>What is that relationship? It's the probability of finding some particular value for a sample correlation, based on what the population correlation is. Even though you may not be able to ever directly measure the population correlation, it does exist and it does have some precise—if unknown—value. And that value establishes the probabilities of the sample correlation value you'll determine.</p>
         <p>That probability curve is what <i>beta</i>, a.k.a. “statistical power”, describes. But before I explain that, let's back up and review the graphic in which the probability curve is related to the population correlation. In that graph, the curve is describe by <i>alpha</i>, a.k.a., “confidence level”, or “<i>p</i> value”.</p>
       </article>
       <article>
         <h2>Confidence level &amp; Statistical power – <i>alpha</i> &amp; <i>beta</i></h2>
-        <p>The next example graphic (figure 07) has three curves in it, showing three different values for <i>alpha</i>. The three probability curves are all identical, but the value of the sample correlation increases from left to right. That increase in the sample correlation shifts the curve upward (in our sideways view) and that means that the value for <i>alpha</i> decreases, since the percentage of the area “under” the probability curve that is bounded by the null line decreases.</p>
+        <p>The next example graphic (Figure 07) has three curves in it, showing three different values for <i>alpha</i>. The three probability curves are all identical, but the value of the sample correlation increases from left to right. That increase in the sample correlation shifts the curve upward (in our sideways view) and that means that the value for <i>alpha</i> decreases, since the percentage of the area “under” the probability curve that is bounded by the null line decreases.</p>
         <div class="w4632">
           <img src="images/large/three-alphas.svg" alt="Figure 07: Three values for alpha" />
           <p>Figure 07</p>
         </div>
         <p>This is what you would expect to happen. Remember that <i>alpha</i>, a.k.a., the “confidence level”, or “<i>p</i> value”, indicates the probability that the population correlation is above zero. Which is another way of saying that it measures the chances that the correlation is “real”, and not an a result of random error. Yet another way of looking at it is to say that <i>alpha</i> is a measure of the chance of making a “Type I” error.</p>
         <p>So, the larger the sample correlation is, the less likely it is that no such correlation exists in the population, and that all you have found is random error. If the sample correlation is quite small, it's easy to believe that the correlation is the result of sampling errors, because it wouldn't take much error to create the illusion of a small correlation. But it would take a very large and therefore unlikely amount of sampling error to create the illusion of a large correlation.</p>
-        <p>The next example graphic (figure 08) takes advantage of the sideways arrangment (finally!), and shows both the population and the sample probability curves for some hypothetical linear regression.</p>
+        <p>The next example graphic (Figure 08) takes advantage of the sideways arrangment (finally!), and shows both the population and the sample probability curves for some hypothetical linear regression.</p>
         <div class="w1596">
           <img src="images/large/basic-alpha-beta-es-n.svg" alt="Figure 08: Basic relationship of alpha and beta" />
           <p>Figure 08</p>
@@ -112,7 +119,7 @@
         <p>On the right side of the graphic, which has the population probability curve, the value of <i>alpha</i> is equal to the area bounded by the null line. On the left side, which has the sample probability curve, the value of <i>beta</i> is equal to the area bounded by the line that bisects the curve on the right. Again, that line is the minimum statistically significant sample correlation at a 95% confidence level.</p>
         <p>The line that bisects the sample probability curve on the left side of the graph is the population correlation value. The probability curve around it describes the sample correlation that you will find. In the graphic, if we assume that the shaded portion of the area is 60% of the total area, then the graph indicates that if we take a sample of that population and test it for a correlation, there is a 60% chance that we will find a statistically significant correlation (<i>p</i>&lt;.05).</p>
         <p>In other words, the fact that 60% of the sample correlation probability curve is higher than the minimum statistically significant sample correlation value (<i>p</i>&lt;.05), means that there is a 60% chance that the sample correlation we find will be a value that is equal to or greater than that minimum value.</p>
-        <p>The next example graphic (figure 09) has three graphs in it, with the statistical power increasing from left to right, while <i>beta</i> is decreasing.</p>
+        <p>The next example graphic (Figure 09) has three graphs in it, with the statistical power increasing from left to right, while <i>beta</i> is decreasing.</p>
         <div class="w4632">
           <img src="images/large/three-betas.svg" alt="Figure 09: Three values for beta" />
           <p>Figure 09</p>
@@ -123,14 +130,14 @@
       </article>
       <article>
       <h2>Sample size – “N”</h2>
-        <p>The larger the sample size in an analysis the less influence random error has on the sample correlation. Therefore, the population probability curve that surrounds the sample correlation will be less spread out for larger sample sizes. The next example graphic (figure 10) represents how the population probability curve tightens as the sample size increases. The sample size, “N”, increases from left to right for the three examples.</p>
+        <p>The larger the sample size in an analysis the less influence random error has on the sample correlation. Therefore, the population probability curve that surrounds the sample correlation will be less spread out for larger sample sizes. The next example graphic (Figure 10) represents how the population probability curve tightens as the sample size increases. The sample size, “N”, increases from left to right for the three examples.</p>
         <div class="w3444">
           <img src="images/large/changing-N-and-alpha.svg" alt="Figure 10: Probabilities tighten as N increases" />
           <p>Figure 10</p>
         </div>
         <p>In those three examples, <i>alpha</i> is constant, and therefore as the probability curve tightens the line that bisects the probability curve drops closer to the null line. In other words, at the same confidence level, the larger the sample size is, the lower the minimum correlation that is statistically significant becomes.</p>
         <p>This is why one of criticisms of null-hypothesis significance testing is that it ‘doesn't indicate anything other than the fact that a sufficiently large sample was used.’ In other words, <em>any</em> non-zero correlation can be statistically significant at <em>any</em> confidence level—the only thing you have to do is find a way to increase the sample size far enough.</p>
-        <p>The next example graphic (figure 11) is a departure from the others, in that it's a graph that is drawn to scale. It shows the relation between sample size and the minimum statistically significant correlation (<i>p</i>&lt;.05). The relation is what we would expect from the sideways examples—as N get larger, the minimum statistically significant sample correlation drops.</p>
+        <p>The next example graphic (Figure 11) is a departure from the others, in that it's a graph that is drawn to scale. It shows the relation between sample size and the minimum statistically significant correlation (<i>p</i>&lt;.05). The relation is what we would expect from the sideways examples—as N get larger, the minimum statistically significant sample correlation drops.</p>
         <div class="w562">
           <img src="images/large/correlation-vs-samplesize.png" alt="Figure 11: Relation of statistical significance to sample size" />
           <p>Figure 11</p>
@@ -150,12 +157,12 @@
           <p>Figure 12</p>
         </div>
         <p>And, regardless of what method you use to determine <i>effect size</i>, if you don't use it to calculate <i>statistical power</i> until after you've collected and analyzed your data, you've already missed out on the chance to use it to help determine the right <i>sample size</i> for your study.</p>
-        <p>Let's go back to the basic example graphic (figure 12) that shows both the population and the sample probability curves for some hypothetical linear regression.</p>
+        <p>Let's go back to the basic example graphic (Figure 12) that shows both the population and the sample probability curves for some hypothetical linear regression.</p>
         <p>The statistical power is the shaded area “under” the sample probability curve of the left side of the graph. The size of that area is determined by two things: the shape of the probability curves, and the distance between the lines that bisects the curves.</p>
         <p>The two curves are identical, and are a result of the <i>sample size</i>.</p>
         <p>The height of the line that bisects the population probability curve on the right side of the graph is a result of the shape of the probability curves combined with the <em>confidence level</em> of the analysis.</p>
         <p>The height of the line that bisects the sample probability curve is the <i>effect size</i> of the analysis, a.k.a., the population correlation.</p>
-        <p>In general, a larger sample size will give you a larger statistical power. Think of it this way: if the two bisecting lines (the sample and population correlations) are a great distance apart, then even if the probability curves are wide and low, there will be a large area that's between the bisection lines. But if the two lines are close together, the probability curves will need to be very tight in order to find a large area between the two bisecting lines. See the next example graphic, (figure 13).</p>
+        <p>In general, a larger sample size will give you a larger statistical power. Think of it this way: if the two bisecting lines (the sample and population correlations) are a great distance apart, then even if the probability curves are wide and low, there will be a large area that's between the bisection lines. But if the two lines are close together, the probability curves will need to be very tight in order to find a large area between the two bisecting lines. See the next example graphic, (Figure 13).</p>
         <div class="w5160">
           <img src="./images/large/N-impact-on-power-overlapped.svg" alt="Figure 13: Impact of sample size on statistical power" />
           <p>Figure 13</p>
@@ -173,7 +180,7 @@
             <img src="images/large/type-1-errors.svg" alt="Figure 14: Sideways Type I error" />
             <p>Figure 14</p>
           </div>
-          <p>The example graphic (figure 14) represents a linear regression done at a 95% confidence level. The population probability curve on the right side of the graph has 5% of its area bounded by null, and the line that bisects it is the minimum sample correlation that would be statistically significant.</p>
+          <p>The example graphic (Figure 14) represents a linear regression done at a 95% confidence level. The population probability curve on the right side of the graph has 5% of its area bounded by null, and the line that bisects it is the minimum sample correlation that would be statistically significant.</p>
           <p>The unusual thing in this graphic is the sample probability curve on the left side of the graph, which has been centered on the null line.  It is there because that is what is involved in a Type I error&mdash;a population for which there is no correlation.</p>
           <p>A Type I error would be any analysis that found a statistically significant sample correlation, despite the fact that no correlation exists in the population. On the sample probability curve, on the left side of the graph, the area that's shaded covers the sample correlations that would be Type I error. That area is 5% of the total area “under” the sample probability curve.</p>
           <p>When the population correlation is null, the area of the sample probability curve that extends above the line of the minimum statistically significant sample correlation will always be exactly equal to the area of the population probability curve that's below the null line, because the two curves are identical in shape and are in perfect symmetry. So, the area of one curve that is bounded by the bisecting line of the other curve is identical to the area of the other curve that is bounded by its bisecting line.</p>
@@ -185,7 +192,7 @@
             <img src="images/large/type-2-errors.svg" alt="Figure 15: Sideways Type II error" />
             <p>Figure 15</p>
           </div>
-          <p>The example graphic (figure 15) represents a Type II error. It shows a linear regression done at a 95% confidence level, that has a statistical power of 84%.</p>
+          <p>The example graphic (Figure 15) represents a Type II error. It shows a linear regression done at a 95% confidence level, that has a statistical power of 84%.</p>
           <p>Remember that a Type II error is when a population correlation exists, but the sample fails to find it.  So, on the graph, a Type II error would be any sample correlation that is below the minimum statistically significant correlation. Therefore, the area of the sample probability curve on the left side of the graphic that is shaded covers the sample correlations that would be a Type II error.</p>
           <section>
             <h3>Unpublishable?</h3>
