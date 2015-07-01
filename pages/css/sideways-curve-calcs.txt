@@ -1,0 +1,35 @@
+0.62500 * 1.6 = 1.00
+0.78125 * 1.6 = 1.25
+0.93750 * 1.6 = 1.50
+1.09375 * 1.6 = 1.75
+1.25000 * 1.6 = 2.00
+1.56250 * 1.6 = 2.50
+1.87500 * 1.6 = 3.00
+
+
+style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:1;stroke-dasharray:6,6;stroke-dashoffset:0"
+
+d="M 145,648 H 0 v 240 H 145"
+d="M 119,618 H 0 v 300 H 119"
+d="M 101,588 H 0 v 360 H 101"
+d="M  88,558 H 0 v 420 H  88"
+d="M  78,528 H 0 v 480 H  78"
+d="M  65,468 H 0 v 600 H  65"  
+d="M  56,408 H 0 v 720 H  56"
+
+
+
+M (absolute)
+m (relative)
+
+L (absolute)
+l (relative)
+
+H (absolute)
+h (relative)
+
+V (absolute)
+v (relative)
+
+
+
