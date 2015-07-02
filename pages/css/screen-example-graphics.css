@@ -63,6 +63,13 @@ p {
 div p {
   font-family:  inherit;
 }
+a {
+  color: #713d8a;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 .w562,
 .w1392,
 .w1596,
@@ -80,18 +87,31 @@ div p {
   margin:  0.1875em;
   padding: 0.125em;
 }
-a {
-  color: #713d8a;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
+
+/************************ New graphics */
+.w1008, 
+.w1536, 
+.w1440, 
+.w2400, 
+.w3072, 
+.w1440, 
+.w2400, 
+.w3072  {
+  background-color: #ffffff;
+  border-style:  solid;
+  border-radius: 0.250em;
+  border-width:  0.125em;
+  border-color:  #7160A2;
+  display: inline-block;
+  margin:  0.1875em;
+  padding: 0.125em;
 }
 
 /********************************[ default layout ]**/
 body  {
   margin: 0.625em;
-}article {
+}
+article {
   padding: 0.3125em;
 }
 p {
@@ -139,6 +159,25 @@ img {
   max-width: 63.9375em;
 }
 
+/************************ New graphics */
+.w1008 {
+  width:     31.25%;
+  max-width: 20.0em;
+}
+.w1536 {
+  width:     45.4375%;
+  max-width: 30.0em;
+}
+.w1440 {
+  width:     89.7500%;
+}
+.w2400 {
+  width:     89.7500%;
+}
+.w3072 {
+  width:     89.7500%;
+}
+
 /********************************[ 25 em < screen ]**/
 @media all and (min-width: 25em) {
   body  {
@@ -179,6 +218,20 @@ img {
   .w4632 {
     width:     89.75%;
     max-width: 67.3125em;
+  }
+
+/************************ New graphics */
+  .w1440 {
+    width:     58.8750%;
+    max-width: 49.1875em;
+  }
+  .w2400 {
+    width:     61.6875%;
+    max-width: 51.5625em;
+  }
+  .w3072 {
+    width:     89.7500%;
+    max-width: 75em;
   }
 }
 

@@ -14,19 +14,16 @@ basic-alpha-sideways.png            Image Size :  792x1392
 1392 / 1392 = 100.00% - max-width: 25em;
       1392 / 1392 = 31.25% - max-width: 20em;
 
-
 population-probability.png	        Image Size : 1056x1512
 sample-probability.png              Image Size : 1056x1512
 
 1056 / 1596 = 66.165% - max-width: 16.5625em
       1056 / 1596 => 20.6875% - max-width: 13.25em
 
-
 basic-alpha-beta-es-n.png           Image Size : 1596x1596
 
 1596 / 1596 = 100.00% - max-width: 25em;
       1596 / 1596 => 31.25% - max-width: 20em;
-
 
 three-alphas.png                    Image Size : 4632x1920
 three-betas.png                     Image Size : 4632x1920
@@ -39,18 +36,15 @@ N-impact-on-power-overlapped.png    Image Size : 5160x1920
 4632 / 5160 = 89.750% - max-width: 67.3125em;
 5160 / 5160 = 100.00% - max-width: 75em;
 
-
 changing-N-and-alpha-R.png          Image Size : 3072x1946
 
 3076 / 5160 = 59.625% - max-width:  44.6875em;  44.71875
 1920 / 1946 = 98.675% - max-width:  44.1250em;  19.6875em;
               58.8125%
 
-
 N-impact-on-power-overlapped.png    Image Size : 5120x2253
 5120 / 5160 = 99.250% - max-width: 74.4375em;
 1920 / 2253 = 85.250% - max-width: 63.9375em
-
 
 type-1-errors.png                   Image Size : 1920x1752
 type-2-errors-50.png                Image Size : 1920x1752
@@ -59,10 +53,6 @@ type-2-errors-90.png                Image Size : 1920x1752
 1920 / 1920 = 100% - max-width: 25em;
         1920 / 1920 = 37.5% - max-width: 24.125em;
 1920 / 1596 = 120.500% - max-width: 30.125em;
-
-
-
-
 
 class="w562"   correlation-vs-samplesize.png        
 
@@ -84,4 +74,74 @@ class="w5160"  N-impact-on-power-overlapped.png
 class="w1920"  type-1-errors.png                    
 class="w1920"  type-2-errors-50.png                 
 class="w1920"  type-2-errors-90.png     
+
++++++
++++++
+$ exiftool -csv -imagesize *.png
++++++
+                                      W      H         W/H
+correlation-vs-samplesize.png         562    302       1.86…
+Standard_deviation_diagram.png        400    200       2.00
+
+basic-prob-alpha.png                  1008   1008      1.00
+population-probability.png            1008   1536      0.65625
+sample-probability.png                1008   1536      0.65625
+basic-alpha-beta-es-n.png             1008   1536      0.65625
+basic-prob-alpha-sideways-dual.png    1008   1536      0.65625
+type-1-errors.png                     1008   1536      0.65625
+type-2-errors.png                     1008   1536      0.65625
+
+  31.25%
+  20.0em
+
+basic-prob-alpha-sideways.png         1536   1536      1.00
+
+1536/1008 = 1.5
+  20.00 * 1.5 = 30em
+  31.25 * 1.5 = 46.875%
+
+changing-N-and-alpha.png              1440   1008      1.42857142857143 = 1/0.70
+N-impact-on-power-overlapped.png      2400   1056      2.27272727272727 = 1/0.44
+three-alphas.png                      3072   1536      2.00
+three-betas.png                       3072   1536      2.00
+
+1008/1536 = 0.65625
+  75    * 0.65625 = 49.1875em
+  89.75 * 0.65625 = 58.8750%
+
+1056/1536 = 0.68750
+  75    * 0.68750 = 51.5625em
+  89.75 * 0.68750 = 61.6875%
+
+1536/1536 = 1.00000
+  75    * 1.00000 = 75em
+  89.75 * 1.00000 = 89.7500%
+
+
+.w1008 {
+  width:     31.25%;
+  max-width: 20.0em;
+}
+.w1536 {
+  width:     46.875%;
+  max-width: 30.0em;
+}
+.w1440 {
+  width:     58.8750%;
+  max-width: 49.1875em;
+}
+.w2400 {
+  width:     61.6875%;
+  max-width: 51.5625em;
+}
+.w3072 {
+  width:     89.7500%;
+  max-width: 75em;
+}
+
+.w1008, 
+.w1536, 
+.w1440, 
+.w2400, 
+.w3072
 
