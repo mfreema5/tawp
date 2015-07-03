@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1008"
-   height="1536"
-   viewBox="0 0 1008 1536"
+   height="1200"
+   viewBox="0 0 1008 1200"
    id="svg3336"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -28,12 +28,12 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.5"
+     inkscape:zoom="0.5"
      inkscape:cx="338.35892"
-     inkscape:cy="1077.9669"
+     inkscape:cy="491.30023"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="true"
+     showgrid="false"
      units="px"
      objecttolerance="24"
      inkscape:window-width="1242"
@@ -91,21 +91,23 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Shade"
-     style="display:inline" />
+     style="display:inline"
+     transform="translate(0,-336)" />
   <g
      inkscape:label="Main"
      inkscape:groupmode="layer"
      id="layer1"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(0,-336)">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 504,1320 504,264"
+       d="M 504,1464 504,408"
        id="path4803"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 504,1032 -408,0"
+       d="m 504,1176 -408,0"
        id="path3346"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -113,11 +115,11 @@
        sodipodi:nodetypes="ccccc"
        inkscape:connector-curvature="0"
        id="path4156"
-       d="M 492,1158 C 492,984 432,954 300,876 234,834 174,810 174,762 174,714 234,690 300,648 426,570 492,546 492,366"
+       d="M 492,1302 C 492,1128 432,1098 300,1020 234,978 174,954 174,906 174,858 234,834 300,792 426,714 492,690 492,510"
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 150,762 354,0"
+       d="m 150,906 354,0"
        id="path4166"
        inkscape:connector-curvature="0" />
   </g>

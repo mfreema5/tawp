@@ -11,25 +11,56 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1008"
-   height="1536"
-   viewBox="0 0 1008 1536"
+   height="1200"
+   viewBox="0 0 1008 1200"
    id="svg3336"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="basic-alpha-beta-es-n.svg">
+   sodipodi:docname="basic-alpha-beta-es-n.svg"
+   inkscape:export-filename="/Users/MJF/Dropbox/NHST-share/graphics/basic-alpha-beta-es-n.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs3338" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
      bordercolor="#666666"
-     borderopacity="1.0">
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="365.35892"
+     inkscape:cy="464.63359"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     objecttolerance="24"
+     inkscape:window-width="1242"
+     inkscape:window-height="750"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:object-nodes="true"
+     inkscape:object-paths="false"
+     inkscape:snap-grids="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3344"
+       snapvisiblegridlinesonly="true"
+       spacingx="6"
+       spacingy="6"
+       empspacing="4" />
   </sodipodi:namedview>
-  <metadata id="metadata3341">
+  <metadata
+     id="metadata3341">
     <rdf:RDF>
-      <cc:Work rdf:about="http://www.freeman.blue/pages/images/large/basic-alpha-beta-es-n.svg">
+      <cc:Work
+         rdf:about="http://www.freeman.blue/pages/images/large/basic-alpha-beta-es-n.svg">
         <dc:format>image/svg+xml</dc:format>
-        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
         <dc:title>Basic alpha-beta-es-n</dc:title>
         <dc:creator>
           <cc:Agent>
@@ -37,15 +68,23 @@
           </cc:Agent>
         </dc:creator>
         <dc:source>www.freeman.blue</dc:source>
-        <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc/3.0/" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-nc/3.0/" />
       </cc:Work>
-      <cc:License rdf:about="http://creativecommons.org/licenses/by-nc/3.0/" >
-        <cc:permits   rdf:resource="http://creativecommons.org/ns#Reproduction"    />
-        <cc:permits   rdf:resource="http://creativecommons.org/ns#Distribution"    />
-        <cc:requires  rdf:resource="http://creativecommons.org/ns#Notice"          />
-        <cc:requires  rdf:resource="http://creativecommons.org/ns#Attribution"     />
-        <cc:prohibits rdf:resource="http://creativecommons.org/ns#CommercialUse"   />
-        <cc:permits   rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-nc/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:prohibits
+           rdf:resource="http://creativecommons.org/ns#CommercialUse" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
       </cc:License>
     </rdf:RDF>
   </metadata>
@@ -53,16 +92,17 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Shade"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(0,-336)">
     <path
        style="fill:#c0c0c0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 504,1248 0,-216 99.56075,0 C 540,1080 516,1134 516,1248 Z"
+       d="m 504,1392 0,-216 99.56075,0 C 540,1224 516,1278 516,1392 Z"
        id="path4171"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
     <path
        style="fill:#c0c0c0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 504,852 -243.49886,0 C 216,828 174,798 174,762 174,720 210,702 288,654 444,564 492,528 492,366 l 12,0 z"
+       d="m 504,996 -243.49886,0 C 216,972 174,942 174,906 174,864 210,846 288,798 444,708 492,672 492,510 l 12,0 z"
        id="path4173"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccc" />
@@ -71,16 +111,17 @@
      inkscape:label="Main"
      inkscape:groupmode="layer"
      id="layer1"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(0,-336)">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 504,1320 504,264"
+       d="M 504,1464 504,408"
        id="path4803"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 912,1032 -816,0"
+       d="m 912,1176 -816,0"
        id="path3346"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -97,17 +138,17 @@
        sodipodi:nodetypes="ccccc"
        inkscape:connector-curvature="0"
        id="path4156"
-       d="M 492,1158 C 492,984 432,954 300,876 234,834 174,810 174,762 174,714 234,690 300,648 426,570 492,546 492,366"
+       d="M 492,1302 C 492,1128 432,1098 300,1020 234,978 174,954 174,906 174,858 234,834 300,792 426,714 492,690 492,510"
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 8;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 260.50114,852 504,852"
+       d="M 260.50114,996 504,996"
        id="path4162"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 150,762 354,0"
+       d="m 150,906 354,0"
        id="path4166"
        inkscape:connector-curvature="0" />
     <use

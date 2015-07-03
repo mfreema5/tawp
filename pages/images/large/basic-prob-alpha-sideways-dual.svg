@@ -11,8 +11,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1008"
-   height="1536"
-   viewBox="0 0 1008 1536"
+   height="1200"
+   viewBox="0 0 1008 1200"
    id="svg3336"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -30,11 +30,11 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="0.5"
-     inkscape:cx="503.56603"
-     inkscape:cy="640.60149"
+     inkscape:cx="530.2327"
+     inkscape:cy="480.60149"
      inkscape:document-units="px"
      inkscape:current-layer="layer5"
-     showgrid="true"
+     showgrid="false"
      units="px"
      objecttolerance="24"
      inkscape:window-width="1217"
@@ -47,7 +47,8 @@
      inkscape:bbox-nodes="false"
      inkscape:object-paths="false"
      inkscape:snap-grids="true"
-     inkscape:bbox-paths="false">
+     inkscape:bbox-paths="false"
+     showguides="false">
     <inkscape:grid
        type="xygrid"
        id="grid3344"
@@ -95,16 +96,17 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Shade"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(0,-336)">
     <path
        sodipodi:nodetypes="ccccc"
        inkscape:connector-curvature="0"
        id="use5299"
-       d="m 456,1206 0,-246 -87.5146,0 C 414,1008 444,1068 443.5,1206 Z"
+       d="m 456.5,1356 0,-246 -87.5146,0 C 414.5,1158 444.5,1218 444,1356 Z"
        style="display:inline;fill:#c0c0c0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        style="fill:#c0c0c0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 564,1284 -12,0 0,-324 174,0 c 0,6 -24,18 -36,30 -90,78 -126,138 -126,294 z"
+       d="m 564.5,1434 -12,0 0,-324 174,0 c 0,6 -24,18 -36,30 -90,78 -126,138 -126,294 z"
        id="path4874"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccc" />
@@ -113,10 +115,11 @@
      inkscape:label="Main"
      inkscape:groupmode="layer"
      id="layer1"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(0,-336)">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4, 8;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 456,750 -312,0"
+       d="m 456.5,900 -312,0"
        id="path3879"
        inkscape:connector-curvature="0" />
     <use
@@ -124,12 +127,12 @@
        y="0"
        xlink:href="#path3879"
        id="use4681"
-       transform="matrix(-1,0,0,1,1008,78)"
+       transform="matrix(-1,0,0,1,1009,78)"
        width="100%"
        height="100%" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 455.5,1326 0,-1080"
+       d="M 456,1476 456,396"
        id="use5305"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -144,14 +147,14 @@
        height="100%" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 443,294 c 0,174 -42,228 -150,312 -60,48 -126,96 -126,144 0,48 66,96 126,144 108,84 150,138 150,312"
+       d="m 443.5,444 c 0,174 -42,228 -150,312 -60,48 -126,96 -126,144 0,48 66,96 126,144 108,84 150,138 150,312"
        id="use5301"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
     <path
        sodipodi:nodetypes="cc"
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 456,960 -336.5,0"
+       d="M 456.5,1110 120,1110"
        id="use5303"
        inkscape:connector-curvature="0" />
     <use
@@ -160,7 +163,7 @@
        y="0"
        xlink:href="#use5303"
        id="use3874"
-       transform="matrix(-1,0,0,1,1008,0)"
+       transform="matrix(-1,0,0,1,1009,0)"
        width="100%"
        height="100%" />
     <use
@@ -168,7 +171,7 @@
        y="0"
        xlink:href="#use5301"
        id="use4871"
-       transform="matrix(-1,0,0,1,1007,78)"
+       transform="matrix(-1,0,0,1,1008,78)"
        width="100%"
        height="100%" />
   </g>
@@ -176,5 +179,6 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Text"
-     style="display:inline" />
+     style="display:inline"
+     transform="translate(0,-336)" />
 </svg>

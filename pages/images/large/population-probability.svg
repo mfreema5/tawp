@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1008"
-   height="1536"
-   viewBox="0 0 1008 1536"
+   height="1200"
+   viewBox="0 0 1008 1200"
    id="svg3336"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.54"
+     inkscape:zoom="1.54"
      inkscape:cx="553.77355"
-     inkscape:cy="298.51526"
+     inkscape:cy="877.63984"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -60,7 +60,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
         <dc:creator>
           <cc:Agent>
             <dc:title>M.J. Freeman</dc:title>
@@ -91,32 +91,34 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Shade"
-     style="display:inline" />
+     style="display:inline"
+     transform="translate(0,-336)" />
   <g
      inkscape:label="Main"
      inkscape:groupmode="layer"
      id="layer1"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(0,-336)">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 504,1320 504,264"
+       d="M 504,1464 504,408"
        id="path4803"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 912,1032 -408,0"
+       d="m 912,1176 -408,0"
        id="path3346"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        inkscape:connector-curvature="0"
        id="use3588"
-       d="m 858,852 -354,0"
+       d="m 858,996 -354,0"
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 516,1248 C 516,1074 576,1044 708,966 774,924 834,900 834,852 834,804 774,780 708,738 582,660 516,636 516,456"
+       d="m 516,1392 c 0,-174 60,-204 192,-282 66,-42 126,-66 126,-114 C 834,948 774,924 708,882 582,804 516,780 516,600"
        id="use3586"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
