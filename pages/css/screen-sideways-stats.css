@@ -90,7 +90,7 @@ a:hover {
 #unpublishable {
   display: none;
 }
-#show_caveat.
+#show_caveat,
 #show_unpublishable {
   display: inline;
 }
@@ -105,7 +105,8 @@ article {
 section > section {
   display: inline;
 }
-
+h3.before {display: inline-block;}
+h3.after  {display: none;}
 p {
   margin: 0.250em 0.125em 0.500em 0.250em;
   padding: 0.250em 0 0.250em 0;
@@ -134,35 +135,6 @@ img {
   max-width:  100%;
   height:     auto;
 }
-.w562, 
-.w792, 
-.w1056, 
-.w1296, 
-.w1392, 
-.w1596, 
-.w1920, 
-.w3444, 
-.w4632, 
-.w5160 {
-  background-color: #ffffff;
-  border-style:     solid;
-  border-radius:    0.250em;
-  border-width:     0.125em;
-  border-color:     #7160A2;
-  display:          block;
-  width:      98.75%;
-  max-width:  12em;
-  float:      none;
-  margin:     0.1875em auto;
-  padding:    0.1250em;
-}
-.w3444, 
-.w4632, 
-.w5160  {
-  max-width: 24.625em;
-}
-/************************ New graphics */
-
 .w1008, 
 .w1536, 
 .w1440, 
@@ -195,6 +167,8 @@ img {
     padding: 0.3125em 0.3125em 0.3125em 7.8125%;
     max-width: 64em;
   }
+  h3.before {display: none;}
+  h3.after  {display: inline-block;}
   div p {
     font-size:    0.875em;
   }
@@ -202,67 +176,6 @@ img {
     margin:  0.125em 0.125em 0.125em 0.625em;
     padding: 0.125em 0.7500% 0.125em 6.25%;
   }
-  .w562, 
-  .w792, 
-  .w1056, 
-  .w1296, 
-  .w1392, 
-  .w1596, 
-  .w1920 {
-    float:    right;
-    clear:    right;
-    margin:   0.625em 0.0625em 0.625em 1.875em;
-    padding:  0.125em;
-  }
-  .w3444, 
-  .w4632, 
-  .w5160  {
-    float:    none;
-    clear:    both;
-    margin:   0.1875em;
-    padding:  0.1250em;
-  }
-  .w562 {
-    width:     43.75%;
-    max-width: 25.0em;
-  }
-  .w792 {
-    width:     17.7500%;
-    max-width: 11.375em;
-  }
-  .w1056 {
-    width:     20.6875%;
-    max-width: 13.250em;
-  }
-  .w1296 {
-    width:     31.25%;
-    max-width: 20.0em;
-  }
-  .w1392 {
-    width:     31.25%;
-    max-width: 20.0em;
-  }
-  .w1596 {
-    width:     31.25%;
-    max-width: 20.0em;
-  }
-  .w1920 {
-    width:     37.5000%;
-    max-width: 20.125em;
-  }
-  .w3444 {
-    width:     58.8125%;
-    max-width: 44.1250em;
-  }
-  .w4632 {
-    width:     89.75000%;
-    max-width: 67.3125em;
-  }
-  .w5160 {
-    width:     85.25%;
-    max-width: 63.9375em;
-  }
-/************************ New graphics */
   .w1008, 
   .w1536, 
   .w1440, 
@@ -270,7 +183,7 @@ img {
   .w3072 {
     float:    right;
     clear:    right;
-    margin:   0.625em 0.0625em 0.625em 1.875em;
+    margin:   0.625em 0.0625em 0.625em 1.4125em;
     padding:  0.125em;
   }
   .w1440, 
@@ -284,6 +197,16 @@ img {
   .w1008 {
     width:     31.25%;
     max-width: 20.0em;
+  }
+  .w1008-l, 
+  .w1536,
+  #Standard_deviation_diagram,
+  #population-probability,
+  #type-2-errors {
+    float:    left;
+    clear:    left;
+    margin:   0.625em 1.4125em 0.625em 0.625em;
+    padding:  0.125em;
   }
   .w1536 {
     width:     46.875%;
