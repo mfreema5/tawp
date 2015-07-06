@@ -7,7 +7,7 @@
     <title>Sideways statistics</title>
     <meta name="author" content="Michael J. Freeman">
     <meta name="description" content="Sideways stats &ndash; another way to look at the characteristics of linear regressions.">
-    <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="css/gfx/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="../css/gfx/favicon.ico" type="image/x-icon">
     <link rel="icon" sizes="192x192" href="../css/gfx/favicon-192x192.png" type="image/png">
     <link rel="icon" sizes="152x152" href="../css/gfx/favicon-152x152.png" type="image/png">
     <link rel="icon" sizes="120x120" href="../css/gfx/favicon-120x120.png" type="image/png">
@@ -38,7 +38,8 @@
         <p>The reason I was interested in those four is because they all come up in discussions of statistical significance. More specifically, in discussions of the use of null-hypothesis significance testing as part of empirical studies in the social science that employ multivariate linear regressions. I've been downright obsessed with null-hypothesis significance testing for a while now, to the point where it almost derailed my Master's thesis in technical communication and information design. (See: <a href='http://www.freeman.blue/index.html'>“Finding Research Value &ndash; the metrics and methods for evaluating research”</a>.)</p>
         <div class="w1008" id="basic-alpha-beta-es-n">
           <img src="images/large/basic-alpha-beta-es-n.svg" alt="Figure 01: A “sideways” graph" />
-          <p>Figure 01</p>
+          <a href="images/basic-alpha-beta-es-n.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+          <p><b>Figure 01</b> &ndash; Relationship of <em>&alpha;</em>, <em>&beta;</em>, sample size, & effect size</p>
         </div>
         <p>At some point I realized that to be able to make rational arguments about null-hypothesis significance testing, I needed to understand those four inter-related characteristics of linear regressions. After reading about them in a variety of books, I also realized that I was going to have to come to my own understanding of them, since none of the explanations I was reading were working for me.</p>
         <p>I tend to be a visual thinker, so I what I eventually came up with a way to represent the relationship between those four characteristics graphically. I think that I understand them now.</p>
@@ -62,6 +63,7 @@
         <p>To explain how I got to the graphics such as in Figure 01, let's start with a graph of a standard probability curve, such as Figure 02.  I'm assuming you've seen something like it before.  (Indeed, you may have seen Figure 02 before, since it's adapted from <a href="https://commons.wikimedia.org/wiki/File:Standard_deviation_diagram.svg">a graphic</a> on Wikimedia Commons.)</p>
         <div class="w1008">
           <img src="images/large/basic-prob-alpha.svg" alt="Figure 03: Basic correlation with alpha = 5%" />
+          <a href="images/basic-prob-alpha.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 03a</p>
         </div>
         <p>The horizontal axis is the possible values for some measure. The vertical axis is the probability of getting each value on the horizontal axis when you make a measurement. Typically, however, we aren't interested in the probability of a specific value, but rather we're interested in the probability of getting a result that is bounded by some specific value. In other words, we're interested in the probability of getting a result that is “greater than or equal to” or that is “less than or equal to” some value.</p>
@@ -70,6 +72,7 @@
         <p>When you're using a null-hypothesis significance test to analyze a sample, a confidence level of 5% means that there is a 5% chance that population correlation is not zero. You don't precisely know the population correlation because you measured and analyzed only a sample of the population, instead of the entire population. So, what you've found is the sample correlation, and the population correlation is related to the sample correlation by a probability curve.</p>
         <div class="w1536">
           <img src="images/large/basic-prob-alpha-sideways.svg" alt="Figure 03b: Sideways correlation with alpha = 5%" />
+          <a href="images/basic-prob-alpha-sideways.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 03b</p>
         </div>
         <p>For the example that is Figure 03a, the mean value of the probability curve is the value of the sample correlation of some hypothetical analysis. The probability curve shows what values the population correlation may have, based on the sample correlation value. (It also depends on the size of the sample, but we'll get to that later.) In the example graphic, 5% of the total area under the curve is bounded by a measured value of <b>zero</b>. So, there is a 5% probability that the population correlation is “less than or equal to” zero. That's the “null” in “null hypothesis significance testing”.</p>
@@ -77,6 +80,7 @@
         <p>Why is this is a useful convention?  The “sideways” arrangment makes it easier to see the relationship between two probability curves, because we can place them next to each other, such as in Figure 04.</p>
         <div class="w1008">
           <img src="images/large/basic-prob-alpha-sideways-dual.svg" alt="Figure 04: Comparing two sideways graphs" />
+          <a href="images/basic-prob-alpha-sideways-dual.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 04</p>
         </div>
         <p>When considering the relationship between the four characteristics of linear regressions, there are two probabilities involved, “alpha” and “beta”.  As was mentioned above, “alpha” is also referred to as the “<i>p</i> value”, or the “confidence level”, etc.  It is a proportion of the population probability curve, which is the curve that's around a given sample correlation and that defines the values of the population's correlation that are expected based on the sample's value.</p>
@@ -89,6 +93,7 @@
         <p>The last part of the previous section about probability curves and “alpha” and “beta” is not, for me at least, intuitively obvious, so let's go over it again.</p>
         <div class="w1008" id="population-probability">
           <img src="images/large/population-probability.svg" alt="Figure 05: Population probability around sample correlation" />
+          <a href="images/population-probability.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 05 &ndash; Sample correlation bisects population probability curve</p>
         </div>
         <p>Let's say you measure a variety of characteristics of a presumably representative sample of a population. You can do a linear regression analysis of the measurements, and precisely calculate the correlations between the characteristics you measured. But, your results are only precise descriptions of the sample. They aren't precise descriptions of the population, because there is always some amount of error, some amount of potential discrepancy, between the mean value of some characteristic for a sample, and the mean value of that characteristic for the population.</p>
@@ -96,6 +101,7 @@
         <p>You can think about that probability calculation as being a probability curve that you draw around the sample correlation, which you determined from your measurements. In the example graphic (Figure 05), the horizontal line that splits the curve marks the value of the sample correlation. The probability curve describes the correlation of the population.</p>
         <div class="w1008">
           <img src="images/large/sample-probability.svg" alt="Figure 06: Sample probability around population correlation" />
+          <a href="images/sample-probability.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 06 &ndash; Population correlation bisects sample probability curve</p>
         </div>
         <p>This is an important distinction to understand. In the example graphic (Figure 05), the straight line is about the <em>sample</em>. The curve is about the <em>population</em>.</p>
@@ -109,12 +115,14 @@
         <p>The next example graphic (Figure 07) has three curves in it, showing three different values for <i>alpha</i>. The three probability curves are all identical, but the value of the sample correlation increases from left to right. That increase in the sample correlation shifts the curve upward (in our sideways view) and that means that the value for <i>alpha</i> decreases, since the percentage of the area “under” the probability curve that is bounded by the null line decreases.</p>
         <div class="w3072">
           <img src="images/large/three-alphas.svg" alt="Figure 07: Three values for alpha" />
+          <a href="images/three-alphas.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 07</p>
         </div>
         <p>This is what you would expect to happen. Remember that <i>alpha</i>, a.k.a., the “confidence level”, or “<i>p</i> value”, indicates the probability that the population correlation is above zero. Which is another way of saying that it measures the chances that the correlation is “real”, and not an a result of random error. Yet another way of looking at it is to say that <i>alpha</i> is a measure of the chance of making a “Type I” error.</p>
         <p>So, the larger the sample correlation is, the less likely it is that no such correlation exists in the population, and that all you have found is random error. If the sample correlation is quite small, it's easy to believe that the correlation is the result of sampling errors, because it wouldn't take much error to create the illusion of a small correlation. But it would take a very large and therefore unlikely amount of sampling error to create the illusion of a large correlation.</p>
         <div class="w1008">
           <img src="images/large/basic-alpha-beta-es-n.svg" alt="Figure 08: Basic relationship of alpha and beta" />
+          <a href="images/basic-alpha-beta-es-n.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 08</p>
         </div>
         <p>The next example graphic (Figure 08) takes advantage of the sideways arrangment (finally!), and shows both the population and the sample probability curves for some hypothetical linear regression.</p>
@@ -126,6 +134,7 @@
         <p>The next example graphic (Figure 09) has three graphs in it, with the statistical power increasing from left to right, while <i>beta</i> is decreasing.</p>
         <div class="w3072">
           <img src="images/large/three-betas.svg" alt="Figure 09: Three values for beta" />
+          <a href="images/three-betas.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 09</p>
         </div>
         <p>The value for <i>alpha</i> is the same for all three graphs, and therefore the minimum sample correlation that is statistically significant is also the same for all three. The statistical power increases because the population correlation increases. As it gets higher in the sideways graph, it gets farther away from the minimum statistically significant sample correlation, and therefore the proportion of the area “under” the sample probability curve that has that minimum correlation as a lower bound gets larger.</p>
@@ -138,6 +147,7 @@
         <p>The larger the sample size in an analysis the less influence random error has on the sample correlation. Therefore, the population probability curve that surrounds the sample correlation will be less spread out for larger sample sizes. The next example graphic (Figure 10) represents how the population probability curve tightens as the sample size increases. The sample size, “N”, increases from left to right for the three examples.</p>
         <div class="w1440">
           <img src="images/large/changing-N-and-alpha.svg" alt="Figure 10: Probabilities tighten as N increases" />
+          <a href="images/changing-N-and-alpha.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 10</p>
         </div>
         <p>In those three examples, <i>alpha</i> is constant, and therefore as the probability curve tightens the line that bisects the probability curve drops closer to the null line. In other words, at the same confidence level, the larger the sample size is, the lower the minimum correlation that is statistically significant becomes.</p>
@@ -158,6 +168,7 @@
         <p>Descriptions of what the “effect size” is can sometimes be esoteric, but since we've limited ourselves to talking about linear regressions that use null-hypothesis significance testing, we can simply say that it's the correlation that exist in the population.</p>
         <div class="w1008">
           <img src="images/large/basic-alpha-beta-es-n.svg" alt="Figure 12: Basic relationship of alpha and beta" />
+          <a href="images/basic-alpha-beta-es-n.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 12</p>
         </div>
         <p>The somewhat confusing thing is that most of the time we don't know the value of the <i>effect size</i>—since if we knew the population correlation, we wouldn't need to be trying to find a sample correlation—yet we need to know its value in order to determine the <i>statistical power</i> of an analysis.</p>
@@ -171,6 +182,7 @@
         <p>In general, a larger sample size will give you a larger statistical power. Think of it this way: if the two bisecting lines (the sample and population correlations) are a great distance apart, then even if the probability curves are wide and low, there will be a large area that's between the bisection lines. But if the two lines are close together, the probability curves will need to be very tight in order to find a large area between the two bisecting lines. See the next example graphic, (Figure 13).</p>
         <div class="w3072">
           <img src="images/large/N-impact-on-power-overlapped.svg" alt="Figure 13: Impact of sample size on statistical power" />
+          <a href="images/N-impact-on-power-overlapped.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 13</p>
         </div>
         <p>Now that we've gone through the four characteristics and how they're related, we can apply them to our understanding of the two types of error associated linear regressions and null hypothesis significance testing.</p>
@@ -185,6 +197,7 @@
           <h3 class="before">Sideways Type I errors</h3>
           <div class="w1008">
             <img src="images/large/type-1-errors.svg" alt="Figure 14: Sideways Type I error" />
+            <a href="images/type-1-errors.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
             <p>Figure 14</p>
           </div>
           <h3 class="after">Sideways Type I errors</h3>
@@ -198,6 +211,7 @@
           <h3 class="before">Sideways Type II errors</h3>
           <div class="w1008" id="type-2-errors" >
             <img src="images/large/type-2-errors.svg" alt="Figure 15: Sideways Type II error" />
+            <a href="images/type-2-errors.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
             <p>Figure 15</p>
           </div>
           <h3 class="after">Sideways Type II errors</h3>

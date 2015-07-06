@@ -86,6 +86,9 @@ a {
 a:hover { 
   text-decoration: underline; 
 }
+a:hover.button {
+  text-decoration: none;
+}
 #caveat,
 #unpublishable {
   display: none;
@@ -157,6 +160,19 @@ img {
 .w3072  {
   max-width: 24.625em;
 }
+.button {
+  background-color: #C5CCE0;
+  border-style:     solid;
+  border-radius:    0.1875em;
+  border-width:     0.0625em;
+  border-color:     #43568B;
+  display:          block;
+  width:      10.3125%;
+  max-width:  1.5em;
+  float:      right;
+  margin:     0.0625em;
+  padding:    0;
+}
 
 /********************************[ 25 em < screen ]**/
 @media all and (min-width: 25em) {
@@ -223,6 +239,9 @@ img {
   .w3072 {
     width:     89.7500%;
     max-width: 75em;
+  }
+  .button {
+    max-width: 2.0625em;
   }
 }
 
