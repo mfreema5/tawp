@@ -1,0 +1,42 @@
+html {
+  box-sizing: border-box;
+  background-color: #7160a2;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Merriweather Sans', sans-serif; 
+  font-weight:  300;
+  font-size:    1.0625em;
+  line-height:  1.250em;
+}
+main {
+  background-color: #cdc6e1;
+  border-radius: 0.250em;
+  padding: 0.5625% 0;
+}
+.graphic,
+.graphic-w {
+  background-color: #ffffff;
+  border-style:     solid;
+  border-radius:    0.3125em;
+  border-width:     0.1250em;
+  border-color:     #7160A2;
+  display:          block;
+  width:      98.75%;
+  float:      none;
+  margin:     0.1250em auto;
+  padding:    0.1250em;
+}
+.graphic {
+  max-width:  32em;
+}
+.graphic-w {
+  max-width:  60em;
+}
+
+img {
+  max-width:  100%;
+  height:     auto;
+}

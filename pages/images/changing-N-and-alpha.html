@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="../css/stand-alone-graphics.css" rel="stylesheet">
+    <title>Sideways statistics – example graphic</title>
+    <meta name="author" content="Michael J. Freeman">
+    <meta name="description" content="Sideways stats graphic">
+    <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="../../css/gfx/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="192x192" href="../../css/gfx/favicon-192x192.png" type="image/png">
+    <link rel="icon" sizes="152x152" href="../../css/gfx/favicon-152x152.png" type="image/png">
+    <link rel="icon" sizes="120x120" href="../../css/gfx/favicon-120x120.png" type="image/png">
+    <link rel="shortcut icon" href="../../css/gfx/favicon.ico" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700,700italic,300,300italic&subset=latin' rel='stylesheet' type='text/css'>
+    <script src="../css/modernizr.custom.30817.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="graphic">
+            <img src="large/changing-N-and-alpha.svg"  alt="changing-N-and-alpha" />
+            <p>Larger <em>sample sizes</em> have tighter probability curves, so the minimum correlation that is statistically significant becomes lower.</p>
+          </div>
+    </main>
+    <footer>
+      <meta name="creator" content="不爽大龄男人">
+    </footer>
+    <script>
+      if (!Modernizr.svg) {
+          var imgs = document.getElementsByTagName('img');
+          var svgExtension = /.*\.svg$/
+          var l = imgs.length;
+          for(var i = 0; i < l; i++) {
+              if(imgs[i].src.match(svgExtension)) {
+                  imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
+                  console.log(imgs[i].src);
+              }
+          }
+      }
+    </script>
+  </body>
+</html>
