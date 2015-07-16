@@ -1,0 +1,25 @@
+Notes for multi-presentation ‘tawp’.
+
+
++++++
+HTML for wrapping around toggle-able text:
+
+<span class="t-text" id="togLN">text 1 to toggle</span><span class="t-button">&nbsp; <button class="toggle" onclick="toggleSpan('togLN');"> ± </button> &nbsp;</span>
+
+Onclick calls this:
+
+<script>
+  function toggleSpan (targetId) {
+    var targetSpan = document.getElementById(targetId);
+    targetSpan.style.display = ( targetSpan.style.display == 'inline' ? 'none' : 'inline' );
+  };
+</script>
+
+CSS:
+
+Set ".t-text" to 'display: inline' and ".t-button" to 'display: none', and the buttons are invisible.
+
+Set ".t-text" to 'display: none' and ".t-button" to 'display: inline', and you've got toggled-text.
+
+
++++++
